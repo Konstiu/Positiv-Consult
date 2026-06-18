@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f7f3ee;
-  --paper-strong: #efe8de;
-  --surface: rgba(255, 255, 255, 0.78);
-  --ink: #122029;
-  --muted: #5d6a72;
-  --line: rgba(18, 32, 41, 0.12);
-  --accent: #dcc49a;
-  --accent-strong: #c1a572;
+  --brand-red: #d7263d;
+  --brand-red-strong: #b91c32;
+  --brand-blue: #1f4e8c;
+  --brand-blue-soft: #dfeaf8;
+  --brand-dark: #111827;
+  --brand-dark-2: #1f2937;
+  --brand-gray: #667085;
+  --brand-light: #f4f7fb;
+  --brand-light-2: #e8eef6;
+  --paper: #f8fafc;
+  --paper-strong: #eef3f8;
+  --surface: rgba(255, 255, 255, 0.84);
+  --ink: var(--brand-dark);
+  --muted: var(--brand-gray);
+  --line: rgba(17, 24, 39, 0.12);
+  --accent: var(--brand-red);
+  --accent-strong: var(--brand-blue);
 }
 
 @theme inline {
@@ -24,13 +33,15 @@
 
 html {
   background:
-    radial-gradient(circle at top, rgba(220, 196, 154, 0.22), transparent 34%),
-    linear-gradient(180deg, #faf7f2 0%, #f7f3ee 100%);
+    radial-gradient(circle at top, rgba(31, 78, 140, 0.12), transparent 36%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
 }
 
 body {
   color: var(--ink);
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 251, 0.92));
 }
 
 a,
@@ -47,7 +58,7 @@ summary {
 }
 
 ::selection {
-  background: rgba(193, 165, 114, 0.28);
+  background: rgba(215, 38, 61, 0.18);
 }
 
 .surface-card {
@@ -55,34 +66,66 @@ summary {
   border-radius: 1.75rem;
   background: var(--surface);
   backdrop-filter: blur(16px);
-  box-shadow: 0 12px 34px rgba(18, 32, 41, 0.06);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
 }
 
 .eyebrow {
   display: inline-flex;
   width: fit-content;
   border-radius: 999px;
-  border: 1px solid rgba(18, 32, 41, 0.1);
-  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(31, 78, 140, 0.16);
+  background: rgba(255, 255, 255, 0.82);
   padding: 0.55rem 0.95rem;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--brand-blue);
 }
 
 .hero-grid {
   background:
-    radial-gradient(circle at top left, rgba(220, 196, 154, 0.24), transparent 32%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    radial-gradient(circle at top left, rgba(215, 38, 61, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(31, 78, 140, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 251, 0.72));
 }
 
 .grid-lines {
   background-image:
-    linear-gradient(rgba(18, 32, 41, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18, 32, 41, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(31, 78, 140, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 78, 140, 0.06) 1px, transparent 1px);
   background-size: 44px 44px;
+}
+
+.button-primary {
+  background: var(--brand-red);
+  color: white;
+  box-shadow: 0 14px 28px rgba(215, 38, 61, 0.22);
+}
+
+.button-primary:hover {
+  background: var(--brand-red-strong);
+  box-shadow: 0 18px 34px rgba(215, 38, 61, 0.3);
+}
+
+.button-secondary {
+  border: 1px solid rgba(31, 78, 140, 0.2);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--brand-dark);
+}
+
+.button-secondary:hover {
+  border-color: rgba(31, 78, 140, 0.36);
+  background: rgba(223, 234, 248, 0.42);
+  color: var(--brand-blue);
+}
+
+.text-link {
+  color: var(--brand-blue);
+}
+
+.text-link:hover {
+  color: var(--brand-red);
 }
 
 .fade-up {

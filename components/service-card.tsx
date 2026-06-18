@@ -4,9 +4,9 @@ import type { ServiceItem } from "@/lib/site-data";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
   return (
-    <article className="surface-card group flex h-full flex-col justify-between p-6 md:p-7">
+    <article className="surface-card group flex h-full flex-col justify-between border-t-4 border-t-[var(--brand-blue)] p-6 md:p-7">
       <div className="space-y-5">
-        <div className="inline-flex rounded-full border border-black/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
+        <div className="inline-flex rounded-full border border-[rgba(31,78,140,0.16)] bg-[var(--brand-light)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
           Kompetenzfeld
         </div>
         <div className="space-y-3">
@@ -20,7 +20,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
         <ul className="space-y-2 text-sm text-[var(--ink)]">
           {service.points.map((point) => (
             <li key={point} className="flex items-start gap-3">
-              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent-strong)]" />
+              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--brand-red)]" />
               <span>{point}</span>
             </li>
           ))}
@@ -28,7 +28,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
       </div>
       <Link
         href={service.href}
-        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--ink)] transition group-hover:translate-x-1"
+        className="text-link mt-8 inline-flex items-center gap-2 text-sm font-semibold transition group-hover:translate-x-1"
       >
         Mehr erfahren
         <span aria-hidden="true">→</span>

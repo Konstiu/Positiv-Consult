@@ -37,7 +37,7 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-[color:rgba(247,243,238,0.84)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-black/5 bg-[color:rgba(255,255,255,0.92)] backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
         <Link href="/" className="flex flex-col leading-none">
           <span className="font-serif text-xl font-semibold tracking-[0.08em] text-[var(--ink)]">
@@ -58,8 +58,8 @@ export function SiteHeader() {
                 href={item.href}
                 className={`rounded-full px-4 py-2 text-sm transition ${
                   active
-                    ? "bg-[var(--ink)] text-white"
-                    : "text-[var(--muted)] hover:bg-white hover:text-[var(--ink)]"
+                    ? "bg-[var(--brand-dark)] text-white"
+                    : "text-[var(--muted)] hover:bg-[var(--brand-light)] hover:text-[var(--brand-blue)]"
                 }`}
               >
                 {item.label}
@@ -71,7 +71,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             href="/kontakt"
-            className="hidden rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--ink)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(193,165,114,0.28)] md:inline-flex"
+            className="button-primary hidden rounded-full px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 md:inline-flex"
           >
             Gespräch anfragen
           </Link>
@@ -79,7 +79,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex rounded-full border border-black/10 bg-white/90 p-3 text-[var(--ink)] lg:hidden"
+            className="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white p-3 text-[var(--ink)] lg:hidden"
             aria-expanded={open}
             aria-label="Navigation öffnen"
           >
@@ -89,7 +89,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="border-t border-black/5 bg-[var(--paper)] lg:hidden">
+        <div className="border-t border-black/5 bg-white lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-4 md:px-8">
             {navItems.map((item) => {
               const active = pathname === item.href;
@@ -100,8 +100,8 @@ export function SiteHeader() {
                   href={item.href}
                   className={`rounded-2xl px-4 py-3 text-base transition ${
                     active
-                      ? "bg-[var(--ink)] text-white"
-                      : "text-[var(--muted)] hover:bg-white"
+                      ? "bg-[var(--brand-dark)] text-white"
+                      : "text-[var(--muted)] hover:bg-[var(--brand-light)] hover:text-[var(--brand-blue)]"
                   }`}
                 >
                   {item.label}
@@ -110,7 +110,7 @@ export function SiteHeader() {
             })}
             <Link
               href="/kontakt"
-              className="mt-3 inline-flex justify-center rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--ink)]"
+              className="button-primary mt-3 inline-flex justify-center rounded-full px-5 py-3 text-sm font-semibold"
             >
               Gespräch anfragen
             </Link>

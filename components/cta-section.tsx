@@ -21,10 +21,11 @@ export function CtaSection({
 }: CtaSectionProps) {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 md:px-8">
-      <div className="relative overflow-hidden rounded-[2rem] bg-[var(--ink)] px-6 py-10 text-white shadow-[0_30px_80px_rgba(18,31,41,0.18)] md:px-10 md:py-14">
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top,rgba(221,196,154,0.26),transparent_58%)]" />
+      <div className="relative overflow-hidden rounded-[2rem] bg-[var(--brand-dark)] px-6 py-10 text-white shadow-[0_30px_80px_rgba(15,23,42,0.22)] md:px-10 md:py-14">
+        <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top,rgba(215,38,61,0.24),transparent_56%)]" />
+        <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_bottom_left,rgba(31,78,140,0.22),transparent_52%)]" />
         <div className="relative max-w-3xl space-y-5">
-          <span className="eyebrow border-white/14 bg-white/6 text-white/78">
+          <span className="eyebrow border-white/14 bg-white/6 text-[var(--brand-blue-soft)]">
             {eyebrow}
           </span>
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight md:text-4xl">
@@ -36,14 +37,14 @@ export function CtaSection({
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               href={primaryHref}
-              className="inline-flex justify-center rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--ink)]"
+              className="button-primary inline-flex justify-center rounded-full px-5 py-3 text-sm font-semibold"
             >
               {primaryLabel}
             </Link>
             {secondaryLabel && secondaryHref ? (
               <Link
                 href={secondaryHref}
-                className="inline-flex justify-center rounded-full border border-white/14 px-5 py-3 text-sm font-semibold text-white"
+                className="inline-flex justify-center rounded-full border border-[rgba(223,234,248,0.26)] bg-white/6 px-5 py-3 text-sm font-semibold text-white hover:border-[var(--brand-blue-soft)] hover:bg-white/10"
               >
                 {secondaryLabel}
               </Link>

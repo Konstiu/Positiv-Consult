@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-import { contactEmail, contactPhone } from "@/lib/site-data";
+import {
+  addressLines,
+  contactEmail,
+  contactPhone,
+  secondaryContactEmail,
+  secondaryContactPhone,
+} from "@/lib/site-data";
 
 export function ContactPanel() {
   return (
@@ -28,6 +34,12 @@ export function ContactPanel() {
           >
             {contactEmail}
           </a>
+          <a
+            href={`mailto:${secondaryContactEmail}`}
+            className="mt-1 block text-sm text-[var(--muted)]"
+          >
+            {secondaryContactEmail}
+          </a>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
@@ -39,16 +51,22 @@ export function ContactPanel() {
           >
             {contactPhone}
           </a>
+          <a
+            href={`tel:${secondaryContactPhone}`}
+            className="mt-1 block text-sm text-[var(--muted)]"
+          >
+            {secondaryContactPhone}
+          </a>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
             Standort
           </p>
-          <p className="mt-2 text-base text-[var(--ink)]">Wien, Österreich</p>
+          <p className="mt-2 text-base text-[var(--ink)]">{addressLines.join(", ")}</p>
         </div>
         <Link
           href="/kontakt"
-          className="inline-flex rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-semibold text-white"
+          className="button-primary inline-flex rounded-full px-5 py-3 text-sm font-semibold"
         >
           Kontaktseite öffnen
         </Link>
