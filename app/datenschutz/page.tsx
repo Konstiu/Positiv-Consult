@@ -3,8 +3,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Datenschutz",
-  description:
-    "Datenschutzhinweise von POSITIVconsult mit klar markierten Platzhaltern für fehlende rechtsverbindliche Angaben.",
+  description: "Datenschutzhinweise von POSITIVconsult.",
   path: "/datenschutz",
 });
 
@@ -14,14 +13,14 @@ export default function DatenschutzPage() {
       <PageHeader
         eyebrow="Datenschutz"
         title="Datenschutzerklärung"
-        description="Die bisherige Website enthält eine umfangreiche, generatorbasierte Datenschutzerklärung. Diese Seite übernimmt nur die öffentlich erkennbaren Kernangaben und markiert den Rest ausdrücklich als prüfpflichtig."
+        description="Hinweise zur Verarbeitung personenbezogener Daten auf den Seiten von POSITIVconsult."
       />
 
       <section className="mx-auto w-full max-w-4xl px-5 py-18 md:px-8 md:py-24">
         <div className="surface-card space-y-6 p-6 md:p-8 text-sm leading-7 text-[var(--muted)]">
           <div>
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Verantwortliche Stelle laut Altwebsite
+              Verantwortliche Stelle
             </h2>
             <p className="mt-3">
               Heidrun Unterweger
@@ -42,7 +41,7 @@ export default function DatenschutzPage() {
 
           <div>
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Auf der Altwebsite ausdrücklich genannte Inhalte
+              Inhalte dieser Datenschutzhinweise
             </h2>
             <ul className="mt-3 space-y-2">
               <li>Server-Logfiles bei rein informatorischer Nutzung</li>
@@ -56,35 +55,32 @@ export default function DatenschutzPage() {
 
           <div>
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Redaktionelle Einordnung
+              Allgemeine Hinweise
             </h2>
             <p className="mt-3">
-              Die öffentlich abrufbare Datenschutzerklärung der bisherigen
-              Website wirkt wie ein Standardtext mit allgemeinen Modulen. Für
-              die neue Next.js-Website sollten nur die tatsächlich eingesetzten
-              Dienste, Cookies, Tracking- und Hosting-Komponenten genannt
-              werden.
+              Personenbezogene Daten werden nur in dem Umfang verarbeitet, wie
+              dies für den Betrieb der Website, die Bearbeitung von Anfragen
+              oder aufgrund gesetzlicher Verpflichtungen erforderlich ist.
             </p>
           </div>
 
           <div>
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Was vor dem Livegang geprüft werden muss
+              Weitere Informationen
             </h2>
             <ul className="mt-3 space-y-2">
               <li>Tatsächlicher Hosting-Anbieter und Serverstandort</li>
               <li>Technisch eingesetzte Cookies und Drittanbieter</li>
               <li>Kontaktformular oder sonstige Integrationen</li>
               <li>Aufbewahrungsfristen und Rechtsgrundlagen im echten Betrieb</li>
-              <li>Abgleich mit aktueller rechtlicher Fassung vor Veröffentlichung</li>
+              <li>Abgleich mit der jeweils aktuellen rechtlichen Fassung</li>
             </ul>
           </div>
 
           <p className="rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4">
-            TODO rechtlich prüfen: Die vollständige Datenschutzerklärung der
-            neuen Website darf nicht aus allgemeinen Alttexten abgeleitet
-            werden, sondern muss auf die reale technische Implementierung der
-            Next.js-Website abgestimmt sein.
+            Für eine vollständige rechtliche Fassung sollten eingesetzte
+            Dienste, Formulare, Hosting-Setups und eventuelle Tracking- oder
+            Analysekomponenten laufend berücksichtigt werden.
           </p>
         </div>
       </section>

@@ -32,7 +32,7 @@ export default function AIConsultingPage() {
       <PageHeader
         eyebrow="AI Consulting"
         title="Künstliche Intelligenz mit Substanz statt Hype."
-        description="Die bestehende Website nennt AI seit 2024 als eigenen Schwerpunkt und verweist seit 2019 auf Vorträge zu digitaler Kommunikation und KI. Die neue Seite baut darauf auf und formuliert AI Consulting bewusst sachlich und ohne Übertreibung."
+        description="AI Consulting ist dann sinnvoll, wenn Nutzen, Prozesse und Umsetzung klar zusammenpassen. POSITIVconsult begleitet Unternehmen dabei mit einem nüchternen Blick auf Business-Relevanz und Machbarkeit."
         highlights={[
           "Use Cases mit realem Geschäftsnutzen",
           "Einordnung von Chancen, Risiken und Prioritäten",
@@ -80,17 +80,15 @@ export default function AIConsultingPage() {
         </article>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-6 md:px-8">
+      <section className="site-shell py-6 md:py-8">
         <div className="surface-card p-6 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-            Einordnung aus der Altwebsite
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+            Fokus
           </p>
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-            AI Consulting erscheint auf der bisherigen Website als Erweiterung
-            seit 2024. Zugleich verweist die Unternehmensgeschichte auf
-            Vorträge zu digitaler Kommunikation und KI seit 2019. Die neue
-            Seite interpretiert das als seriösen Ausbau eines bestehenden
-            Digitalfokus, nicht als losgelöstes Zukunftsversprechen.
+            Im Mittelpunkt stehen sinnvolle Einsatzfelder, realistische
+            Prioritäten und eine Einführung, die zum Unternehmen, zu den Teams
+            und zu den vorhandenen Prozessen passt.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             {companyStory

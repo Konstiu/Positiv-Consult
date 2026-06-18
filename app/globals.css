@@ -31,6 +31,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 html {
   background:
     radial-gradient(circle at top, rgba(31, 78, 140, 0.12), transparent 36%),
@@ -42,6 +47,8 @@ body {
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 251, 0.92));
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 a,
@@ -67,6 +74,23 @@ summary {
   background: var(--surface);
   backdrop-filter: blur(16px);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
+}
+
+.site-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 78rem;
+  padding-inline: 1.25rem;
+}
+
+.section-space {
+  padding-block: 4.5rem;
+}
+
+.card-stack {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
 .eyebrow {
@@ -98,6 +122,11 @@ summary {
 }
 
 .button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border-radius: 999px;
   background: var(--brand-red);
   color: white;
   box-shadow: 0 14px 28px rgba(215, 38, 61, 0.22);
@@ -109,6 +138,11 @@ summary {
 }
 
 .button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border-radius: 999px;
   border: 1px solid rgba(31, 78, 140, 0.2);
   background: rgba(255, 255, 255, 0.88);
   color: var(--brand-dark);
@@ -128,8 +162,25 @@ summary {
   color: var(--brand-red);
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid rgba(31, 78, 140, 0.38);
+  outline-offset: 3px;
+}
+
 .fade-up {
   animation: fade-up 700ms ease both;
+}
+
+@media (min-width: 768px) {
+  .site-shell {
+    padding-inline: 2rem;
+  }
+
+  .section-space {
+    padding-block: 6rem;
+  }
 }
 
 @keyframes fade-up {

@@ -3,7 +3,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Impressum",
-  description: "Impressum von POSITIVconsult mit klar gekennzeichneten Platzhaltern für fehlende Pflichtangaben.",
+  description: "Impressum von POSITIVconsult.",
   path: "/impressum",
 });
 
@@ -13,14 +13,14 @@ export default function ImpressumPage() {
       <PageHeader
         eyebrow="Impressum"
         title="Impressum"
-        description="Die folgenden Angaben wurden aus dem öffentlich erreichbaren Impressum der bisherigen Website übernommen und müssen vor Livegang rechtlich geprüft werden."
+        description="Rechtliche Angaben und Kontaktinformationen von POSITIVconsult."
       />
 
       <section className="mx-auto w-full max-w-4xl px-5 py-18 md:px-8 md:py-24">
         <div className="surface-card space-y-6 p-6 md:p-8">
           <div>
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Öffentlich erreichbare Angaben der Altwebsite
+              Angaben
             </h2>
             <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
               Heidrun Unterweger
@@ -52,21 +52,18 @@ export default function ImpressumPage() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-[var(--ink)]">
-              Sonstiger Hinweis der Altwebsite
+              Hinweis
             </h3>
             <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Die Website nennt außerdem die EU-Plattform zur
-              Online-Streitbeilegung und erklärt, dass keine Verpflichtung und
-              keine Bereitschaft zur Teilnahme an einem
-              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-              besteht.
+              Es wird auf die EU-Plattform zur Online-Streitbeilegung
+              hingewiesen. Zudem besteht keine Verpflichtung und keine
+              Bereitschaft zur Teilnahme an einem
+              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.
             </p>
           </div>
           <p className="rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
-            TODO rechtlich prüfen: Rechtsform, vollständige Pflichtangaben,
-            Aktualität der UID, Adressschreibweise, Streitbeilegungshinweis und
-            alle sonstigen Informationspflichten vor Veröffentlichung nochmals
-            abgleichen.
+            Rechtliche Pflichtangaben können abhängig von Unternehmensform und
+            aktueller regulatorischer Situation ergänzt oder angepasst werden.
           </p>
         </div>
       </section>

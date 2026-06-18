@@ -38,17 +38,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[color:rgba(255,255,255,0.92)] backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
-        <Link href="/" className="flex flex-col leading-none">
-          <span className="font-serif text-xl font-semibold tracking-[0.08em] text-[var(--ink)]">
-            POSITIVconsult
-          </span>
-          <span className="mt-1 text-[0.68rem] uppercase tracking-[0.28em] text-[var(--muted)]">
-            Unternehmensberatung Wien
+      <div className="site-shell flex min-h-[4.25rem] items-center justify-between gap-5 py-2">
+        <Link href="/" className="flex h-10 shrink-0 items-center">
+          <span className="flex items-center gap-3 whitespace-nowrap font-serif text-[1.18rem] font-semibold tracking-[0.04em] text-[var(--ink)]">
+            <span>POSITIVconsult</span>
+            <span className="font-sans text-[0.68rem] uppercase tracking-[0.24em] text-[var(--muted)]">
+              Wien
+            </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-2 lg:flex">
+        <nav className="hidden min-w-0 flex-1 items-center justify-end gap-1 lg:flex">
           {navItems.map((item) => {
             const active = pathname === item.href;
 
@@ -56,10 +56,10 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm transition ${
+                className={`inline-flex h-10 items-center whitespace-nowrap rounded-full px-4 text-[0.95rem] font-medium transition ${
                   active
-                    ? "bg-[var(--brand-dark)] text-white"
-                    : "text-[var(--muted)] hover:bg-[var(--brand-light)] hover:text-[var(--brand-blue)]"
+                    ? "bg-[rgba(17,24,39,0.08)] text-[var(--ink)]"
+                    : "text-[var(--muted)] hover:bg-[rgba(31,78,140,0.06)] hover:text-[var(--brand-blue)]"
                 }`}
               >
                 {item.label}
@@ -68,18 +68,11 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/kontakt"
-            className="button-primary hidden rounded-full px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 md:inline-flex"
-          >
-            Gespräch anfragen
-          </Link>
-
+        <div className="flex shrink-0 items-center lg:hidden">
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white p-3 text-[var(--ink)] lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(31,78,140,0.14)] bg-white text-[var(--ink)] lg:hidden"
             aria-expanded={open}
             aria-label="Navigation öffnen"
           >
@@ -90,7 +83,7 @@ export function SiteHeader() {
 
       {open ? (
         <div className="border-t border-black/5 bg-white lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col px-5 py-4 md:px-8">
+          <nav className="site-shell flex flex-col gap-1 py-4">
             {navItems.map((item) => {
               const active = pathname === item.href;
 
@@ -98,9 +91,9 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`rounded-2xl px-4 py-3 text-base transition ${
+                  className={`inline-flex min-h-[3rem] items-center rounded-2xl px-4 text-base transition ${
                     active
-                      ? "bg-[var(--brand-dark)] text-white"
+                      ? "bg-[rgba(17,24,39,0.08)] text-[var(--ink)]"
                       : "text-[var(--muted)] hover:bg-[var(--brand-light)] hover:text-[var(--brand-blue)]"
                   }`}
                 >
@@ -108,12 +101,6 @@ export function SiteHeader() {
                 </Link>
               );
             })}
-            <Link
-              href="/kontakt"
-              className="button-primary mt-3 inline-flex justify-center rounded-full px-5 py-3 text-sm font-semibold"
-            >
-              Gespräch anfragen
-            </Link>
           </nav>
         </div>
       ) : null}

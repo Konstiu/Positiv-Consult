@@ -1,12 +1,13 @@
 import { PageHeader } from "@/components/page-header";
 import { StatsStrip } from "@/components/stats-strip";
 import { createMetadata } from "@/lib/metadata";
-import { companyStory, sourceNotes } from "@/lib/site-data";
+import { companyStory, teamContacts } from "@/lib/site-data";
+import { ContactCard } from "@/components/contact-card";
 
 export const metadata = createMetadata({
   title: "Über uns",
   description:
-    "Über POSITIVconsult: Unternehmensberatung aus Wien mit über 20 Jahren Erfahrung, rund 250 Projekten und internationaler Perspektive.",
+    "Über POSITIVconsult: erfahrene Unternehmensberatung aus Wien mit langjähriger Erfahrung und internationaler Perspektive.",
   path: "/ueber-uns",
 });
 
@@ -16,12 +17,12 @@ export default function UeberUnsPage() {
       <PageHeader
         eyebrow="Über uns"
         title="Erfahrung, Klarheit und Umsetzungsnähe als Beratungsstandard."
-        description="POSITIVconsult ist laut bestehender Website eine Unternehmensberatung aus Wien mit Fokus auf Digitalisierung, Marketing und Vertrieb. Im Zentrum steht das Erzielen von Wachstum."
+        description="POSITIVconsult ist eine Unternehmensberatung aus Wien mit Fokus auf Strategie, Digitalisierung, Marketing und Vertrieb. Im Zentrum stehen persönliche Zusammenarbeit, klare Struktur und wirksame Umsetzung."
         highlights={[
           "Sitz in Wien",
           "25 Jahre Berufserfahrung im digitalen Umfeld",
           "Beratung für Konzerne, KMU, Startups und EPU",
-          "Arbeit meist direkt mit Eigentümer oder Geschäftsführung",
+          "Arbeit direkt mit Eigentümer:innen und Geschäftsführung",
         ]}
       />
 
@@ -35,10 +36,10 @@ export default function UeberUnsPage() {
             Beratung für Entscheider
           </h2>
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-            Die Altwebsite beschreibt POSITIVconsult als Beratungsunternehmen,
-            das Wachstum in den Mittelpunkt stellt. Ob Unternehmensgründung,
-            Eintritt in weitere Märkte, neue Zielgruppen oder neue Produkte:
-            Konzepte werden entwickelt und auf Wunsch auch umgesetzt.
+            Seit 2004 begleitet POSITIVconsult Unternehmen in Phasen, in denen
+            Wachstum, Marktposition, Vertrieb oder digitale Entwicklung neu
+            justiert werden müssen. Die Beratung ist persönlich, direkt und
+            auf Wirkung ausgerichtet.
           </p>
         </article>
         <article className="surface-card p-6 md:p-8">
@@ -46,15 +47,14 @@ export default function UeberUnsPage() {
             Erfahrung in Breite und Tiefe
           </h2>
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-            Die bestehende Website spricht von Unternehmen aus
-            unterschiedlichsten Branchen, national und international. Als
-            belastbare Kennzahlen werden 250 Projekte, 150 Kunden und Erfahrung
-            in 7 Ländern genannt.
+            Zwei erfahrene Partner arbeiten direkt mit Eigentümer:innen,
+            Geschäftsführung und Entscheidungsteams. Das sorgt für kurze Wege,
+            Verbindlichkeit und einen klaren Blick auf das Wesentliche.
           </p>
         </article>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-8 md:px-8 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="site-shell grid gap-5 py-8 lg:grid-cols-[1.05fr_0.95fr]">
         <article className="surface-card p-6 md:p-8">
           <h2 className="font-serif text-3xl font-semibold text-[var(--ink)]">
             Entwicklungsschritte
@@ -75,19 +75,17 @@ export default function UeberUnsPage() {
             ))}
           </div>
         </article>
-        <article className="surface-card p-6 md:p-8">
-          <h2 className="font-serif text-3xl font-semibold text-[var(--ink)]">
-            Quellen- und Prüfhinweis
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-            {sourceNotes.website}
-          </p>
-          <p className="mt-4 rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
-            TODO: Falls sich Eigentumsverhältnisse, Schwerpunkte, Rollen oder
-            historische Angaben geändert haben, sollte diese Seite vor dem
-            Livegang redaktionell geprüft werden.
-          </p>
-        </article>
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
+          {teamContacts.map((person) => (
+            <ContactCard
+              key={person.email}
+              name={person.name}
+              role={person.role}
+              email={person.email}
+              phone={person.phone}
+            />
+          ))}
+        </div>
       </section>
     </>
   );

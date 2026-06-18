@@ -78,7 +78,7 @@ const serviceBlocks = [
     problem:
       "Markteintritte sind oft komplex, weil lokale Marktlogiken, Partner und Prioritäten zusammengebracht werden müssen.",
     approach:
-      "Mit internationalen Partnern begleitet POSITIVconsult Markteintritte laut Altwebsite unter anderem in die USA, nach Brasilien, Deutschland, die Schweiz und China.",
+      "Mit internationalen Partnern begleitet POSITIVconsult Markteintritte unter anderem in die USA, nach Brasilien, Deutschland, die Schweiz und China.",
     result:
       "Bessere Vorbereitung und strukturiertere Entscheidungen bei Internationalisierungsvorhaben.",
   },
@@ -107,8 +107,8 @@ export default function LeistungenPage() {
     <>
       <PageHeader
         eyebrow="Leistungen"
-        title="Alle öffentlich erkennbaren Leistungsbereiche der bisherigen Website, neu strukturiert."
-        description="Die neue Leistungsseite übernimmt die vorhandenen Themen der Altwebsite, ordnet sie klarer und formuliert sie moderner: mit Problem, Beratungsansatz und erwartetem Nutzen."
+        title="Leistungen für Markt, Wachstum und digitale Entwicklung."
+        description="POSITIVconsult begleitet Unternehmen in Strategie, Vertrieb, Marketing, Digitalisierung, E-Commerce, Förderthemen und AI Consulting — strukturiert, pragmatisch und umsetzungsnah."
         highlights={[
           "Strategie, Kampagnen und Vertrieb",
           "Online Marketing, E-Commerce und Digitalisierung",

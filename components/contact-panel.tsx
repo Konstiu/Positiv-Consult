@@ -1,72 +1,40 @@
 import Link from "next/link";
 
-import {
-  addressLines,
-  contactEmail,
-  contactPhone,
-  secondaryContactEmail,
-  secondaryContactPhone,
-} from "@/lib/site-data";
+import { ContactCard } from "@/components/contact-card";
+import { addressLines, teamContacts } from "@/lib/site-data";
 
 export function ContactPanel() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl gap-8 px-5 py-18 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start md:py-24">
-      <div className="space-y-6">
+    <section className="site-shell section-space grid gap-10">
+      <div className="max-w-3xl space-y-6">
         <span className="eyebrow">Kontakt</span>
         <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] md:text-5xl">
-          Persönlich, klar und direkt in Wien.
+          Lassen Sie uns über Ihr nächstes Vorhaben sprechen.
         </h2>
         <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
-          Wenn ein Strategie-, Wachstums-, Digitalisierungs- oder
-          AI-Vorhaben konkret werden soll, ist ein erstes Gespräch der
-          sinnvollste Startpunkt.
+          Ob Strategie, Digitalisierung, Vertrieb, E-Commerce, Förderthemen
+          oder AI Consulting — wir klären gemeinsam, wo POSITIVconsult sinnvoll
+          unterstützen kann.
         </p>
+        <p className="text-sm text-[var(--muted)]">{addressLines.join(", ")}</p>
       </div>
 
-      <div className="surface-card space-y-5 p-6 md:p-8">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-            E-Mail
-          </p>
-          <a
-            href={`mailto:${contactEmail}`}
-            className="mt-2 block text-lg font-semibold text-[var(--ink)]"
-          >
-            {contactEmail}
-          </a>
-          <a
-            href={`mailto:${secondaryContactEmail}`}
-            className="mt-1 block text-sm text-[var(--muted)]"
-          >
-            {secondaryContactEmail}
-          </a>
-        </div>
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-            Telefon
-          </p>
-          <a
-            href={`tel:${contactPhone}`}
-            className="mt-2 block text-lg font-semibold text-[var(--ink)]"
-          >
-            {contactPhone}
-          </a>
-          <a
-            href={`tel:${secondaryContactPhone}`}
-            className="mt-1 block text-sm text-[var(--muted)]"
-          >
-            {secondaryContactPhone}
-          </a>
-        </div>
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-            Standort
-          </p>
-          <p className="mt-2 text-base text-[var(--ink)]">{addressLines.join(", ")}</p>
-        </div>
+      <div className="grid gap-5 md:grid-cols-2">
+        {teamContacts.map((person) => (
+          <ContactCard
+            key={person.email}
+            name={person.name}
+            role={person.role}
+            email={person.email}
+            phone={person.phone}
+          />
+        ))}
+      </div>
+
+      <div className="pt-1">
         <Link
           href="/kontakt"
-          className="button-primary inline-flex rounded-full px-5 py-3 text-sm font-semibold"
+          className="button-secondary px-5 text-sm font-semibold"
         >
           Kontaktseite öffnen
         </Link>

@@ -50,69 +50,69 @@ export const navItems: NavItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "25", label: "Jahre Berufserfahrung" },
-  { value: "250", label: "begleitete Projekte" },
-  { value: "150", label: "Kunden und Auftraggeber" },
-  { value: "7", label: "Länder Projekterfahrung" },
+  { value: "25+", label: "Jahre Berufserfahrung" },
+  { value: "250+", label: "Projekte" },
+  { value: "150+", label: "Kunden" },
+  { value: "7", label: "Länder" },
 ];
 
 export const coreServices: ServiceItem[] = [
   {
     title: "Strategie & Wachstum",
     description:
-      "Positionierung, Strategie und Wachstumslogik für Unternehmen, die neue Märkte, Zielgruppen, Produkte oder Entwicklungsschritte fundiert angehen wollen.",
+      "Wir schärfen Positionierung, Zielgruppen, Marktchancen und Wachstumslogik — als Grundlage für bessere Entscheidungen.",
     href: "/leistungen",
-    points: ["Positionierung", "Strategieentwicklung", "Wachstumsfelder"],
+    points: ["Positionierung", "Zielgruppen", "Wachstumslogik"],
   },
   {
-    title: "Kampagnen & Marktansprache",
+    title: "Marketing & Kampagnen",
     description:
-      "Marketing- und Kommunikationsmaßnahmen werden an die Realität digitaler Märkte angepasst und entlang klarer Ziele ausgerichtet.",
+      "Wir entwickeln Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Markt und zu digitalen Kanälen passen.",
     href: "/leistungen",
-    points: ["Kampagnen", "Digitale Kommunikation", "Content & Reichweite"],
+    points: ["Kommunikation", "Kampagnen", "Digitale Kanäle"],
   },
   {
-    title: "Vertrieb",
+    title: "Vertrieb & Marktbearbeitung",
     description:
-      "Vertriebsstruktur, Verkaufsaktivitäten und Marktbearbeitung werden so aufgesetzt, dass sie effizienter, klarer und skalierbarer werden.",
+      "Wir unterstützen beim Aufbau effizienter Vertriebsstrukturen und bei der Optimierung laufender Verkaufsaktivitäten.",
     href: "/leistungen",
-    points: ["Vertriebsstruktur", "Verkaufsaktivitäten", "Optimierung im Alltag"],
+    points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
   },
   {
-    title: "Online Marketing & E-Commerce",
+    title: "Digitalisierung & E-Commerce",
     description:
-      "Website, Content Marketing, Social Media und E-Commerce werden aus unternehmerischer Perspektive betrachtet und weiterentwickelt.",
+      "Wir helfen, digitale Prozesse, Online-Marketing, Websites und E-Commerce strategisch sinnvoll weiterzuentwickeln.",
     href: "/leistungen",
-    points: ["Website", "Social Media", "E-Commerce"],
+    points: ["Digitale Prozesse", "Websites", "E-Commerce"],
   },
   {
-    title: "Digitalisierung & AI",
+    title: "AI Consulting",
     description:
-      "Digitale Transformation und KI werden nicht als Selbstzweck verstanden, sondern als Hebel für bessere Prozesse, Kommunikation und Wachstum.",
-    href: "/digitalisierung",
-    points: ["Digitale Transformation", "AI Consulting", "Umsetzungsbegleitung"],
+      "Wir identifizieren sinnvolle KI-Anwendungsfälle, priorisieren Use Cases und begleiten Pilotierung und Einführung mit klarem Business-Fokus.",
+    href: "/ai-consulting",
+    points: ["Use Cases", "Pilotierung", "Einführung"],
   },
   {
-    title: "Ausschreibungen, Startups & Internationales",
+    title: "Förderberatung",
     description:
-      "Von Lieferantenauswahl über Investor-Pitches bis zum Markteintritt in ausgewählte Länder: Projekte werden strukturiert vorbereitet und begleitet.",
-    href: "/leistungen",
-    points: ["Ausschreibungen", "Startup-Beratung", "Markteintritt"],
+      "Wir prüfen, ob Fördermöglichkeiten zu Strategie-, Digitalisierungs- oder Innovationsvorhaben passen.",
+    href: "/foerderungen",
+    points: ["Einordnung", "Passung", "Projektbezug"],
   },
 ];
 
 export const expertiseAreas = [
-  "Unternehmensberatung aus Wien mit Fokus auf Digitalisierung, Marketing und Vertrieb",
-  "Wachstum durch Strategie, Marktarbeit und umsetzbare Konzepte",
-  "Arbeit direkt mit Eigentümer:innen, Geschäftsführung und Entscheidern",
-  "National und international tätig, mit Projekterfahrung in 7 Ländern",
+  "Unternehmensberatung aus Wien mit zwei erfahrenen Ansprechpartner:innen",
+  "Strategie, Marketing, Vertrieb und digitale Transformation aus einer Hand",
+  "Direkte Zusammenarbeit mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
+  "Persönlich, pragmatisch und mit Blick auf messbare Wirkung",
 ];
 
 export const homeFaqs: FaqItem[] = [
   {
     question: "Für welche Unternehmen ist POSITIVconsult die richtige Beratung?",
     answer:
-      "Die Altwebsite nennt nationale und internationale Konzerne ebenso wie Startups sowie kleine und mittlere Unternehmen in Österreich und im Ausland. Die Beratung richtet sich vor allem an Eigentümer:innen und Geschäftsführung.",
+      "POSITIVconsult arbeitet mit EPU, KMU und etablierten Unternehmen. Besonders wertvoll ist die Zusammenarbeit dort, wo Eigentümer:innen, Geschäftsführung oder Entscheidungsteams Klarheit, Struktur und Umsetzungsstärke brauchen.",
   },
   {
     question: "Welche Themen stehen typischerweise am Anfang eines Projekts?",
@@ -122,12 +122,12 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "Wie arbeitet POSITIVconsult?",
     answer:
-      "Laut bestehender Website werden Konzepte gemeinsam entwickelt und auf Wunsch auch umgesetzt. Das Beratungsverständnis verbindet Analyse, Strategie und operative Begleitung.",
+      "Die Zusammenarbeit verbindet Analyse, strategische Klarheit und konkrete Umsetzung. Ziel ist nicht mehr Komplexität, sondern bessere Entscheidungen und spürbare Fortschritte im Alltag.",
   },
   {
     question: "Kann Förderberatung mit Digitalisierungs- oder AI-Projekten verbunden werden?",
     answer:
-      "Ja. Die bestehende Website nennt Förderberatung seit 2017 sowie Beraterpool-Zugehörigkeiten bei WKW, WK Niederösterreich und KMU.DIGITAL. Fördermöglichkeiten müssen jedoch stets projektbezogen geprüft werden.",
+      "Ja. Förderthemen können sinnvoll sein, wenn sie zu einem realen Vorhaben passen. Entscheidend ist immer die inhaltliche Passung zum Projekt und nicht die Förderung als Selbstzweck.",
   },
 ];
 
@@ -138,16 +138,16 @@ export const footerLinks = [
 
 export const testimonials = [
   {
-    title: "Mehrere hundert begleitete Projekte",
-    text: "Die bestehende Website spricht von mehreren hundert Projekten sowie von 250 Projekten als Kennzahl. Diese Erfahrung bildet die Basis für strategische und operative Beratung.",
+    title: "Langjährige Projekterfahrung",
+    text: "Seit vielen Jahren begleitet POSITIVconsult Unternehmen in Strategie, Marktbearbeitung, Digitalisierung und Wachstum.",
   },
   {
-    title: "Erfahrung im digitalen Umfeld",
-    text: "Die Altwebsite nennt 25 Jahre Berufserfahrung im digitalen Umfeld und betont laufendes Trendscouting in digitaler Kommunikation und E-Commerce.",
+    title: "Digitale Kompetenz mit Business-Fokus",
+    text: "Digitalisierung, E-Commerce und AI Consulting werden aus unternehmerischer Sicht gedacht und in realistische Umsetzung übersetzt.",
   },
   {
-    title: "Zusammenarbeit direkt mit Entscheidern",
-    text: "POSITIVconsult arbeitet laut bestehender Website meistens direkt für Eigentümer oder Geschäftsführung und begleitet Kunden häufig über mehrere Jahre.",
+    title: "Direkte Zusammenarbeit mit Entscheidern",
+    text: "Die Beratung erfolgt persönlich, direkt und mit kurzen Wegen zwischen Analyse, Entscheidung und Umsetzung.",
   },
 ];
 
@@ -181,19 +181,21 @@ export const companyStory: TimelineItem[] = [
 ];
 
 export const fundingFacts = [
-  "Dr. Heidrun Unterweger und Mag. Marc Isop werden auf der Altwebsite als Teil des Beraterpools der Wirtschaftskammer Wien genannt.",
-  "Dr. Heidrun Unterweger wird dort als incite zertifizierte Digital Consultant (CDC) sowie eCommerce & Social Media Consultant im KMU.DIGITAL-Umfeld genannt.",
-  "Dr. Heidrun Unterweger wird außerdem als Teil des Beraterpools der Wirtschaftskammer Niederösterreich angeführt.",
+  "Beraterpool der Wirtschaftskammer Wien",
+  "incite zertifizierte Digital Consultant (CDC) sowie eCommerce & Social Media Consultant im KMU.DIGITAL-Umfeld",
+  "Beraterpool der Wirtschaftskammer Niederösterreich",
 ];
 
 export const teamContacts = [
   {
     name: "Dr. Heidrun Unterweger",
+    role: "POSITIVconsult",
     phone: contactPhone,
     email: contactEmail,
   },
   {
     name: "Mag. Marc Isop",
+    role: "POSITIVconsult",
     phone: secondaryContactPhone,
     email: secondaryContactEmail,
   },
@@ -217,10 +219,3 @@ export const clientCategories: ClientCategory[] = [
     names: ["Mochi GmbH", "Cafe Burggasse 24", "Cafe Kriemhild", "Restaurant Zsom"],
   },
 ];
-
-export const sourceNotes = {
-  website:
-    "Öffentlich auslesbare Inhalte von www.positiv-consult.at, Hauptseite sowie Impressum und Datenschutz, abgerufen am 18.06.2026.",
-  privacy:
-    "Die bestehende Datenschutzerklärung wirkt generatorbasiert und enthält allgemeine Standardbausteine. Vor Livegang der neuen Website ist eine rechtliche und technische Prüfung erforderlich.",
-};

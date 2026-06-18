@@ -8,20 +8,18 @@ import { ServiceCard } from "@/components/service-card";
 import { StatsStrip } from "@/components/stats-strip";
 import { createMetadata } from "@/lib/metadata";
 import {
-  companyStory,
+  clientCategories,
   coreServices,
   expertiseAreas,
   homeFaqs,
-  sourceNotes,
   serviceProcess,
-  teamContacts,
   testimonials,
 } from "@/lib/site-data";
 
 export const metadata = createMetadata({
   title: "Unternehmensberatung Wien für Digitalisierung, Marketing und Vertrieb",
   description:
-    "POSITIVconsult ist eine Unternehmensberatung aus Wien mit Fokus auf Digitalisierung, Marketing, Vertrieb, Strategie, Förderberatung, E-Commerce und AI Consulting.",
+    "POSITIVconsult ist eine Unternehmensberatung aus Wien für Strategie, Marketing, Vertrieb, Digitalisierung, E-Commerce, Förderthemen und AI Consulting.",
   path: "/",
   keywords: [
     "Unternehmensberatung Wien",
@@ -33,38 +31,61 @@ export const metadata = createMetadata({
 });
 
 export default function Home() {
+  const featuredClients = clientCategories.flatMap((group) => group.names).slice(0, 8);
+
   return (
     <>
       <section className="hero-grid overflow-hidden">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-end">
+        <div className="site-shell grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:py-24">
           <div className="fade-up space-y-8">
-            <span className="eyebrow">Strategie. Umsetzung. Wirkung.</span>
-            <div className="space-y-6">
-              <h1 className="max-w-5xl text-balance font-serif text-5xl font-semibold tracking-tight text-[var(--ink)] sm:text-6xl lg:text-7xl">
-                Unternehmensberatung aus Wien für Digitalisierung, Marketing,
-                Vertrieb und nachhaltiges Wachstum.
+            <span className="eyebrow">Unternehmensberatung aus Wien</span>
+            <div className="space-y-5">
+              <h1 className="max-w-4xl text-balance font-serif text-5xl font-semibold tracking-tight text-[var(--ink)] sm:text-6xl lg:text-[4.25rem]">
+                Strategie, Digitalisierung und Wachstum für Unternehmen, die
+                weiterkommen wollen.
               </h1>
               <p className="max-w-2xl text-pretty text-lg leading-8 text-[var(--muted)] md:text-xl">
-                POSITIVconsult unterstützt Unternehmen bei Strategie,
-                Marktbearbeitung, digitaler Transformation, E-Commerce,
-                Förderthemen und AI Consulting. Konzepte werden nicht nur
-                entwickelt, sondern auf Wunsch auch in die Umsetzung gebracht.
+                POSITIVconsult ist eine Unternehmensberatung aus Wien. Zwei
+                erfahrene Ansprechpartner begleiten Unternehmen bei Positionierung,
+                Marketing, Vertrieb, digitaler Transformation, E-Commerce,
+                Förderthemen und AI Consulting — von der Analyse über das
+                Konzept bis zur Umsetzung.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/kontakt"
-                className="button-primary inline-flex justify-center rounded-full px-6 py-3.5 text-sm font-semibold"
+                className="button-primary px-6 text-sm font-semibold"
               >
-                Erstgespräch anfragen
+                Erstgespräch vereinbaren
               </Link>
               <Link
                 href="/leistungen"
-                className="button-secondary inline-flex justify-center rounded-full px-6 py-3.5 text-sm font-semibold"
+                className="button-secondary px-6 text-sm font-semibold"
               >
                 Leistungen ansehen
               </Link>
+            </div>
+            <div className="grid max-w-2xl grid-cols-2 gap-3 pt-2 md:grid-cols-4">
+              {[
+                ["25+", "Jahre"],
+                ["250+", "Projekte"],
+                ["150+", "Kunden"],
+                ["7", "Länder"],
+              ].map(([value, label]) => (
+                <div
+                  key={label}
+                  className="rounded-[1.1rem] border border-[rgba(17,24,39,0.08)] bg-white/78 px-4 py-3 text-center sm:text-left"
+                >
+                  <p className="font-serif text-2xl font-semibold text-[var(--brand-red)]">
+                    {value}
+                  </p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                    {label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -73,19 +94,18 @@ export default function Home() {
             <div className="absolute -left-12 bottom-0 h-32 w-32 rounded-full bg-[rgba(31,78,140,0.18)] blur-3xl" />
             <div className="relative space-y-7">
               <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--muted)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)]">
                   Wofür POSITIVconsult steht
                 </p>
                 <p className="text-3xl font-serif font-semibold text-[var(--ink)]">
-                  Wachstum durch klare Positionierung, wirksame Marktarbeit und
-                  digitale Entwicklung.
+                  Persönliche Beratung, klare Struktur und Umsetzungsstärke.
                 </p>
               </div>
               <div className="grid gap-3">
                 {expertiseAreas.map((item) => (
                   <div
                     key={item}
-                    className="rounded-[1.35rem] border border-black/8 bg-white/72 px-5 py-4 text-sm leading-7 text-[var(--ink)]"
+                    className="rounded-[1.35rem] border border-black/8 bg-white/80 px-5 py-4 text-sm leading-7 text-[var(--ink)]"
                   >
                     {item}
                   </div>
@@ -96,19 +116,19 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="py-8 md:py-10">
+      <div className="pb-8 md:pb-10">
         <StatsStrip />
       </div>
 
-      <section className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 py-18 md:px-8 md:py-24">
+      <section className="site-shell section-space flex flex-col gap-10">
         <SectionHeading
-          eyebrow="Leistungsfelder"
-          title="Leistungen, die aus der bestehenden POSITIVconsult-Positionierung abgeleitet und neu strukturiert wurden."
-          description="Die bisherige Website nennt Strategie, Kampagnen, Vertrieb, Online Marketing, E-Commerce, Startups, Ausschreibungen, Internationalisierung, Förderberatung sowie seit 2024 AI Consulting. Diese Themen sind hier moderner und klarer gegliedert."
+          eyebrow="Leistungen"
+          title="Beratungsfelder mit klarer Struktur und operativer Relevanz."
+          description="POSITIVconsult begleitet Unternehmen dort, wo Positionierung, Markt, Vertrieb und digitale Entwicklung konkret werden."
           action={
             <Link
               href="/leistungen"
-              className="button-secondary inline-flex rounded-full px-5 py-3 text-sm font-semibold"
+              className="button-secondary inline-flex rounded-full px-5 text-sm font-semibold"
             >
               Alle Leistungen
             </Link>
@@ -121,11 +141,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-8 px-5 py-18 md:px-8 lg:grid-cols-[0.95fr_1.05fr] md:py-24">
+      <section className="site-shell section-space grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <SectionHeading
-          eyebrow="Arbeitsweise"
-          title="Von der Analyse über das Konzept bis zur Umsetzung."
-          description="Die bestehende Website beschreibt POSITIVconsult als Beratungshaus, das Lösungen entwickelt und diese auf Wunsch auch umsetzt. Daraus ergibt sich ein klarer, pragmatischer Projektmodus."
+          eyebrow="Positionierung"
+          title="Beratung mit Erfahrung, Struktur und Umsetzungskraft."
+          description="Seit 2004 unterstützt POSITIVconsult Unternehmen dabei, Wachstum klarer zu planen, Märkte besser zu bearbeiten und digitale Chancen sinnvoll zu nutzen. Als erfahrene Unternehmensberatung aus Wien arbeiten wir direkt mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams — pragmatisch, persönlich und mit Blick auf messbare Wirkung."
         />
         <div className="grid gap-4">
           {serviceProcess.map((item) => (
@@ -136,7 +156,7 @@ export default function Home() {
               <h3 className="mt-3 font-serif text-2xl font-semibold text-[var(--ink)]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              <p className="mt-3 text-base leading-7 text-[var(--muted)]">
                 {item.text}
               </p>
             </article>
@@ -144,11 +164,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 py-18 md:px-8 md:py-24">
+      <section className="site-shell section-space flex flex-col gap-10">
         <SectionHeading
           eyebrow="Erfahrung"
-          title="Substanz aus 25 Jahren digitalem Umfeld und mehreren hundert Projekten."
-          description="Die Altwebsite nennt 25 Jahre Berufserfahrung, 250 Projekte, 150 Kunden und Projekterfahrung in 7 Ländern. Diese Zahlen werden hier bewusst nur dort verwendet, wo sie öffentlich belegt waren."
+          title="Vertrauen entsteht durch Erfahrung, Klarheit und persönliche Begleitung."
+          description="Zwei erfahrene Partner begleiten Projekte direkt. Das schafft kurze Wege, Verbindlichkeit und eine Beratung, die strategisch denkt und operativ anschlussfähig bleibt."
           align="center"
         />
         <div className="grid gap-5 lg:grid-cols-3">
@@ -157,7 +177,7 @@ export default function Home() {
               <h3 className="font-serif text-2xl font-semibold text-[var(--ink)]">
                 {item.title}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+              <p className="mt-4 text-base leading-7 text-[var(--muted)]">
                 {item.text}
               </p>
             </article>
@@ -165,62 +185,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-8 px-5 py-6 md:px-8 lg:grid-cols-[0.95fr_1.05fr]">
-        <SectionHeading
-          eyebrow="Geschichte"
-          title="Entwicklung der Beratungsschwerpunkte seit 2004."
-          description="Die bisherige Website enthält eine klare Zeitleiste der fachlichen Erweiterungen. Sie zeigt, wie aus klassischer Unternehmensberatung schrittweise Digital-, E-Commerce-, Förder- und AI-Kompetenz aufgebaut wurde."
-        />
-        <div className="grid gap-3">
-          {companyStory.map((item) => (
-            <article key={`${item.year}-${item.title}`} className="surface-card px-5 py-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)]">
-                {item.year}
-              </p>
-              <p className="mt-2 text-base leading-7 text-[var(--ink)]">{item.title}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-2 md:py-24">
-        <article className="surface-card p-6 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-            Direkter Kontakt
+      <section className="site-shell section-space flex flex-col gap-8">
+        <div className="max-w-3xl space-y-4">
+          <span className="eyebrow">Kunden & Branchen</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] md:text-5xl">
+            Erfahrung in unterschiedlichen Branchen und Unternehmensrealitäten.
+          </h2>
+          <p className="text-base leading-8 text-[var(--muted)] md:text-lg">
+            POSITIVconsult arbeitet mit Unternehmen aus Handel, Dienstleistung,
+            Bildung, Institutionen und Gastronomie. Ein kompakter Auszug:
           </p>
-          <div className="mt-5 space-y-4">
-            {teamContacts.map((person) => (
-              <div key={person.email} className="rounded-[1.35rem] border border-black/8 bg-white/70 px-4 py-4">
-                <p className="font-semibold text-[var(--ink)]">{person.name}</p>
-                <a href={`tel:${person.phone}`} className="mt-2 block text-sm text-[var(--muted)]">
-                  {person.phone}
-                </a>
-                <a href={`mailto:${person.email}`} className="block text-sm text-[var(--muted)]">
-                  {person.email}
-                </a>
-              </div>
+        </div>
+        <div className="surface-card p-6 md:p-8">
+          <div className="flex flex-wrap gap-3">
+            {featuredClients.map((name) => (
+              <span
+                key={name}
+                className="rounded-full border border-[rgba(31,78,140,0.16)] bg-[var(--brand-light)] px-4 py-2 text-sm font-medium text-[var(--ink)]"
+              >
+                {name}
+              </span>
             ))}
           </div>
-        </article>
-        <article className="surface-card p-6 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-            Quellenhinweis
-          </p>
-          <p className="mt-5 text-sm leading-7 text-[var(--muted)]">
-            {sourceNotes.website}
-          </p>
-          <p className="mt-4 rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
-            TODO: Einzelne Aussagen, Zahlen und Kontaktdaten sollten vor dem
-            Livegang noch einmal gegen den aktuellen Stand des Unternehmens
-            geprüft werden.
-          </p>
-        </article>
+        </div>
       </section>
 
       <CtaSection
         eyebrow="AI & Digitalisierung"
-        title="Sie wollen Digitalisierung oder KI strukturiert einordnen und sinnvoll umsetzen?"
-        description="Die Altwebsite nennt digitale Transformation, E-Commerce, digitale Kommunikation und seit 2024 AI Consulting als Kernfelder. Die neue Website übersetzt diese Themen in ein klares, seriöses Leistungsbild."
+        title="Digitale Vorhaben brauchen Klarheit, Priorität und saubere Umsetzung."
+        description="Ob Digitalisierungsprojekt, E-Commerce-Weiterentwicklung oder AI Consulting: Wir helfen dabei, Chancen realistisch einzuordnen und daraus tragfähige Schritte zu machen."
         primaryLabel="AI Consulting ansehen"
         primaryHref="/ai-consulting"
         secondaryLabel="Digitalisierung ansehen"
@@ -229,7 +222,7 @@ export default function Home() {
 
       <FaqSection
         title="Häufige Fragen vor einem Erstgespräch"
-        description="Diese Fragen kommen häufig auf, wenn ein Beratungsprojekt vorbereitet oder neu bewertet wird."
+        description="Diese Fragen stehen oft am Anfang, wenn ein Vorhaben geschärft oder neu bewertet werden soll."
         items={homeFaqs}
       />
 

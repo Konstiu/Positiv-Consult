@@ -23,7 +23,7 @@ export default function DigitalisierungPage() {
       <PageHeader
         eyebrow="Digitalisierung"
         title="Digitalisierung, die Prozesse verbessert statt nur Tools zu ergänzen."
-        description="Die bestehende Website nennt digitale Transformation, digitale Kommunikation, Online Marketing und seit 2014 auch Digital Consulting. Die neue Seite verdichtet diese Felder zu einem klareren Digitalisierungsangebot."
+        description="Digitalisierung ist dann wirksam, wenn Prozesse, Marktbearbeitung und Systeme sinnvoll zusammenarbeiten. Genau darauf richtet POSITIVconsult den Blick."
         highlights={focusAreas}
       />
 
@@ -35,8 +35,8 @@ export default function DigitalisierungPage() {
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
             Digitalisierung entfaltet dann Wirkung, wenn Abläufe sauber
             strukturiert, Informationswege vereinfacht und operative Reibung
-            reduziert werden. Die Altwebsite verknüpft dieses Thema eng mit
-            Marketing, Vertrieb, E-Commerce und Wachstum.
+            reduziert werden. Genau dort entsteht häufig der größte Hebel für
+            Wachstum, Vertrieb und Marktwirkung.
           </p>
         </article>
         <article className="surface-card p-6 md:p-8">
@@ -46,8 +46,7 @@ export default function DigitalisierungPage() {
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
             Die Auswahl von Systemen und Lösungen folgt einem klaren
             Soll-Zustand. Dadurch wird Digitalisierung steuerbar und
-            nachvollziehbar, statt Stückwerk zu bleiben. Die neue Struktur
-            macht daraus ein nachvollziehbares Beratungsbild für Entscheider.
+            nachvollziehbar, statt Stückwerk zu bleiben.
           </p>
         </article>
       </section>

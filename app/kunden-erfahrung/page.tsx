@@ -16,7 +16,7 @@ export default function KundenErfahrungPage() {
       <PageHeader
         eyebrow="Kunden / Erfahrung"
         title="Nachvollziehbare Erfahrung statt dekorativer Referenzbehauptungen."
-        description="Die bisherige Website veröffentlicht Kennzahlen und eine umfangreiche Kundenliste. Die neue Seite übernimmt diese Informationen selektiv und sachlich, ohne künstliche Referenzinszenierung."
+        description="POSITIVconsult arbeitet mit Unternehmen aus unterschiedlichen Branchen und begleitet Projekte mit einem klaren Fokus auf Markt, Wachstum und Umsetzung."
       />
 
       <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-3 md:py-24">
@@ -34,16 +34,14 @@ export default function KundenErfahrungPage() {
 
       <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 py-4 md:px-8">
         <div className="max-w-3xl">
-          <span className="eyebrow">Öffentlich genannte Kunden</span>
+          <span className="eyebrow">Kunden & Branchen</span>
           <h2 className="mt-5 text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] md:text-5xl">
-            Ein zurückhaltend kuratierter Auszug aus der auf der Altwebsite
-            veröffentlichten Kundenliste.
+            Ein kompakter Auszug aus Unternehmen und Organisationen, mit denen
+            POSITIVconsult gearbeitet hat.
           </h2>
           <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-            Es werden bewusst keine Logos, Cases oder Aussagen ergänzt, die
-            öffentlich nicht belegbar waren. Die folgenden Namen stammen aus
-            der bestehenden Website und sollten vor dem Livegang nochmals auf
-            Aktualität geprüft werden.
+            Die Auswahl zeigt die Bandbreite der Branchen und Aufgabenfelder
+            von Handel über Dienstleistung bis zu Bildung und Institutionen.
           </p>
         </div>
         <div className="grid gap-5 lg:grid-cols-2">
