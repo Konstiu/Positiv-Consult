@@ -44,7 +44,7 @@ export function CtaSection({
             {secondaryLabel && secondaryHref ? (
               <Link
                 href={secondaryHref}
-                className="inline-flex min-h-[3rem] justify-center rounded-full border border-[rgba(223,234,248,0.26)] bg-white/6 px-5 text-sm font-semibold text-white hover:border-[var(--brand-blue-soft)] hover:bg-white/10"
+                className="inline-flex min-h-[3rem] items-center justify-center rounded-full border border-white/18 bg-transparent px-5 text-sm font-semibold text-white/92 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04)] hover:border-white/34 hover:bg-white/8 hover:text-white"
               >
                 {secondaryLabel}
               </Link>

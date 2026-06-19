@@ -45,7 +45,7 @@ export default function OpenGraphImage() {
             </div>
           </div>
           <div style={{ fontSize: 24, color: "#d7263d" }}>
-            Wien · 25 Jahre Erfahrung · 250 Projekte
+            Wien · 30 Jahre Erfahrung · 250 Projekte
           </div>
         </div>
       </div>

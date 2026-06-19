@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -13,12 +12,10 @@ export function SiteFooter() {
     <footer className="border-t border-black/5 bg-[var(--brand-dark)] text-[var(--paper)]">
       <div className="site-shell grid gap-10 py-14 md:grid-cols-[1.35fr_1fr_0.9fr]">
         <div className="space-y-4">
-          <Image
+          <img
             src="/brand/positivconsult-logo.png"
             alt={companyName}
-            width={175}
-            height={27}
-            className="h-auto w-[11rem]"
+            className="block h-auto w-[11rem]"
           />
           <p className="max-w-md text-sm leading-7 text-slate-300">
             Erfahrene Unternehmensberatung aus Wien mit Fokus auf Wachstum,

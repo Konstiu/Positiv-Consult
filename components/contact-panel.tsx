@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { ContactCard } from "@/components/contact-card";
 import { addressLines, teamContacts } from "@/lib/site-data";
 
@@ -30,15 +28,6 @@ export function ContactPanel() {
             photoUrl={person.photoUrl}
           />
         ))}
-      </div>
-
-      <div className="pt-1">
-        <Link
-          href="/kontakt"
-          className="button-secondary px-5 text-sm font-semibold"
-        >
-          Kontaktseite öffnen
-        </Link>
       </div>
     </section>
   );

@@ -12,23 +12,22 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
   return (
     <article className="surface-card card-stack min-h-[16.5rem] overflow-hidden p-0">
       {photoUrl ? (
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[var(--brand-light)]">
-          <Image
-            src={photoUrl}
-            alt={name}
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover object-center"
-            priority={false}
-          />
+        <div className="flex justify-center bg-white px-6 pt-6">
+          <div className="relative aspect-square w-full max-w-[12rem] overflow-hidden rounded-[1.5rem] bg-white">
+            <Image
+              src={photoUrl}
+              alt={name}
+              fill
+              sizes="192px"
+              className="object-cover object-center"
+              priority={false}
+            />
+          </div>
         </div>
       ) : null}
 
-      <div className="flex flex-1 flex-col p-6 md:p-7">
+      <div className="flex flex-1 flex-col items-center p-6 text-center md:p-7">
         <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
-            Ansprechpartner
-          </p>
           <div className="space-y-1">
             <h3 className="font-serif text-2xl font-semibold text-[var(--ink)]">
               {name}

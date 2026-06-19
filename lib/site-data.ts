@@ -48,7 +48,7 @@ export const addressLines = ["Mariahilfer Straße 101", "1060 Wien", "Österreic
 
 export const navItems: NavItem[] = [
   { href: "/", label: "Start" },
-  { href: "/leistungen", label: "Leistungen" },
+  { href: "/#leistungen", label: "Leistungen" },
   { href: "/ai-consulting", label: "AI Consulting" },
   { href: "/digitalisierung", label: "Digitalisierung" },
   { href: "/foerderungen", label: "Förderungen" },
@@ -58,7 +58,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "25+", label: "Jahre Berufserfahrung" },
+  { value: "30+", label: "Jahre Berufserfahrung" },
   { value: "250+", label: "Projekte" },
   { value: "150+", label: "Kunden" },
   { value: "7", label: "Länder" },
@@ -105,7 +105,7 @@ export const coreServices: ServiceItem[] = [
     description:
       "Wir prüfen, ob Fördermöglichkeiten zu Strategie-, Digitalisierungs- oder Innovationsvorhaben passen.",
     href: "/foerderungen",
-    points: ["Einordnung", "Passung", "Projektbezug"],
+    points: ["Einordnung", "Eignung", "Projektbezug"],
   },
 ];
 
@@ -214,18 +214,51 @@ export const teamContacts = [
 export const clientCategories: ClientCategory[] = [
   {
     category: "Handel",
-    names: ["BIPA", "Dorotheum", "Morawa", "Lobmeyr", "Depot", "Bikestore"],
+    names: [
+      "BIPA",
+      "Bikestore",
+      "Depot",
+      "Dorotheum",
+      "Gissinger",
+      "Intersport Alpensport",
+      "Lobmeyr",
+      "Morawa",
+    ],
   },
   {
     category: "Dienstleister",
-    names: ["ArtforArt", "Onlim GmbH", "SOL4 IT-Consulting GmbH", "Wallner & Partner", "Klimabündnis Oberösterreich"],
+    names: [
+      "ArtforArt",
+      "Herbanima",
+      "Kager Knapp Hausverwaltung",
+      "Klimabündnis Oberösterreich",
+      "Onlim GmbH",
+      "SOL4 IT-Consulting GmbH",
+      "Wallner & Partner",
+      "Wine & Partners",
+    ],
   },
   {
     category: "Bildung & Institutionen",
-    names: ["Medizinische Universität Wien", "KMU Akademie und Management AG", "WKO", "WIFI Wien", "WK Wien"],
+    names: [
+      "KMU Akademie und Management AG",
+      "Medizinische Universität Wien",
+      "WIFI Wien",
+      "Wirtschaftskammer Wien",
+      "WKO",
+      "WK Wien",
+    ],
   },
   {
     category: "Gastronomie",
-    names: ["Mochi GmbH", "Cafe Burggasse 24", "Cafe Kriemhild", "Restaurant Zsom"],
+    names: [
+      "Bellaria",
+      "Cafe Burggasse 24",
+      "Cafe Kriemhild",
+      "Finetime",
+      "Mochi GmbH",
+      "Orbis Reisen",
+      "Restaurant Zsom",
+    ],
   },
 ];

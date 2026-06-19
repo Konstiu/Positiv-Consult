@@ -20,7 +20,7 @@ export default function UeberUnsPage() {
         description="POSITIVconsult ist eine Unternehmensberatung aus Wien mit Fokus auf Strategie, Digitalisierung, Marketing und Vertrieb. Im Zentrum stehen persönliche Zusammenarbeit, klare Struktur und wirksame Umsetzung."
         highlights={[
           "Sitz in Wien",
-          "25 Jahre Berufserfahrung im digitalen Umfeld",
+          "30 Jahre Berufserfahrung im digitalen Umfeld",
           "Beratung für Konzerne, KMU, Startups und EPU",
           "Arbeit direkt mit Eigentümer:innen und Geschäftsführung",
         ]}

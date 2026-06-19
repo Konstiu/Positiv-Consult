@@ -31,7 +31,25 @@ export const metadata = createMetadata({
 });
 
 export default function Home() {
-  const featuredClients = clientCategories.flatMap((group) => group.names).slice(0, 8);
+  const featuredClientNames = [
+    "Intersport Alpensport",
+    "Klimabündnis Oberösterreich",
+    "Wirtschaftskammer Wien",
+    "Medizinische Universität Wien",
+    "Gissinger",
+    "Herbanima",
+    "Orbis Reisen",
+    "Kager Knapp Hausverwaltung",
+    "Finetime",
+    "Bellaria",
+    "Wine & Partners",
+  ];
+  const featuredClients = Array.from(
+    new Set([
+      ...featuredClientNames,
+      ...clientCategories.flatMap((group) => group.names),
+    ]),
+  ).slice(0, 14);
 
   return (
     <>
@@ -40,16 +58,15 @@ export default function Home() {
           <div className="fade-up space-y-8">
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
-              <h1 className="max-w-4xl text-balance font-serif text-5xl font-semibold tracking-tight text-[var(--ink)] sm:text-6xl lg:text-[4.25rem]">
-                Strategie, Digitalisierung und Wachstum für Unternehmen, die
-                weiterkommen wollen.
+              <h1 className="max-w-4xl text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl lg:text-[3.15rem]">
+                Strategie, Digitalisierung, Automatisierung und KI für moderne Unternehmen.
               </h1>
-              <p className="max-w-2xl text-pretty text-lg leading-8 text-[var(--muted)] md:text-xl">
+              <p className="max-w-2xl text-pretty text-base leading-7 text-[var(--muted)] md:text-lg">
                 POSITIVconsult ist eine Unternehmensberatung aus Wien. Zwei
-                erfahrene Ansprechpartner begleiten Unternehmen bei Positionierung,
-                Marketing, Vertrieb, digitaler Transformation, E-Commerce,
-                Förderthemen und AI Consulting — von der Analyse über das
-                Konzept bis zur Umsetzung.
+                erfahrene Ansprechpartner begleiten Unternehmen bei
+                Positionierung, Marketing, Vertrieb, digitaler Transformation,
+                E-Commerce, Förderthemen und AI Consulting — von der Analyse
+                über das Konzept bis zur Umsetzung.
               </p>
             </div>
 
@@ -67,34 +84,38 @@ export default function Home() {
                 Leistungen ansehen
               </Link>
             </div>
-            <p className="max-w-2xl text-sm font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
-              Persönliche Beratung, direkte Ansprechpartner und klare
-              Umsetzungsschritte.
-            </p>
           </div>
 
-          <div className="fade-up surface-card grid-lines relative overflow-hidden p-6 md:p-8">
-            <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[rgba(215,38,61,0.20)] blur-3xl" />
-            <div className="absolute -left-12 bottom-0 h-32 w-32 rounded-full bg-[rgba(31,78,140,0.18)] blur-3xl" />
-            <div className="relative space-y-7">
-              <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)]">
-                  Wofür POSITIVconsult steht
-                </p>
-                <p className="text-3xl font-serif font-semibold text-[var(--ink)]">
-                  Persönliche Beratung, klare Struktur und Umsetzungsstärke.
-                </p>
-              </div>
-              <div className="grid gap-3">
-                {expertiseAreas.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[1.35rem] border border-black/8 bg-white/80 px-5 py-4 text-sm leading-7 text-[var(--ink)]"
-                  >
-                    {item}
-                  </div>
+          <div className="fade-up max-w-xl lg:justify-self-end">
+            <div className="border-l border-[rgba(31,78,140,0.18)] pl-5 md:pl-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)]">
+                Persönlicher Ansatz
+              </p>
+              <ul className="mt-5 space-y-3">
+                {expertiseAreas.slice(1).map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-6 text-[var(--muted)]">
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                    />
+                    <span>{item}</span>
+                  </li>
                 ))}
-              </div>
+                <li className="flex items-start gap-3 text-sm leading-6 text-[var(--muted)]">
+                  <span
+                    aria-hidden="true"
+                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                  />
+                  <span>Am Puls der Zeit mit Blick auf konkrete Umsetzung</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm leading-6 text-[var(--muted)]">
+                  <span
+                    aria-hidden="true"
+                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                  />
+                  <span>Exzellentes Netzwerk und langjährige Partnerschaften</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -104,19 +125,11 @@ export default function Home() {
         <StatsStrip />
       </div>
 
-      <section className="site-shell section-space flex flex-col gap-10">
+      <section id="leistungen" className="site-shell section-space flex flex-col gap-10">
         <SectionHeading
           eyebrow="Leistungen"
           title="Beratungsfelder mit klarer Struktur und operativer Relevanz."
           description="POSITIVconsult begleitet Unternehmen dort, wo Positionierung, Markt, Vertrieb und digitale Entwicklung konkret werden."
-          action={
-            <Link
-              href="/leistungen"
-              className="button-secondary inline-flex rounded-full px-5 text-sm font-semibold"
-            >
-              Alle Leistungen
-            </Link>
-          }
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {coreServices.map((service) => (
