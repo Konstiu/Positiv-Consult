@@ -30,7 +30,7 @@ export default function AIConsultingPage() {
   return (
     <>
       <PageHeader
-        eyebrow="AI Consulting"
+        eyebrow="AI Consulting für EPU und KMU"
         title="Künstliche Intelligenz mit Substanz statt Hype."
         description="AI Consulting ist dann sinnvoll, wenn Nutzen, Prozesse und Umsetzung klar zusammenpassen. POSITIVconsult begleitet Unternehmen dabei mit einem nüchternen Blick auf Business-Relevanz und Machbarkeit."
         highlights={[

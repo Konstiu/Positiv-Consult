@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -36,8 +37,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[color:rgba(255,255,255,0.92)] backdrop-blur-xl">
       <div className="site-shell flex min-h-[4.25rem] items-center justify-between gap-5 py-2">
         <Link href="/" className="flex h-10 shrink-0 items-center">
-          <span className="whitespace-nowrap font-serif text-[1.18rem] font-semibold tracking-[0.04em] text-[var(--ink)]">
-            POSITIVconsult
+          <span className="inline-flex items-center rounded-xl bg-[var(--brand-dark)] px-3 py-2 shadow-[0_10px_24px_rgba(15,23,42,0.12)]">
+            <Image
+              src="/brand/positivconsult-logo.png"
+              alt="POSITIVconsult"
+              width={175}
+              height={27}
+              priority
+              className="h-auto w-[9.8rem]"
+            />
           </span>
         </Link>
 
