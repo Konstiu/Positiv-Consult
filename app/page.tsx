@@ -38,7 +38,7 @@ export default function Home() {
       <section className="hero-grid overflow-hidden">
         <div className="site-shell grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:py-24">
           <div className="fade-up space-y-8">
-            <span className="eyebrow">Unternehmensberatung aus Wien</span>
+            <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
               <h1 className="max-w-4xl text-balance font-serif text-5xl font-semibold tracking-tight text-[var(--ink)] sm:text-6xl lg:text-[4.25rem]">
                 Strategie, Digitalisierung und Wachstum für Unternehmen, die
@@ -67,26 +67,10 @@ export default function Home() {
                 Leistungen ansehen
               </Link>
             </div>
-            <div className="grid max-w-2xl grid-cols-2 gap-3 pt-2 md:grid-cols-4">
-              {[
-                ["25+", "Jahre"],
-                ["250+", "Projekte"],
-                ["150+", "Kunden"],
-                ["7", "Länder"],
-              ].map(([value, label]) => (
-                <div
-                  key={label}
-                  className="rounded-[1.1rem] border border-[rgba(17,24,39,0.08)] bg-white/78 px-4 py-3 text-center sm:text-left"
-                >
-                  <p className="font-serif text-2xl font-semibold text-[var(--brand-red)]">
-                    {value}
-                  </p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <p className="max-w-2xl text-sm font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+              Persönliche Beratung, direkte Ansprechpartner und klare
+              Umsetzungsschritte.
+            </p>
           </div>
 
           <div className="fade-up surface-card grid-lines relative overflow-hidden p-6 md:p-8">

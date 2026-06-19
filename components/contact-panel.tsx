@@ -27,6 +27,7 @@ export function ContactPanel() {
             role={person.role}
             email={person.email}
             phone={person.phone}
+            photoUrl={person.photoUrl}
           />
         ))}
       </div>

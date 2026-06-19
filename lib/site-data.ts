@@ -30,6 +30,14 @@ export type ClientCategory = {
   names: string[];
 };
 
+export type TeamContact = {
+  name: string;
+  role: string;
+  email: string;
+  phone: string;
+  photoUrl?: string;
+};
+
 export const companyName = "POSITIVconsult";
 export const siteUrl = "https://www.positiv-consult.at";
 export const contactEmail = "h.unterweger@positiv-consult.at";
@@ -192,14 +200,16 @@ export const teamContacts = [
     role: "POSITIVconsult",
     phone: contactPhone,
     email: contactEmail,
+    photoUrl: "/team/heidrun-unterweger.png",
   },
   {
     name: "Mag. Marc Isop",
     role: "POSITIVconsult",
     phone: secondaryContactPhone,
     email: secondaryContactEmail,
+    photoUrl: "/team/marc-isop.png",
   },
-];
+] as TeamContact[];
 
 export const clientCategories: ClientCategory[] = [
   {

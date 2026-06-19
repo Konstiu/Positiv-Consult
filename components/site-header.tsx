@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { navItems } from "@/lib/site-data";
 
@@ -32,19 +32,12 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-[color:rgba(255,255,255,0.92)] backdrop-blur-xl">
       <div className="site-shell flex min-h-[4.25rem] items-center justify-between gap-5 py-2">
         <Link href="/" className="flex h-10 shrink-0 items-center">
-          <span className="flex items-center gap-3 whitespace-nowrap font-serif text-[1.18rem] font-semibold tracking-[0.04em] text-[var(--ink)]">
-            <span>POSITIVconsult</span>
-            <span className="font-sans text-[0.68rem] uppercase tracking-[0.24em] text-[var(--muted)]">
-              Wien
-            </span>
+          <span className="whitespace-nowrap font-serif text-[1.18rem] font-semibold tracking-[0.04em] text-[var(--ink)]">
+            POSITIVconsult
           </span>
         </Link>
 
@@ -56,6 +49,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setOpen(false)}
                 className={`inline-flex h-10 items-center whitespace-nowrap rounded-full px-4 text-[0.95rem] font-medium transition ${
                   active
                     ? "bg-[rgba(17,24,39,0.08)] text-[var(--ink)]"
@@ -91,6 +85,7 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => setOpen(false)}
                   className={`inline-flex min-h-[3rem] items-center rounded-2xl px-4 text-base transition ${
                     active
                       ? "bg-[rgba(17,24,39,0.08)] text-[var(--ink)]"
