@@ -18,12 +18,12 @@ import {
 } from "@/lib/site-data";
 
 export const metadata = createMetadata({
-  title: "Unternehmensberatung Wien für Digitalisierung, Marketing und Vertrieb",
+  title: "Unternehmensberatung für Digitalisierung, Marketing und AI",
   description:
-    "POSITIVconsult ist eine Unternehmensberatung aus Wien für Strategie, Marketing, Vertrieb, Digitalisierung, E-Commerce, Förderthemen und AI Consulting.",
+    "POSITIVconsult ist eine Unternehmensberatung für Strategie, Marketing, Vertrieb, Digitalisierung, E-Commerce, Förderthemen und AI Consulting.",
   path: "/",
   keywords: [
-    "Unternehmensberatung Wien",
+    "Unternehmensberatung",
     "Digital Consulting",
     "AI Consulting",
     "Marketingberatung",
