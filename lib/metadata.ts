@@ -9,7 +9,7 @@ type MetadataInput = {
   keywords?: string[];
 };
 
-const defaultImage = "/opengraph-image";
+const defaultImage = "/brand/positivconsult-logo.png";
 
 export function createMetadata({
   title,
@@ -33,7 +33,7 @@ export function createMetadata({
       siteName: companyName,
       locale: "de_AT",
       type: "website",
-      images: [{ url: defaultImage, width: 1200, height: 630, alt: title }],
+      images: [{ url: defaultImage, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
