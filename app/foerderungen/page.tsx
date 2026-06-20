@@ -6,7 +6,7 @@ import { fundingFacts } from "@/lib/site-data";
 export const metadata = createMetadata({
   title: "Förderungen",
   description:
-    "Förderberatung für Wachstums-, Digitalisierungs- und Innovationsvorhaben mit Blick auf Passung, Wirtschaftlichkeit und Projektlogik.",
+    "Förderberatung für Wachstums-, Digitalisierungs- und Innovationsvorhaben mit Blick auf Förderfähigkeit, Wirtschaftlichkeit und Projektlogik.",
   path: "/foerderungen",
 });
 
@@ -16,7 +16,7 @@ export default function FoerderungenPage() {
       <PageHeader
         eyebrow="Förderungen"
         title="Fördermöglichkeiten einordnen, ohne das Projekt aus den Augen zu verlieren."
-        description="Förderberatung ist dann sinnvoll, wenn sie zu einem klaren Vorhaben passt. POSITIVconsult unterstützt dabei, passende Förderthemen einzuordnen und mit Strategie, Digitalisierung oder Innovation sinnvoll zu verbinden."
+        description="Förderberatung ist dann sinnvoll, wenn sie zu einem klaren Vorhaben passt. POSITIVconsult unterstützt dabei, Förderfähigkeit einzuordnen und das Thema mit Strategie, Digitalisierung oder Innovation sinnvoll zu verbinden."
         highlights={[
           "Einordnung passender Förderthemen",
           "Verbindung mit Digitalisierungs- und Innovationsprojekten",
@@ -28,8 +28,8 @@ export default function FoerderungenPage() {
       <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-3 md:py-24">
         {[
           {
-            title: "Passung prüfen",
-            text: "Nicht jedes Vorhaben eignet sich gleichermaßen. Entscheidend ist, ob Ziel, Umfang und Projektlogik sauber zusammenpassen.",
+            title: "Förderfähigkeit einordnen",
+            text: "Nicht jedes Vorhaben eignet sich gleichermaßen. Entscheidend ist, ob Ziel, Umfang und Projektlogik fachlich und wirtschaftlich stimmig sind.",
           },
           {
             title: "Projekt schärfen",
@@ -37,7 +37,7 @@ export default function FoerderungenPage() {
           },
           {
             title: "Wirtschaftlich denken",
-            text: "Förderberatung ist nur dann wertvoll, wenn sie zum Unternehmen, zum Vorhaben und zur realen Umsetzung passt.",
+            text: "Förderberatung ist nur dann wertvoll, wenn sie zum Unternehmen, zum Vorhaben und zum realistischen nächsten Umsetzungsschritt passt.",
           },
         ].map((item) => (
           <article key={item.title} className="surface-card p-6 md:p-7">

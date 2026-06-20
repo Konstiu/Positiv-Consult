@@ -27,6 +27,10 @@ export default function KontaktPage() {
           <p className="mt-3 text-base leading-7 text-[var(--muted)]">
             {addressLines.join(", ")}
           </p>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
+            In einem ersten Gespräch klären wir Ausgangslage, Prioritäten und
+            sinnvolle nächste Schritte.
+          </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
           {teamContacts.map((person) => (

@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/page-header";
 import { createMetadata } from "@/lib/metadata";
+import { contactEmail, contactPhone, toTelHref } from "@/lib/site-data";
 
 export const metadata = createMetadata({
   title: "Impressum",
@@ -36,11 +37,20 @@ export default function ImpressumPage() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-[var(--ink)]">Kontakt</h3>
-            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Telefon: 06769414427
-              <br />
-              E-Mail: h.unterweger@positiv-consult.at
-            </p>
+            <div className="mt-3 space-y-3 text-sm leading-7 text-[var(--muted)]">
+              <div>
+                <p className="font-medium text-[var(--ink)]">E-Mail</p>
+                <a href={`mailto:${contactEmail}`} className="text-link block break-all">
+                  {contactEmail}
+                </a>
+              </div>
+              <div>
+                <p className="font-medium text-[var(--ink)]">Telefon</p>
+                <a href={toTelHref(contactPhone)} className="block">
+                  {contactPhone}
+                </a>
+              </div>
+            </div>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-[var(--ink)]">
@@ -61,10 +71,6 @@ export default function ImpressumPage() {
               Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.
             </p>
           </div>
-          <p className="rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
-            Rechtliche Pflichtangaben können abhängig von Unternehmensform und
-            aktueller regulatorischer Situation ergänzt oder angepasst werden.
-          </p>
         </div>
       </section>
     </>

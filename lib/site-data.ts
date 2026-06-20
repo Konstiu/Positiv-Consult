@@ -68,6 +68,7 @@ export const secondaryContactEmail = "m.isop@positiv-consult.at";
 export const contactPhone = "+43 676 941 44 27";
 export const secondaryContactPhone = "+43 676 941 31 44";
 export const addressLines = ["Mariahilfer Straße 101", "1060 Wien", "Österreich"];
+export const toTelHref = (phone: string) => `tel:${phone.replace(/\s+/g, "")}`;
 
 export const navItems: NavItem[] = [
   { href: "/", label: "Start" },
@@ -91,7 +92,7 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Strategie & Wachstum",
     description:
-      "Wir schärfen Positionierung, Zielgruppen, Marktchancen und Wachstumslogik — als Grundlage für bessere Entscheidungen.",
+      "Wir schärfen Positionierung, Zielgruppen, Marktchancen und Wachstumslogik für klare Entscheidungsgrundlagen und priorisierte Maßnahmen.",
     href: "/leistungen",
     points: ["Positionierung", "Zielgruppen", "Wachstumslogik"],
   },
@@ -105,14 +106,14 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Vertrieb & Marktbearbeitung",
     description:
-      "Wir unterstützen beim Aufbau effizienter Vertriebsstrukturen und bei der Optimierung laufender Verkaufsaktivitäten.",
+      "Wir strukturieren Vertriebsprozesse, Marktbearbeitung und operative Verkaufsaktivitäten mit Blick auf Steuerbarkeit und Prioritäten.",
     href: "/leistungen",
     points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
   },
   {
     title: "Digitalisierung & E-Commerce",
     description:
-      "Wir helfen, digitale Prozesse, Online-Marketing, Websites und E-Commerce strategisch sinnvoll weiterzuentwickeln.",
+      "Wir entwickeln digitale Prozesse, Websites und E-Commerce in Richtung einer realistischen Roadmap mit klaren nächsten Schritten weiter.",
     href: "/leistungen",
     points: ["Digitale Prozesse", "Websites", "E-Commerce"],
   },
@@ -126,9 +127,9 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Förderberatung",
     description:
-      "Wir prüfen, ob Fördermöglichkeiten zu Strategie-, Digitalisierungs- oder Innovationsvorhaben passen.",
+      "Wir ordnen ein, ob Fördermöglichkeiten fachlich und wirtschaftlich zu Strategie-, Digitalisierungs- oder Innovationsvorhaben passen.",
     href: "/foerderungen",
-    points: ["Einordnung", "Eignung", "Projektbezug"],
+    points: ["Einordnung", "Förderfähigkeit", "Projektbezug"],
   },
 ];
 
@@ -136,29 +137,29 @@ export const expertiseAreas = [
   "Unternehmensberatung aus Wien mit zwei erfahrenen Ansprechpartner:innen",
   "Strategie, Marketing, Vertrieb und digitale Transformation aus einer Hand",
   "Direkte Zusammenarbeit mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
-  "Persönlich, pragmatisch und mit Blick auf messbare Wirkung",
+  "Persönlich, pragmatisch und mit Fokus auf klare Entscheidungsgrundlagen",
 ];
 
 export const homeFaqs: FaqItem[] = [
   {
     question: "Für welche Unternehmen ist POSITIVconsult die richtige Beratung?",
     answer:
-      "POSITIVconsult arbeitet mit EPU, KMU und etablierten Unternehmen. Besonders wertvoll ist die Zusammenarbeit dort, wo Eigentümer:innen, Geschäftsführung oder Entscheidungsteams Klarheit, Struktur und Umsetzungsstärke brauchen.",
+      "POSITIVconsult arbeitet mit EPU, KMU und etablierten Unternehmen. Besonders wertvoll ist die Zusammenarbeit dort, wo Eigentümer:innen, Geschäftsführung oder Entscheidungsteams priorisierte Maßnahmen, klare Entscheidungsgrundlagen und einen konkreten nächsten Umsetzungsschritt brauchen.",
   },
   {
     question: "Welche Themen stehen typischerweise am Anfang eines Projekts?",
     answer:
-      "Typische Themen sind Positionierung, Strategie, neue Märkte und Zielgruppen, Produkteinführungen, Vertriebsstruktur, digitale Kommunikation, E-Commerce oder die Prüfung von Fördermöglichkeiten.",
+      "Typische Themen sind Positionierung, Strategie, neue Märkte und Zielgruppen, Produkteinführungen, Vertriebsstruktur, digitale Kommunikation, E-Commerce oder die Einordnung von Fördermöglichkeiten.",
   },
   {
     question: "Wie arbeitet POSITIVconsult?",
     answer:
-      "Die Zusammenarbeit verbindet Analyse, strategische Klarheit und konkrete Umsetzung. Ziel ist nicht mehr Komplexität, sondern bessere Entscheidungen und spürbare Fortschritte im Alltag.",
+      "Die Zusammenarbeit verbindet Analyse, Priorisierung und konkrete Umsetzung. Ziel sind klare Entscheidungsgrundlagen, abgestimmte Maßnahmen und Fortschritte, die operativ anschlussfähig bleiben.",
   },
   {
     question: "Kann Förderberatung mit Digitalisierungs- oder AI-Projekten verbunden werden?",
     answer:
-      "Ja. Förderthemen können sinnvoll sein, wenn sie zu einem realen Vorhaben passen. Entscheidend ist immer die inhaltliche Passung zum Projekt und nicht die Förderung als Selbstzweck.",
+      "Ja. Förderthemen können sinnvoll sein, wenn sie zu einem realen Vorhaben passen. Entscheidend ist immer der fachliche Projektbezug und nicht die Förderung als Selbstzweck.",
   },
 ];
 
@@ -174,11 +175,11 @@ export const testimonials = [
   },
   {
     title: "Digitale Kompetenz mit Business-Fokus",
-    text: "Digitalisierung, E-Commerce und AI Consulting werden aus unternehmerischer Sicht gedacht und in realistische Umsetzung übersetzt.",
+    text: "Digitalisierung, E-Commerce und AI Consulting werden aus unternehmerischer Sicht gedacht und in realistische Roadmaps, priorisierte Maßnahmen und konkrete Umsetzungsschritte übersetzt.",
   },
   {
     title: "Direkte Zusammenarbeit mit Entscheidern",
-    text: "Die Beratung erfolgt persönlich, direkt und mit kurzen Wegen zwischen Analyse, Entscheidung und Umsetzung.",
+    text: "Die Beratung erfolgt persönlich, direkt und mit kurzen Wegen zwischen Analyse, Entscheidung und dem nächsten sinnvollen Umsetzungsschritt.",
   },
 ];
 
@@ -186,17 +187,17 @@ export const serviceProcess = [
   {
     step: "01",
     title: "Ausgangslage präzisieren",
-    text: "Geschäftsmodell, Markt, Organisation und prioritäre Hebel werden auf Entscheidungsreife gebracht.",
+    text: "Geschäftsmodell, Markt, Organisation und prioritäre Hebel werden so verdichtet, dass klare Entscheidungsgrundlagen entstehen.",
   },
   {
     step: "02",
     title: "Strategie übersetzen",
-    text: "Ziele werden in Maßnahmen, Verantwortlichkeiten und realistische Umsetzungslogik überführt.",
+    text: "Ziele werden in priorisierte Maßnahmen, Verantwortlichkeiten und eine realistische Umsetzungslogik überführt.",
   },
   {
     step: "03",
-    title: "Wirksam umsetzen",
-    text: "Begleitung erfolgt dort, wo Wirkung entsteht: in Entscheidungen, Prozessen, Marktbearbeitung und digitaler Praxis.",
+    title: "Konkrete nächste Schritte umsetzen",
+    text: "Begleitung erfolgt dort, wo Entscheidungen in strukturierte Vertriebsprozesse, Kampagnenlogik, Roadmaps oder Pilotvorhaben übergehen.",
   },
 ];
 

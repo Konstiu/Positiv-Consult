@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { toTelHref } from "@/lib/site-data";
 
 type ContactCardProps = {
   name: string;
@@ -36,13 +37,29 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
           </div>
         </div>
 
-        <div className="mt-auto space-y-4 pt-8">
-          <a href={`mailto:${email}`} className="text-link block break-all text-base font-semibold">
-            {email}
-          </a>
-          <a href={`tel:${phone}`} className="block text-base font-semibold text-[var(--ink)]">
-            {phone}
-          </a>
+        <div className="mt-auto w-full space-y-4 pt-8">
+          <div className="space-y-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
+              E-Mail
+            </p>
+            <a
+              href={`mailto:${email}`}
+              className="text-link block break-all text-base font-semibold"
+            >
+              {email}
+            </a>
+          </div>
+          <div className="space-y-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
+              Telefon
+            </p>
+            <a
+              href={toTelHref(phone)}
+              className="block text-base font-semibold text-[var(--ink)]"
+            >
+              {phone}
+            </a>
+          </div>
         </div>
       </div>
     </article>

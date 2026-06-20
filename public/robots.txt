@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://konstiu.github.io/Positiv-Consult/sitemap.xml
+Sitemap: https://www.positiv-consult.at/sitemap.xml

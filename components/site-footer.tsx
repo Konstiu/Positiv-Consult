@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -6,6 +7,7 @@ import {
   footerLinks,
   teamContacts,
   withBasePath,
+  toTelHref,
 } from "@/lib/site-data";
 
 export function SiteFooter() {
@@ -13,9 +15,11 @@ export function SiteFooter() {
     <footer className="border-t border-black/5 bg-[var(--brand-dark)] text-[var(--paper)]">
       <div className="site-shell grid gap-10 py-14 md:grid-cols-[1.35fr_1fr_0.9fr]">
         <div className="space-y-4">
-          <img
+          <Image
             src={withBasePath("/brand/positivconsult-logo.png")}
             alt={companyName}
+            width={176}
+            height={27}
             className="block h-auto w-[11rem]"
           />
           <p className="max-w-md text-sm leading-7 text-slate-300">
@@ -31,8 +35,9 @@ export function SiteFooter() {
           <p className="text-sm text-slate-300">{addressLines.join(", ")}</p>
           <div className="space-y-4">
             {teamContacts.map((person) => (
-              <div key={person.email} className="space-y-1.5">
+              <div key={person.email} className="space-y-2">
                 <p className="text-sm font-semibold text-white">{person.name}</p>
+                <p className="text-sm text-slate-400">{person.role}</p>
                 <a
                   href={`mailto:${person.email}`}
                   className="block text-sm text-slate-300 hover:text-[var(--brand-red)]"
@@ -40,7 +45,7 @@ export function SiteFooter() {
                   {person.email}
                 </a>
                 <a
-                  href={`tel:${person.phone}`}
+                  href={toTelHref(person.phone)}
                   className="block text-sm text-slate-300 hover:text-[var(--brand-blue-soft)]"
                 >
                   {person.phone}

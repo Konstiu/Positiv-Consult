@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Digitalisierung",
   description:
-    "Digitalisierungsberatung für Unternehmen: Prozesse verbessern, Systeme sinnvoll verbinden und Transformation strukturiert umsetzen.",
+    "Digitalisierungsberatung für Unternehmen: Prozesse strukturieren, Systeme sinnvoll verbinden und eine realistische Roadmap für die Umsetzung entwickeln.",
   path: "/digitalisierung",
   keywords: ["Digitalisierung Beratung", "Digital Consulting Wien"],
 });
@@ -23,7 +23,7 @@ export default function DigitalisierungPage() {
       <PageHeader
         eyebrow="Digitalisierung"
         title="Digitalisierung, die Prozesse verbessert statt nur Tools zu ergänzen."
-        description="Digitalisierung ist dann wirksam, wenn Prozesse, Marktbearbeitung und Systeme sinnvoll zusammenarbeiten. Genau darauf richtet POSITIVconsult den Blick."
+        description="Digitalisierung ist dann sinnvoll, wenn Prozesse, Marktbearbeitung und Systeme sauber zusammenarbeiten. Genau darauf richtet POSITIVconsult den Blick."
         highlights={focusAreas}
       />
 
@@ -36,7 +36,7 @@ export default function DigitalisierungPage() {
             Digitalisierung entfaltet dann Wirkung, wenn Abläufe sauber
             strukturiert, Informationswege vereinfacht und operative Reibung
             reduziert werden. Genau dort entsteht häufig der größte Hebel für
-            Wachstum, Vertrieb und Marktwirkung.
+            Wachstum, Vertrieb und Marktbearbeitung.
           </p>
         </article>
         <article className="surface-card p-6 md:p-8">
@@ -46,7 +46,8 @@ export default function DigitalisierungPage() {
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
             Die Auswahl von Systemen und Lösungen folgt einem klaren
             Soll-Zustand. Dadurch wird Digitalisierung steuerbar und
-            nachvollziehbar, statt Stückwerk zu bleiben.
+            nachvollziehbar, statt Stückwerk zu bleiben. Das Ergebnis ist eine
+            realistische Digitalisierungs-Roadmap mit klaren Prioritäten.
           </p>
         </article>
       </section>
@@ -54,7 +55,7 @@ export default function DigitalisierungPage() {
       <CtaSection
         eyebrow="Digitale Transformation"
         title="Wenn Prozesse, Systeme oder Teams an Grenzen stoßen, braucht es einen klaren Digitalisierungsrahmen."
-        description="POSITIVconsult hilft bei Priorisierung, Struktur und Umsetzung digitaler Vorhaben mit einem realistischen Blick auf Organisation, Ressourcen und Nutzen."
+        description="POSITIVconsult hilft bei Priorisierung, Struktur und Umsetzung digitaler Vorhaben mit einem realistischen Blick auf Organisation, Ressourcen und den konkreten nächsten Schritt."
         primaryLabel="Digitalisierungsprojekt besprechen"
         primaryHref="/kontakt"
         secondaryLabel="Förderungen ansehen"

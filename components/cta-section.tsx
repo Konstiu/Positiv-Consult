@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type CtaSectionProps = {
@@ -8,6 +9,7 @@ type CtaSectionProps = {
   primaryHref: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  backgroundImageSrc?: string;
 };
 
 export function CtaSection({
@@ -18,10 +20,23 @@ export function CtaSection({
   primaryHref,
   secondaryLabel,
   secondaryHref,
+  backgroundImageSrc,
 }: CtaSectionProps) {
   return (
     <section className="site-shell">
       <div className="relative overflow-hidden rounded-[2rem] bg-[var(--brand-dark)] px-6 py-10 text-white shadow-[0_30px_80px_rgba(15,23,42,0.22)] md:px-10 md:py-14">
+        {backgroundImageSrc ? (
+          <div className="pointer-events-none absolute inset-0">
+            <Image
+              src={backgroundImageSrc}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover grayscale opacity-[0.12]"
+            />
+            <div className="absolute inset-0 bg-[rgba(17,24,39,0.72)]" />
+          </div>
+        ) : null}
         <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top,rgba(215,38,61,0.24),transparent_56%)]" />
         <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_bottom_left,rgba(31,78,140,0.22),transparent_52%)]" />
         <div className="relative max-w-3xl space-y-5">
@@ -33,6 +48,10 @@ export function CtaSection({
           </h2>
           <p className="text-pretty text-base leading-8 text-white/74 md:text-lg">
             {description}
+          </p>
+          <p className="max-w-2xl text-sm leading-7 text-white/72">
+            In einem ersten Gespräch klären wir Ausgangslage, Prioritäten und
+            sinnvolle nächste Schritte.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link

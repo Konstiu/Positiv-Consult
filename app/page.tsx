@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ContactPanel } from "@/components/contact-panel";
@@ -53,8 +54,18 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero-grid overflow-hidden">
-        <div className="site-shell grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:py-24">
+      <section className="hero-grid relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block">
+          <Image
+            src="/ai-images/modern-office-tower.jpg"
+            alt=""
+            fill
+            sizes="40vw"
+            className="object-cover grayscale opacity-[0.11]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.96),rgba(248,250,252,0.7),rgba(248,250,252,0.9))]" />
+        </div>
+        <div className="site-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:py-24">
           <div className="fade-up space-y-8">
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
@@ -62,11 +73,12 @@ export default function Home() {
                 Strategie, Digitalisierung, Automatisierung und KI für moderne Unternehmen.
               </h1>
               <p className="max-w-2xl text-pretty text-base leading-7 text-[var(--muted)] md:text-lg">
-                POSITIVconsult ist eine Unternehmensberatung aus Wien. Zwei
-                erfahrene Ansprechpartner begleiten Unternehmen bei
+                POSITIVconsult ist eine Unternehmensberatung aus Wien für
+                Eigentümer:innen, Geschäftsführung, Entscheidungsteams, EPU und
+                KMU. Zwei erfahrene Ansprechpartner begleiten Unternehmen bei
                 Positionierung, Marketing, Vertrieb, digitaler Transformation,
                 E-Commerce, Förderthemen und AI Consulting — von der Analyse
-                über das Konzept bis zur Umsetzung.
+                bis zum konkreten nächsten Umsetzungsschritt.
               </p>
             </div>
 
@@ -75,7 +87,7 @@ export default function Home() {
                 href="/kontakt"
                 className="button-primary px-6 text-sm font-semibold"
               >
-                Erstgespräch vereinbaren
+                30-minütiges Erstgespräch vereinbaren
               </Link>
               <Link
                 href="/leistungen"
@@ -138,11 +150,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-shell section-space grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+      <section className="site-shell section-space relative grid gap-8 overflow-hidden lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[38%] xl:block">
+          <Image
+            src="/ai-images/strategy-meeting.png"
+            alt=""
+            fill
+            sizes="30vw"
+            className="object-cover grayscale opacity-[0.07]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.92),rgba(248,250,252,0.6),transparent)]" />
+        </div>
         <SectionHeading
           eyebrow="Positionierung"
           title="Beratung mit Erfahrung, Struktur und Umsetzungskraft."
-          description="Seit 2004 unterstützt POSITIVconsult Unternehmen dabei, Wachstum klarer zu planen, Märkte besser zu bearbeiten und digitale Chancen sinnvoll zu nutzen. Als erfahrene Unternehmensberatung aus Wien arbeiten wir direkt mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams — pragmatisch, persönlich und mit Blick auf messbare Wirkung."
+          description="Seit 2004 unterstützt POSITIVconsult Unternehmen dabei, Wachstumsrichtungen zu schärfen, Märkte strukturierter zu bearbeiten und digitale Vorhaben realistisch aufzusetzen. Als erfahrene Unternehmensberatung aus Wien arbeiten wir direkt mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams."
         />
         <div className="grid gap-4">
           {serviceProcess.map((item) => (
@@ -210,11 +232,12 @@ export default function Home() {
       <CtaSection
         eyebrow="AI & Digitalisierung"
         title="Digitale Vorhaben brauchen Klarheit, Priorität und saubere Umsetzung."
-        description="Ob Digitalisierungsprojekt, E-Commerce-Weiterentwicklung oder AI Consulting: Wir helfen dabei, Chancen realistisch einzuordnen und daraus tragfähige Schritte zu machen."
+        description="Ob Digitalisierungsprojekt, E-Commerce-Weiterentwicklung oder AI Consulting: Wir helfen dabei, Chancen realistisch einzuordnen und daraus eine tragfähige Roadmap, priorisierte Maßnahmen und einen konkreten nächsten Schritt abzuleiten."
         primaryLabel="AI Consulting ansehen"
         primaryHref="/ai-consulting"
         secondaryLabel="Digitalisierung ansehen"
         secondaryHref="/digitalisierung"
+        backgroundImageSrc="/ai-images/ai-circuit-board.jpg"
       />
 
       <FaqSection

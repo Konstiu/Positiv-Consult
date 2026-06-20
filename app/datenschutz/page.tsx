@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/page-header";
 import { createMetadata } from "@/lib/metadata";
+import { contactEmail, contactPhone, toTelHref } from "@/lib/site-data";
 
 export const metadata = createMetadata({
   title: "Datenschutz",
@@ -22,35 +23,31 @@ export default function DatenschutzPage() {
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
               Verantwortliche Stelle
             </h2>
-            <p className="mt-3">
-              Heidrun Unterweger
-              <br />
-              POSITIVconsult
-              <br />
-              Mariahilfer Straße 101
-              <br />
-              1060 Wien
-              <br />
-              Österreich
-              <br />
-              Telefon: 06769414427
-              <br />
-              E-Mail: h.unterweger@positiv-consult.at
-            </p>
-          </div>
-
-          <div>
-            <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Inhalte dieser Datenschutzhinweise
-            </h2>
-            <ul className="mt-3 space-y-2">
-              <li>Server-Logfiles bei rein informatorischer Nutzung</li>
-              <li>SSL- bzw. TLS-Verschlüsselung</li>
-              <li>Cookies einschließlich Session- und persistenter Cookies</li>
-              <li>Verarbeitung bei Kontaktaufnahme per Formular oder E-Mail</li>
-              <li>Betroffenenrechte und Widerspruchsrecht</li>
-              <li>Hinweise zur Speicherdauer personenbezogener Daten</li>
-            </ul>
+            <div className="mt-3 space-y-3">
+              <p>
+                Heidrun Unterweger
+                <br />
+                POSITIVconsult
+                <br />
+                Mariahilfer Straße 101
+                <br />
+                1060 Wien
+                <br />
+                Österreich
+              </p>
+              <div>
+                <p className="font-medium text-[var(--ink)]">E-Mail</p>
+                <a href={`mailto:${contactEmail}`} className="text-link block break-all">
+                  {contactEmail}
+                </a>
+              </div>
+              <div>
+                <p className="font-medium text-[var(--ink)]">Telefon</p>
+                <a href={toTelHref(contactPhone)} className="block">
+                  {contactPhone}
+                </a>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -59,29 +56,60 @@ export default function DatenschutzPage() {
             </h2>
             <p className="mt-3">
               Personenbezogene Daten werden nur in dem Umfang verarbeitet, wie
-              dies für den Betrieb der Website, die Bearbeitung von Anfragen
-              oder aufgrund gesetzlicher Verpflichtungen erforderlich ist.
+              dies für den technischen Betrieb dieser Website, die Bearbeitung
+              von Anfragen oder aufgrund gesetzlicher Verpflichtungen
+              erforderlich ist.
             </p>
           </div>
 
           <div>
             <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
-              Weitere Informationen
+              Zugriff auf die Website
             </h2>
-            <ul className="mt-3 space-y-2">
-              <li>Tatsächlicher Hosting-Anbieter und Serverstandort</li>
-              <li>Technisch eingesetzte Cookies und Drittanbieter</li>
-              <li>Kontaktformular oder sonstige Integrationen</li>
-              <li>Aufbewahrungsfristen und Rechtsgrundlagen im echten Betrieb</li>
-              <li>Abgleich mit der jeweils aktuellen rechtlichen Fassung</li>
-            </ul>
+            <p className="mt-3">
+              Beim Aufruf der Website können technisch erforderliche Daten
+              verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit des
+              Zugriffs, aufgerufene Inhalte, Browserinformationen und ähnliche
+              Verbindungsdaten. Diese Verarbeitung dient der Bereitstellung,
+              Stabilität und Sicherheit der Website.
+            </p>
           </div>
 
-          <p className="rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4">
-            Für eine vollständige rechtliche Fassung sollten eingesetzte
-            Dienste, Formulare, Hosting-Setups und eventuelle Tracking- oder
-            Analysekomponenten laufend berücksichtigt werden.
-          </p>
+          <div>
+            <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+              Kontaktaufnahme
+            </h2>
+            <p className="mt-3">
+              Wenn Sie per E-Mail oder telefonisch Kontakt aufnehmen, werden
+              die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage
+              und für mögliche Anschlussfragen verarbeitet.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+              Datensicherheit
+            </h2>
+            <p className="mt-3">
+              Diese Website nutzt eine verschlüsselte Verbindung, damit
+              übermittelte Inhalte vor unbefugtem Zugriff geschützt werden.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+              Ihre Rechte
+            </h2>
+            <p className="mt-3">
+              Sie haben im Rahmen der gesetzlichen Vorgaben insbesondere das
+              Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
+              Verarbeitung sowie auf Widerspruch gegen bestimmte Verarbeitungen.
+            </p>
+          </div>
+
+          {/* Rechtliche Detailangaben zu Hosting, eingesetzten Diensten, Cookies,
+              Rechtsgrundlagen und Speicherdauern erst nach juristischer Prüfung
+              und technischer Finalabstimmung ergänzen. */}
         </div>
       </section>
     </>

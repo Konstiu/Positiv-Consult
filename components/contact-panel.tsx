@@ -14,6 +14,10 @@ export function ContactPanel() {
           oder AI Consulting — wir klären gemeinsam, wo POSITIVconsult sinnvoll
           unterstützen kann.
         </p>
+        <p className="max-w-2xl text-sm leading-7 text-[var(--muted)]">
+          In einem ersten Gespräch klären wir Ausgangslage, Prioritäten und
+          sinnvolle nächste Schritte.
+        </p>
         <p className="text-sm text-[var(--muted)]">{addressLines.join(", ")}</p>
       </div>
 

@@ -6,7 +6,7 @@ import { companyStory } from "@/lib/site-data";
 export const metadata = createMetadata({
   title: "AI Consulting",
   description:
-    "AI Consulting für Unternehmen: Use Cases priorisieren, Prozesse verbessern und KI strukturiert in Geschäftsmodell, Teams und Abläufe verankern.",
+    "AI Consulting für Unternehmen: Use Cases priorisieren, KI strukturiert in Geschäftsmodell, Teams und Abläufe verankern und realistische Einführungswege ableiten.",
   path: "/ai-consulting",
   keywords: ["AI Consulting Wien", "KI Beratung Unternehmen", "AI Strategie"],
 });
@@ -22,7 +22,7 @@ const pillars = [
   },
   {
     title: "Verankerung im Unternehmen",
-    text: "Wirkung entsteht erst dann, wenn Prozesse, Verantwortlichkeiten, Governance und Team-Adoption mitgedacht werden.",
+    text: "Nutzen entsteht erst dann, wenn Prozesse, Verantwortlichkeiten, Governance und Team-Adoption mitgedacht werden.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function AIConsultingPage() {
           </p>
           <ul className="mt-5 space-y-3 text-sm leading-7 text-[var(--ink)]">
             <li>Automatisierung repetitiver Wissensarbeit</li>
-            <li>Bessere Vertriebs- und Marketingprozesse</li>
+            <li>Strukturierte Vertriebs- und Marketingprozesse</li>
             <li>Assistenzsysteme für Analyse und Entscheidung</li>
             <li>KI-gestützte Angebots-, Content- oder Serviceprozesse</li>
           </ul>
@@ -74,8 +74,9 @@ export default function AIConsultingPage() {
             AI Consulting ist dann sinnvoll, wenn es in Ziele, Prozesse und
             Verantwortlichkeiten eingebettet wird. Deshalb verbindet
             POSITIVconsult Business-Verständnis, Priorisierung und
-            Umsetzungsnähe zu einem Beratungsansatz, der nicht in
-            Technologiebegeisterung stecken bleibt.
+            Umsetzungsnähe zu einem Beratungsansatz, der zu bewerteten
+            KI-Use-Cases, klaren Prioritäten und realistischen nächsten
+            Schritten führt.
           </p>
         </article>
       </section>
@@ -107,9 +108,9 @@ export default function AIConsultingPage() {
 
       <CtaSection
         eyebrow="AI Roadmap"
-        title="Sie möchten prüfen, wo KI in Ihrem Unternehmen wirklich sinnvoll einsetzbar ist?"
-        description="Ein fokussiertes Erstgespräch hilft, Chancen realistisch einzuordnen und die nächsten Schritte sauber zu priorisieren."
-        primaryLabel="AI Gespräch anfragen"
+        title="Sie möchten KI-Potenzial in Ihrem Unternehmen realistisch einschätzen?"
+        description="Ein fokussiertes Erstgespräch hilft, Chancen realistisch einzuordnen, Use Cases zu bewerten und die nächsten Schritte sauber zu priorisieren."
+        primaryLabel="KI-Potenzial realistisch einschätzen"
         primaryHref="/kontakt"
       />
     </>
