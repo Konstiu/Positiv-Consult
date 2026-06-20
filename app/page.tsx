@@ -54,8 +54,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero-grid relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[42%] lg:block">
+      <section className="hero-grid relative isolate overflow-hidden">
+        <div className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[42%] lg:block">
           <Image
             src="/ai-images/modern-office-tower.jpg"
             alt=""
@@ -150,8 +150,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-shell section-space relative grid gap-8 overflow-hidden lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[38%] xl:block">
+      <section className="site-shell section-space relative isolate grid gap-8 overflow-hidden lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="pointer-events-none absolute inset-y-0 left-0 -z-10 hidden w-[38%] xl:block">
           <Image
             src="/ai-images/strategy-meeting.png"
             alt=""
