@@ -71,7 +71,7 @@ export const addressLines = ["Mariahilfer Straße 101", "1060 Wien", "Österreic
 export const toTelHref = (phone: string) => `tel:${phone.replace(/\s+/g, "")}`;
 
 export const navItems: NavItem[] = [
-  { href: "/", label: "Start" },
+  { href: "/", label: "Home" },
   { href: "/#leistungen", label: "Leistungen" },
   { href: "/ai-consulting", label: "AI Consulting" },
   { href: "/digitalisierung", label: "Digitalisierung" },

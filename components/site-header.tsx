@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { navItems, withBasePath } from "@/lib/site-data";
 
@@ -32,6 +32,25 @@ function MenuIcon({ open }: { open: boolean }) {
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [hash, setHash] = useState("");
+
+  const handleNavClick = (href: string) => {
+    setOpen(false);
+    setHash(href === "/#leistungen" ? "#leistungen" : "");
+  };
+
+  useEffect(() => {
+    const updateHash = () => {
+      setHash(window.location.hash);
+    };
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-[var(--brand-dark)] text-white backdrop-blur-xl">
@@ -48,13 +67,18 @@ export function SiteHeader() {
 
         <nav className="hidden min-w-0 flex-1 items-center justify-end gap-1 lg:flex">
           {navItems.map((item) => {
-            const active = item.href === "/#leistungen" ? pathname === "/" : pathname === item.href;
+            const active =
+              item.href === "/"
+                ? pathname === "/" && hash !== "#leistungen"
+                : item.href === "/#leistungen"
+                  ? pathname === "/" && hash === "#leistungen"
+                  : pathname === item.href;
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setOpen(false)}
+                onClick={() => handleNavClick(item.href)}
                 className={`inline-flex h-10 items-center whitespace-nowrap px-4 text-[0.95rem] font-medium transition ${
                   active
                     ? "text-white"
@@ -84,13 +108,18 @@ export function SiteHeader() {
         <div className="border-t border-white/8 bg-[var(--brand-dark)] lg:hidden">
           <nav className="site-shell flex flex-col gap-1 py-4">
             {navItems.map((item) => {
-              const active = item.href === "/#leistungen" ? pathname === "/" : pathname === item.href;
+              const active =
+                item.href === "/"
+                  ? pathname === "/" && hash !== "#leistungen"
+                  : item.href === "/#leistungen"
+                    ? pathname === "/" && hash === "#leistungen"
+                    : pathname === item.href;
 
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
                   className={`inline-flex min-h-[3rem] items-center px-4 text-base transition ${
                     active
                       ? "text-white"
