@@ -38,8 +38,31 @@ export type TeamContact = {
   photoUrl?: string;
 };
 
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (basePath
+    ? `https://konstiu.github.io${basePath}`
+    : "https://www.positiv-consult.at");
+
+export function withBasePath(path: string) {
+  if (!path.startsWith("/")) {
+    return path;
+  }
+
+  return `${basePath}${path}`;
+}
+
+export function toAbsoluteSiteUrl(path: string) {
+  const normalizedPath = path === "/" ? "/" : `${path.replace(/\/$/, "")}/`;
+  return `${siteUrl}${normalizedPath === "/" ? "/" : normalizedPath}`;
+}
+
+export function toAbsoluteAssetUrl(path: string) {
+  return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export const companyName = "POSITIVconsult";
-export const siteUrl = "https://www.positiv-consult.at";
 export const contactEmail = "h.unterweger@positiv-consult.at";
 export const secondaryContactEmail = "m.isop@positiv-consult.at";
 export const contactPhone = "+43 676 941 44 27";
@@ -200,14 +223,14 @@ export const teamContacts = [
     role: "POSITIVconsult",
     phone: contactPhone,
     email: contactEmail,
-    photoUrl: "/team/heidrun-unterweger.png",
+    photoUrl: withBasePath("/team/heidrun-unterweger.png"),
   },
   {
     name: "Mag. Marc Isop",
     role: "POSITIVconsult",
     phone: secondaryContactPhone,
     email: secondaryContactEmail,
-    photoUrl: "/team/marc-isop.png",
+    photoUrl: withBasePath("/team/marc-isop.png"),
   },
 ] as TeamContact[];
 

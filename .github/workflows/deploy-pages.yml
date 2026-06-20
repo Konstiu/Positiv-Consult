@@ -36,6 +36,10 @@ jobs:
         run: npm ci
 
       - name: Build static export
+        env:
+          GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: /Positiv-Consult
+          NEXT_PUBLIC_SITE_URL: https://konstiu.github.io/Positiv-Consult
         run: npm run build
 
       - name: Upload artifact

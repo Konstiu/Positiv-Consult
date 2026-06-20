@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-import { companyName, siteUrl } from "@/lib/site-data";
+import {
+  companyName,
+  toAbsoluteAssetUrl,
+  toAbsoluteSiteUrl,
+} from "@/lib/site-data";
 
 type MetadataInput = {
   title: string;
@@ -9,7 +13,7 @@ type MetadataInput = {
   keywords?: string[];
 };
 
-const defaultImage = "/brand/positivconsult-logo.png";
+const defaultImage = toAbsoluteAssetUrl("/brand/positivconsult-logo.png");
 
 export function createMetadata({
   title,
@@ -17,7 +21,7 @@ export function createMetadata({
   path = "/",
   keywords = [],
 }: MetadataInput): Metadata {
-  const canonical = new URL(path, siteUrl).toString();
+  const canonical = toAbsoluteSiteUrl(path);
 
   return {
     title,

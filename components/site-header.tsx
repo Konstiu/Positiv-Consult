@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { navItems } from "@/lib/site-data";
+import { navItems, withBasePath } from "@/lib/site-data";
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -37,7 +37,7 @@ export function SiteHeader() {
       <div className="site-shell flex min-h-[5rem] items-center justify-between gap-5 py-3">
         <Link href="/" className="flex h-10 shrink-0 items-center">
           <img
-            src="/brand/positivconsult-logo.png"
+            src={withBasePath("/brand/positivconsult-logo.png")}
             alt="POSITIVconsult"
             className="block h-auto w-[9.8rem]"
           />

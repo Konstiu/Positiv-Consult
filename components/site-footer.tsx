@@ -5,6 +5,7 @@ import {
   companyName,
   footerLinks,
   teamContacts,
+  withBasePath,
 } from "@/lib/site-data";
 
 export function SiteFooter() {
@@ -13,7 +14,7 @@ export function SiteFooter() {
       <div className="site-shell grid gap-10 py-14 md:grid-cols-[1.35fr_1fr_0.9fr]">
         <div className="space-y-4">
           <img
-            src="/brand/positivconsult-logo.png"
+            src={withBasePath("/brand/positivconsult-logo.png")}
             alt={companyName}
             className="block h-auto w-[11rem]"
           />
