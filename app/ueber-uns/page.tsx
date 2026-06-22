@@ -17,7 +17,7 @@ export default function UeberUnsPage() {
       <PageHeader
         eyebrow="Über uns"
         title="Erfahrung, Klarheit und Umsetzungsnähe als Beratungsstandard."
-        description="POSITIVconsult ist eine Unternehmensberatung aus Wien mit Fokus auf Strategie, Digitalisierung, Marketing und Vertrieb. Im Zentrum stehen persönliche Zusammenarbeit, klare Struktur und konkrete nächste Schritte."
+        description="POSITIVconsult ist eine Unternehmensberatung mit Fokus auf Strategie, Digitalisierung, Marketing und Vertrieb. Im Zentrum stehen persönliche Zusammenarbeit, klare Struktur und konkrete nächste Schritte."
         highlights={[
           "Sitz in Wien",
           "30 Jahre Berufserfahrung im digitalen Umfeld",
