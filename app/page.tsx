@@ -64,7 +64,7 @@ export default function Home() {
               </h1>
               <p className="max-w-2xl text-pretty text-base leading-7 text-[var(--muted)] md:text-lg">
                 POSITIVconsult ist eine Unternehmensberatung aus Wien für
-                Eigentümer:innen, Geschäftsführung, Entscheidungsteams, EPU und
+                Eigentümer:innen, Geschäftsführung, Entscheidungsteams, Start-Ups, EPU und
                 KMU. Zwei erfahrene Ansprechpartner begleiten Unternehmen bei
                 Positionierung, Marketing, Vertrieb, digitaler Transformation,
                 E-Commerce, Förderthemen und AI Consulting — von der Analyse
@@ -89,31 +89,31 @@ export default function Home() {
           </div>
 
           <div className="fade-up max-w-xl lg:justify-self-end">
-            <div className="border-l border-[rgba(31,78,140,0.18)] pl-5 md:pl-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)]">
+            <div className="border-l-2 border-[rgba(31,78,140,0.28)] pl-5 md:pl-6">
+              <p className="text-base font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)] md:text-lg">
                 Persönlicher Ansatz
               </p>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-6 space-y-4">
                 {expertiseAreas.slice(1).map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-6 text-[var(--muted)]">
+                  <li key={item} className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
                     <span
                       aria-hidden="true"
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                      className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
                     />
                     <span>{item}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-3 text-sm leading-6 text-[var(--muted)]">
+                <li className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
                   <span
                     aria-hidden="true"
-                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                    className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
                   />
                   <span>Am Puls der Zeit mit Blick auf konkrete Umsetzung</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm leading-6 text-[var(--muted)]">
+                <li className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
                   <span
                     aria-hidden="true"
-                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                    className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
                   />
                   <span>Exzellentes Netzwerk und langjährige Partnerschaften</span>
                 </li>
