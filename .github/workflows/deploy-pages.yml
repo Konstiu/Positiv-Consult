@@ -37,7 +37,7 @@ jobs:
 
       - name: Build static export
         env:
-          NEXT_PUBLIC_SITE_URL: https://www.positiv-consult.at
+          NEXT_PUBLIC_SITE_URL: https://positiv-consult.unterweger.tech
         run: npm run build
 
       - name: Upload artifact

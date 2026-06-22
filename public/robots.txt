@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.positiv-consult.at/sitemap.xml
+Sitemap: https://positiv-consult.unterweger.tech/sitemap.xml

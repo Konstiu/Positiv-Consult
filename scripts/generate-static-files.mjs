@@ -7,7 +7,7 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (basePath
     ? `https://konstiu.github.io${basePath}`
-    : "https://www.positiv-consult.at");
+    : "https://positiv-consult.unterweger.tech");
 
 const routes = [
   "",
