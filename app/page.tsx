@@ -54,17 +54,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero-grid relative isolate overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-[42%] lg:block">
-          <Image
-            src="/ai-images/modern-office-tower.jpg"
-            alt=""
-            fill
-            sizes="40vw"
-            className="object-cover grayscale opacity-[0.11]"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.96),rgba(248,250,252,0.7),rgba(248,250,252,0.9))]" />
-        </div>
+      <section className="relative isolate overflow-hidden bg-white">
         <div className="site-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:py-24">
           <div className="fade-up space-y-8">
             <span className="eyebrow">Unternehmensberatung</span>
