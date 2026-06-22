@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: `%s | ${companyName}`,
   },
   description:
-    "Moderne Unternehmensberatung aus Wien für Strategie, Digitalisierung, Marketing, Vertrieb, Förderberatung und AI Consulting.",
+    "Moderne Unternehmensberatung für Strategie, Digitalisierung, Marketing, Vertrieb, Förderberatung und AI Consulting.",
 };
 
 export default function RootLayout({

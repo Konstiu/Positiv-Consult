@@ -94,7 +94,11 @@ export default function Home() {
                 Persönlicher Ansatz
               </p>
               <ul className="mt-6 space-y-4">
-                {expertiseAreas.slice(1).map((item) => (
+                {[
+                  "Strategie, Marketing, Vertrieb und digitale Transformation integriert gedacht",
+                  "Direkter Austausch mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
+                  "Persönlich, pragmatisch und auf klare Entscheidungsgrundlagen ausgerichtet",
+                ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
                     <span
                       aria-hidden="true"
@@ -108,14 +112,14 @@ export default function Home() {
                     aria-hidden="true"
                     className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
                   />
-                  <span>Am Puls der Zeit mit Blick auf konkrete Umsetzung</span>
+                  <span>Aktuelle Impulse mit konsequentem Fokus auf die praktische Umsetzung</span>
                 </li>
                 <li className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
                   <span
                     aria-hidden="true"
                     className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
                   />
-                  <span>Exzellentes Netzwerk und langjährige Partnerschaften</span>
+                  <span>Exzellentes Netzwerk und langjährige Partnerschaften für wirkungsvolle Lösungen</span>
                 </li>
               </ul>
             </div>
@@ -140,29 +144,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-shell section-space relative isolate grid gap-8 overflow-hidden lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="pointer-events-none absolute inset-y-0 left-0 -z-10 hidden w-[38%] xl:block">
-          <Image
-            src="/ai-images/strategy-meeting.png"
-            alt=""
-            fill
-            sizes="30vw"
-            className="object-cover grayscale opacity-[0.07]"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.92),rgba(248,250,252,0.6),transparent)]" />
+      <section className="site-shell section-space relative isolate flex flex-col gap-8 overflow-hidden">
+        <div className="max-w-4xl space-y-4">
+          <span className="eyebrow">Positionierung</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
+            Beratung mit Erfahrung, Struktur und Umsetzungskraft.
+          </h2>
+          <p className="max-w-3xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Seit 2004 unterstützt POSITIVconsult Unternehmen dabei, Wachstumsrichtungen zu schärfen, Märkte strukturierter zu bearbeiten und digitale Vorhaben realistisch aufzusetzen. Wir arbeiten direkt mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams.
+          </p>
         </div>
-        <SectionHeading
-          eyebrow="Positionierung"
-          title="Beratung mit Erfahrung, Struktur und Umsetzungskraft."
-          description="Seit 2004 unterstützt POSITIVconsult Unternehmen dabei, Wachstumsrichtungen zu schärfen, Märkte strukturierter zu bearbeiten und digitale Vorhaben realistisch aufzusetzen. Als erfahrene Unternehmensberatung aus Wien arbeiten wir direkt mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams."
-        />
-        <div className="grid gap-4">
+        <div className="grid gap-4 lg:grid-cols-3">
           {serviceProcess.map((item) => (
             <article key={item.step} className="surface-card p-6 md:p-7">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-red)]">
                 {item.step}
               </p>
-              <h3 className="mt-3 font-serif text-2xl font-semibold text-[var(--ink)]">
+              <h3 className="mt-3 font-serif text-2xl font-semibold text-[var(--brand-blue)]">
                 {item.title}
               </h3>
               <p className="mt-3 text-base leading-7 text-[var(--muted)]">
@@ -183,7 +181,7 @@ export default function Home() {
         <div className="grid gap-5 lg:grid-cols-3">
           {testimonials.map((item) => (
             <article key={item.title} className="surface-card p-6 md:p-7">
-              <h3 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+              <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
                 {item.title}
               </h3>
               <p className="mt-4 text-base leading-7 text-[var(--muted)]">

@@ -99,9 +99,9 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Marketing & Kampagnen",
     description:
-      "Wir entwickeln Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Markt und zu digitalen Kanälen passen.",
+      "Wir entwickeln strategisch fundierte Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Marktumfeld und zu relevanten digitalen Kanälen passen.",
     href: "/leistungen",
-    points: ["Kommunikation", "Kampagnen", "Digitale Kanäle"],
+    points: ["Kommunikationsstrategie", "Kampagnen Set Up", "Digitale Kanäle"],
   },
   {
     title: "Vertrieb & Marktbearbeitung",
@@ -134,7 +134,7 @@ export const coreServices: ServiceItem[] = [
 ];
 
 export const expertiseAreas = [
-  "Unternehmensberatung aus Wien mit zwei erfahrenen Ansprechpartner:innen",
+  "Unternehmensberatung mit zwei erfahrenen Ansprechpartner:innen",
   "Strategie, Marketing, Vertrieb und digitale Transformation aus einer Hand",
   "Direkte Zusammenarbeit mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
   "Persönlich, pragmatisch und mit Fokus auf klare Entscheidungsgrundlagen",
@@ -196,7 +196,7 @@ export const serviceProcess = [
   },
   {
     step: "03",
-    title: "Konkrete nächste Schritte umsetzen",
+    title: "Konkrete nächste Schritte",
     text: "Begleitung erfolgt dort, wo Entscheidungen in strukturierte Vertriebsprozesse, Kampagnenlogik, Roadmaps oder Pilotvorhaben übergehen.",
   },
 ];

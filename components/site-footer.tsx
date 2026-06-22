@@ -23,7 +23,7 @@ export function SiteFooter() {
             className="block h-auto w-[11rem]"
           />
           <p className="max-w-md text-sm leading-7 text-slate-300">
-            Erfahrene Unternehmensberatung aus Wien mit Fokus auf Wachstum,
+            Erfahrene Unternehmensberatung mit Fokus auf Wachstum,
             Digitalisierung, Vertrieb, Förderthemen und AI Consulting.
           </p>
         </div>

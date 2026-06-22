@@ -7,7 +7,7 @@ import { ContactCard } from "@/components/contact-card";
 export const metadata = createMetadata({
   title: "Über uns",
   description:
-    "Über POSITIVconsult: erfahrene Unternehmensberatung aus Wien mit langjähriger Erfahrung und internationaler Perspektive.",
+    "Über POSITIVconsult: erfahrene Unternehmensberatung mit langjähriger Erfahrung und internationaler Perspektive.",
   path: "/ueber-uns",
 });
 
