@@ -1,15 +1,14 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_PAGES === "true";
-const repoBasePath = "/Positiv-Consult";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  ...(isGitHubPages
+  ...(basePath
     ? {
-        basePath: repoBasePath,
-        assetPrefix: repoBasePath,
+        basePath,
+        assetPrefix: basePath,
       }
     : {}),
   images: {
