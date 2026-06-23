@@ -22,9 +22,9 @@ export default function DigitalisierungPage() {
   return (
     <>
       <PageHeader
-        eyebrow="KI & Digitalisierung"
-        title="Digitalisierung, die reale Engpässe beseitigt statt neue Tools zu stapeln."
-        description="Wir helfen KMU dabei, Prozesse, Systeme, Websites und E-Commerce-Strukturen so einzuordnen, dass daraus ein umsetzbarer Maßnahmenplan entsteht – nicht nur eine weitere To-do-Liste."
+        eyebrow="KI CONSULTING UND DIGITALISIERUNG"
+        title="Künstliche Intelligenz mit Substanz statt Hype."
+        description="KI Consulting ist dann sinnvoll, wenn Nutzen, Prozesse und Umsetzung klar zusammenpassen. POSITIVconsult begleitet Unternehmen dabei mit einem nüchternen Blick auf Business-Relevanz und Machbarkeit."
         highlights={[
           "Prozessanalyse und Systempriorisierung",
           "Website- und E-Commerce-Einordnung",

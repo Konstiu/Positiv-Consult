@@ -95,7 +95,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "30+", label: "Jahre Berufserfahrung" },
+  { value: "30+", label: "Beratungserfahrung in Strategie, Digitalisierung, Vertrieb und Wachstum." },
   { value: "250+", label: "Projekte" },
   { value: "150+", label: "Kunden" },
   { value: "7", label: "Länder" },
