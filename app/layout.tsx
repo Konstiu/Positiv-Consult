@@ -8,11 +8,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${companyName} | Unternehmensberatung Wien`,
+    default: `${companyName} | Strategie, Digitalisierung & KI-Beratung`,
     template: `%s | ${companyName}`,
   },
   description:
-    "Moderne Unternehmensberatung für Strategie, Digitalisierung, Marketing, Vertrieb, Förderberatung und AI Consulting.",
+    "Unternehmensberatung für KMU, Eigentümer:innen und Geschäftsführungen: Strategie, Digitalisierung, KI-Beratung, Vertrieb und Förderberatung.",
 };
 
 export default function RootLayout({

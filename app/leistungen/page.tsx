@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Leistungen",
   description:
-    "Leistungsbereiche von POSITIVconsult: Strategie, Kampagnen, Vertrieb, Online Marketing, E-Commerce, Startups, Ausschreibungen, Internationalisierung, Förderberatung und AI Consulting.",
+    "Leistungsbereiche von POSITIVconsult: Strategie, Marketing, Vertrieb, Digitalisierung, KI-Beratung, Förderberatung, E-Commerce, Ausschreibungen und Internationalisierung.",
   path: "/leistungen",
 });
 
@@ -13,92 +13,92 @@ const serviceBlocks = [
   {
     title: "Strategie",
     problem:
-      "Wenn Positionierung, Zielbild oder Wachstumsrichtung nicht präzise genug sind, werden Markt- und Vertriebsentscheidungen unscharf.",
+      "Wenn Marktchancen, Zielgruppen, Angebote und Ressourcen nicht sauber eingeordnet sind, werden Investitionen, Vertrieb und Wachstum schnell unscharf.",
     approach:
-      "POSITIVconsult verdichtet Marktbild, Zielgruppen, Angebotslogik und Wachstumsrichtung zu einer belastbaren strategischen Linie.",
+      "Wir ordnen Marktbild, Positionierung, Zielgruppen, Angebotslogik und interne Möglichkeiten gemeinsam mit der Geschäftsführung und relevanten Verantwortlichen.",
     result:
-      "Am Ende liegen klare Entscheidungsgrundlagen, priorisierte Maßnahmen und eine nachvollziehbare Wachstumsrichtung vor.",
+      "Sie erhalten eine belastbare Grundlage für Prioritäten, Entscheidungen und die nächsten strategischen Schritte.",
   },
   {
-    title: "Kampagnen",
+    title: "Marketing & Kampagnen",
     problem:
-      "Kampagnen wirken oft nicht mehr, wenn sie mit alten Logiken auf neue digitale Märkte treffen.",
+      "Kommunikation verliert Wirkung, wenn Botschaften, Kanäle und Zielgruppen nicht mehr zusammenpassen oder Kampagnen nur operativ weiterlaufen.",
     approach:
-      "Kampagnen werden an Zielgruppenverhalten, digitale Kanäle, Botschaften und Timing angepasst und in eine tragfähige Kommunikationslogik überführt.",
+      "Wir entwickeln Kommunikationsstrategie, Kampagnen-Setup und Kanalprioritäten mit Blick auf Marktumfeld, Zielgruppe und verfügbare Ressourcen.",
     result:
-      "Unternehmen erhalten eine abgestimmte Kampagnenlogik mit klarer Marktansprache, passenden Kanälen und umsetzbaren Maßnahmen.",
+      "Am Ende steht ein nachvollziehbarer Ansatz für Inhalte, Kampagnen und digitale Kanäle, der tatsächlich anschlussfähig ist.",
   },
   {
     title: "Vertrieb",
     problem:
-      "Vertriebsstrukturen wachsen häufig historisch und verlieren dadurch an Effizienz und Steuerbarkeit.",
+      "Historisch gewachsene Vertriebsstrukturen machen Marktbearbeitung oft aufwendig, unübersichtlich oder schwer steuerbar.",
     approach:
-      "POSITIVconsult strukturiert Vertriebsabläufe, Rollen, Prioritäten und Marktbearbeitung so, dass operative Aktivitäten besser steuerbar werden.",
+      "Wir analysieren Rollen, Prozesse, Angebotslogik und operative Vertriebsaktivitäten und bringen diese in eine klarere Struktur.",
     result:
-      "Nach der Zusammenarbeit stehen strukturierte Vertriebsprozesse, klare Zuständigkeiten und ein belastbarer nächster Umsetzungsschritt.",
+      "Sie bekommen eine belastbare Grundlage für Vertriebsorganisation, Prioritäten und die Weiterentwicklung laufender Aktivitäten.",
   },
   {
-    title: "Ausschreibungen",
+    title: "Digitalisierung",
     problem:
-      "Bei der Einbindung externer Lieferanten fehlt oft ein klarer Rahmen für Auswahl und Vergleichbarkeit.",
+      "Viele KMU arbeiten mit historisch gewachsenen Prozessen, zu vielen Tools und einer Systemlandschaft ohne klare Priorität.",
     approach:
-      "Ausschreibungen werden fachlich vorbereitet, Vergleichskriterien geschärft und Angebote entlang von Ziel, Aufwand und Eignung bewertet.",
+      "Wir analysieren Prozesse, Systeme, Schnittstellen und digitale Baustellen und priorisieren nach Wirkung, Aufwand und Umsetzbarkeit.",
     result:
-      "Entscheidungsteams erhalten eine strukturierte Auswahlgrundlage und nachvollziehbare Kriterien für die Partnerentscheidung.",
+      "Sie erhalten einen Maßnahmenplan, der digitale Vorhaben in eine realistische Reihenfolge bringt.",
   },
   {
-    title: "Online Marketing",
+    title: "KI-Beratung",
     problem:
-      "Website, Content, Social Media und digitale Reichweite entwickeln sich häufig ohne konsistente Prioritäten.",
+      "KI ist oft präsent, aber unklar bleibt, welche Use Cases wirklich sinnvoll sind und wie groß Aufwand, Risiko und Nutzen tatsächlich sind.",
     approach:
-      "Die digitale Marktbearbeitung wird über Website, Content, Social Media und Performance-Kommunikation hinweg geordnet und aufeinander abgestimmt.",
+      "Wir prüfen Einsatzfelder, priorisieren Use Cases und definieren klar abgegrenzte Pilotprojekte für Marketing, Vertrieb, Administration oder Wissensmanagement.",
     result:
-      "Am Ende steht eine abgestimmte Kommunikationslogik mit klaren Prioritäten für Inhalte, Kanäle und Marktbearbeitung.",
-  },
-  {
-    title: "E-Commerce",
-    problem:
-      "Digitale Vertriebskanäle benötigen mehr als nur Technologie; sie brauchen geschäftliche Logik, Prozesse und Kundennähe.",
-    approach:
-      "E-Commerce wird als Teil von Angebot, Vertrieb, Prozessen und digitaler Kundenreise betrachtet und nicht isoliert als Shop-Thema behandelt.",
-    result:
-      "Unternehmen erhalten abgestimmte digitale Verkaufsprozesse, klare Prioritäten und eine realistische Weiterentwicklungsrichtung.",
-  },
-  {
-    title: "Startups",
-    problem:
-      "Junge Unternehmen müssen ihr Modell, ihre Story und ihren Markt fit für Wachstum und Finanzierung machen.",
-    approach:
-      "POSITIVconsult begleitet Business Modelling, Positionierung, Pitch-Logik und die Vorbereitung zentraler Entscheidungs- und Kommunikationsunterlagen.",
-    result:
-      "Danach liegen ein geschärftes Geschäftsmodell, eine klare Marktlogik und belastbare Unterlagen für Gespräche mit Investor:innen oder Partnern vor.",
-  },
-  {
-    title: "Internationales",
-    problem:
-      "Markteintritte sind oft komplex, weil lokale Marktlogiken, Partner und Prioritäten zusammengebracht werden müssen.",
-    approach:
-      "Mit internationalen Partnern begleitet POSITIVconsult die Vorbereitung von Markteintritten, die Partnerauswahl und die Priorisierung der nächsten Schritte.",
-    result:
-      "Unternehmen haben danach eine strukturierte Entscheidungsgrundlage für Markt, Partner und den konkreten Eintrittspfad.",
+      "Sie bekommen eine realistische Einschätzung, welche KI-Themen für Ihr Unternehmen sinnvoll sind und wie ein guter Einstieg aussehen kann.",
   },
   {
     title: "Förderberatung",
     problem:
-      "Förderthemen werden häufig zu spät oder ohne klaren Projektbezug betrachtet.",
+      "Förderthemen werden oft erst dann betrachtet, wenn das Projekt schon läuft oder die Projektlogik noch nicht ausgereift ist.",
     approach:
-      "Fördermöglichkeiten werden im Kontext von EPU-, KMU-, Digitalisierungs- oder Transformationsvorhaben fachlich eingeordnet und mit Ziel, Umfang und Projektlogik abgeglichen.",
+      "Wir unterstützen bei der Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten im Zusammenhang mit Digitalisierung, Innovation oder Wachstum.",
     result:
-      "Am Ende steht eine Förderfähigkeits-Einschätzung mit klarem Projektbezug und einem realistischen nächsten Schritt.",
+      "Sie wissen, ob ein Vorhaben fachlich und wirtschaftlich zu möglichen Förderthemen passt und wie die nächsten Schritte aussehen.",
   },
   {
-    title: "AI Consulting",
+    title: "E-Commerce",
     problem:
-      "KI wird oft diffus diskutiert, ohne klaren Nutzen, Prioritäten oder organisatorische Tragfähigkeit.",
+      "Shop, Website und digitale Vertriebskanäle entwickeln sich häufig auseinander und werden nicht mehr als gemeinsamer Verkaufsprozess gedacht.",
     approach:
-      "POSITIVconsult übersetzt KI-Themen in einen pragmatischen Beratungsansatz mit Fokus auf sinnvolle Einsatzfelder, Priorisierung und Umsetzung.",
+      "Wir betrachten E-Commerce im Zusammenspiel mit Sortiment, Website, Vertrieb, Service und internen Abläufen.",
     result:
-      "Unternehmen erhalten bewertete KI-Use-Cases, klare Prioritäten und eine realistische Grundlage für Pilotierung oder Einführung.",
+      "Sie erhalten eine Einordnung, wo im digitalen Verkauf die größten Hebel liegen und was zuerst verbessert werden sollte.",
+  },
+  {
+    title: "Ausschreibungen",
+    problem:
+      "Wenn externe Partner eingebunden werden sollen, fehlt oft eine belastbare Grundlage für Vergleich, Auswahl und Entscheidung.",
+    approach:
+      "Wir unterstützen bei Ausschreibungslogik, Auswahlkriterien, Anbieterbewertung und der fachlichen Strukturierung des Prozesses.",
+    result:
+      "Sie erhalten eine nachvollziehbare Entscheidungsgrundlage für Partner, Anbieter oder Lieferanten.",
+  },
+  {
+    title: "Start-ups",
+    problem:
+      "Junge Unternehmen müssen Geschäftsmodell, Angebot, Marktansprache und Pitch-Logik gleichzeitig schärfen, obwohl Ressourcen meist knapp sind.",
+    approach:
+      "Wir begleiten bei Positionierung, Angebotslogik, Marktansprache, Pitch-Unterlagen und den nächsten strategischen Entscheidungen.",
+    result:
+      "Sie gewinnen Klarheit darüber, wie Geschäftsmodell, Markt und Kommunikation sinnvoll auf Wachstum vorbereitet werden können.",
+  },
+  {
+    title: "Internationalisierung",
+    problem:
+      "Ein neuer Markt ist nicht nur eine Vertriebsfrage, sondern eine Kombination aus Marktlogik, Partnerwahl, Prioritäten und Ressourcen.",
+    approach:
+      "Mit internationalen Partnern begleiten wir die Einordnung von Märkten, die Auswahl geeigneter Kontakte und die Vorbereitung der nächsten Schritte.",
+    result:
+      "Sie erhalten eine strukturierte Grundlage für die Frage, ob und wie ein Markteintritt sinnvoll vorbereitet werden sollte.",
   },
 ];
 
@@ -107,26 +107,26 @@ export default function LeistungenPage() {
     <>
       <PageHeader
         eyebrow="Leistungen"
-        title="Leistungen für Markt, Wachstum und digitale Entwicklung."
-        description="POSITIVconsult begleitet Unternehmen in Strategie, Vertrieb, Marketing, Digitalisierung, E-Commerce, Förderthemen und AI Consulting — strukturiert, pragmatisch und mit klaren Ergebnissen für die nächsten Entscheidungen."
+        title="Beratungsfelder für Entscheidungen, Prioritäten und konkrete Vorhaben."
+        description="POSITIVconsult unterstützt bei Strategie, Marketing, Vertrieb, Digitalisierung, KI-Beratung, Förderthemen und angrenzenden Wachstumsvorhaben – mit einem klaren Blick auf Umsetzbarkeit und unternehmerische Relevanz."
         highlights={[
-          "Strategie, Kampagnen und Vertrieb",
-          "Online Marketing, E-Commerce und Digitalisierung",
-          "Ausschreibungen, Startups und Internationalisierung",
-          "Förderberatung und AI Consulting",
+          "Strategie, Marktbearbeitung und Wachstum",
+          "KI-Beratung, Digitalisierung und E-Commerce",
+          "Förderberatung, Ausschreibungen und Internationalisierung",
+          "Persönliche Zusammenarbeit mit Eigentümer:innen und Geschäftsführungen",
         ]}
       />
 
       <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-2 md:py-24">
         {serviceBlocks.map((service) => (
           <article key={service.title} className="surface-card p-6 md:p-7">
-            <h2 className="font-serif text-3xl font-semibold text-[var(--ink)]">
+            <h2 className="font-serif text-3xl font-semibold text-[var(--brand-blue)]">
               {service.title}
             </h2>
             <div className="mt-5 grid gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Problem
+                  Wann das relevant ist
                 </p>
                 <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
                   {service.problem}
@@ -134,7 +134,7 @@ export default function LeistungenPage() {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Beratungsansatz
+                  Wie wir arbeiten
                 </p>
                 <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
                   {service.approach}
@@ -142,7 +142,7 @@ export default function LeistungenPage() {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Nutzen
+                  Was Sie mitnehmen
                 </p>
                 <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
                   {service.result}
@@ -155,9 +155,9 @@ export default function LeistungenPage() {
 
       <CtaSection
         eyebrow="Leistungsabgleich"
-        title="Sie möchten klären, welches Thema für Ihr Unternehmen gerade Priorität hat?"
-        description="Ein Erstgespräch hilft, den eigentlichen Beratungsbedarf sauber zu benennen und aus den vorhandenen Leistungsfeldern den richtigen Schwerpunkt abzuleiten."
-        primaryLabel="30-minütiges Erstgespräch vereinbaren"
+        title="Sie möchten herausfinden, welcher Beratungsansatz für Ihr Thema gerade wirklich passt?"
+        description="In einem Gespräch klären wir, ob es primär um Strategie, KI, Digitalisierung, Vertrieb, Förderthemen oder eine Kombination daraus geht."
+        primaryLabel="Passenden Beratungsansatz finden"
         primaryHref="/kontakt"
       />
     </>

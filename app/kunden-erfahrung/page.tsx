@@ -1,12 +1,12 @@
 import { ContactPanel } from "@/components/contact-panel";
 import { PageHeader } from "@/components/page-header";
 import { createMetadata } from "@/lib/metadata";
-import { clientCategories, testimonials } from "@/lib/site-data";
+import { clientCategories, proofTeasers } from "@/lib/site-data";
 
 export const metadata = createMetadata({
-  title: "Kunden und Erfahrung",
+  title: "Referenzen",
   description:
-    "Einblick in die Erfahrung von POSITIVconsult mit belastbaren Fakten statt erfundenen Referenzen.",
+    "Referenzen und Erfahrung von POSITIVconsult: Branchen, Kundenfelder und typische Beratungsaufgaben im Überblick.",
   path: "/kunden-erfahrung",
 });
 
@@ -14,18 +14,24 @@ export default function KundenErfahrungPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Kunden / Erfahrung"
-        title="Nachvollziehbare Erfahrung statt dekorativer Referenzbehauptungen."
-        description="POSITIVconsult arbeitet mit Unternehmen aus unterschiedlichen Branchen und begleitet Projekte mit einem klaren Fokus auf Markt, Wachstum und Umsetzung."
+        eyebrow="Referenzen"
+        title="Erfahrung aus unterschiedlichen Branchen und Unternehmensrealitäten."
+        description="POSITIVconsult arbeitet mit KMU, Start-ups, Institutionen und wirtschaftsnahen Organisationen. Die Referenzen zeigen keine dekorativen Behauptungen, sondern echte Branchenbreite und typische Themenfelder."
+        highlights={[
+          "Handel, E-Commerce, Dienstleistung und KMU",
+          "Bildung, Institutionen und wirtschaftsnahe Organisationen",
+          "Gastronomie, Lifestyle und wachstumsorientierte Unternehmen",
+          "Direkte Zusammenarbeit mit Eigentümer:innen und Geschäftsführungen",
+        ]}
       />
 
-      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-3 md:py-24">
-        {testimonials.map((item) => (
+      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-2 xl:grid-cols-4 md:py-24">
+        {proofTeasers.map((item) => (
           <article key={item.title} className="surface-card p-6 md:p-7">
-            <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+            <h2 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
               {item.title}
             </h2>
-            <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
               {item.text}
             </p>
           </article>
@@ -36,18 +42,16 @@ export default function KundenErfahrungPage() {
         <div className="max-w-3xl">
           <span className="eyebrow">Kunden & Branchen</span>
           <h2 className="mt-5 text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] md:text-5xl">
-            Ein kompakter Auszug aus Unternehmen und Organisationen, mit denen
-            POSITIVconsult gearbeitet hat.
+            Ein Auszug aus Unternehmen und Organisationen, mit denen POSITIVconsult gearbeitet hat.
           </h2>
           <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-            Die Auswahl zeigt die Bandbreite der Branchen und Aufgabenfelder
-            von Handel über Dienstleistung bis zu Bildung und Institutionen.
+            Ohne fremde Logos und ohne erfundene Cases: Die folgenden Namen zeigen die Bandbreite der Branchen und Aufgaben, in denen Erfahrung vorhanden ist.
           </p>
         </div>
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {clientCategories.map((group) => (
             <article key={group.category} className="surface-card p-6 md:p-7">
-              <h3 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+              <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
                 {group.category}
               </h3>
               <div className="mt-5 flex flex-wrap gap-3">

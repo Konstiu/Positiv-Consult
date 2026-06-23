@@ -6,45 +6,47 @@ import { fundingFacts } from "@/lib/site-data";
 export const metadata = createMetadata({
   title: "Förderungen",
   description:
-    "Förderberatung für Wachstums-, Digitalisierungs- und Innovationsvorhaben mit Blick auf Förderfähigkeit, Wirtschaftlichkeit und Projektlogik.",
+    "Förderberatung für Digitalisierungs-, Innovations- und Wachstumsvorhaben: Förderfähigkeit einordnen, Projektlogik schärfen und nächste Schritte ableiten.",
   path: "/foerderungen",
 });
+
+const fundingSections = [
+  {
+    title: "Förderfähigkeit einordnen",
+    text: "Wir unterstützen dabei, zu klären, ob ein Vorhaben inhaltlich und wirtschaftlich zu möglichen Förderthemen passt.",
+  },
+  {
+    title: "Projektlogik schärfen",
+    text: "Ein überzeugendes Förderthema braucht ein klares Zielbild, einen nachvollziehbaren Projektbezug und sinnvolle Maßnahmen.",
+  },
+  {
+    title: "Nächste Schritte ableiten",
+    text: "Wir helfen dabei, Förderthemen mit Digitalisierung, Innovation oder Wachstum sauber zu verbinden und den nächsten Schritt realistisch einzuordnen.",
+  },
+];
 
 export default function FoerderungenPage() {
   return (
     <>
       <PageHeader
         eyebrow="Förderungen"
-        title="Fördermöglichkeiten einordnen, ohne das Projekt aus den Augen zu verlieren."
-        description="Förderberatung ist dann sinnvoll, wenn sie zu einem klaren Vorhaben passt. POSITIVconsult unterstützt dabei, Förderfähigkeit einzuordnen und das Thema mit Strategie, Digitalisierung oder Innovation sinnvoll zu verbinden."
+        title="Förderthemen sachlich prüfen, ohne das Projekt aus den Augen zu verlieren."
+        description="Förderberatung ist dann sinnvoll, wenn ein Vorhaben inhaltlich schlüssig ist und die Projektlogik trägt. Genau dort setzen wir an – ohne Förderversprechen und ohne künstliche Aufblähung."
         highlights={[
-          "Einordnung passender Förderthemen",
-          "Verbindung mit Digitalisierungs- und Innovationsprojekten",
-          "Fokus auf Projektlogik und Umsetzbarkeit",
-          "Realistische Einschätzung statt leeren Versprechen",
+          "WKO- und KMU.DIGITAL-nahe Beratungserfahrung",
+          "Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten",
+          "Verbindung zu Digitalisierungs-, KI- und Wachstumsvorhaben",
+          "Keine Garantien, sondern realistische Einschätzung",
         ]}
       />
 
       <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-3 md:py-24">
-        {[
-          {
-            title: "Förderfähigkeit einordnen",
-            text: "Nicht jedes Vorhaben eignet sich gleichermaßen. Entscheidend ist, ob Ziel, Umfang und Projektlogik fachlich und wirtschaftlich stimmig sind.",
-          },
-          {
-            title: "Projekt schärfen",
-            text: "Ein gutes Förderthema braucht ein klares Zielbild, nachvollziehbare Maßnahmen und eine belastbare Ausgangslage.",
-          },
-          {
-            title: "Wirtschaftlich denken",
-            text: "Förderberatung ist nur dann wertvoll, wenn sie zum Unternehmen, zum Vorhaben und zum realistischen nächsten Umsetzungsschritt passt.",
-          },
-        ].map((item) => (
+        {fundingSections.map((item) => (
           <article key={item.title} className="surface-card p-6 md:p-7">
-            <h2 className="font-serif text-2xl font-semibold text-[var(--ink)]">
+            <h2 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
               {item.title}
             </h2>
-            <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
+            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
               {item.text}
             </p>
           </article>
@@ -67,18 +69,16 @@ export default function FoerderungenPage() {
             ))}
           </div>
           <p className="mt-5 rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
-            Förderberatung erfolgt ohne Garantien. Entscheidend ist immer, ob
-            die Fördermöglichkeit fachlich, wirtschaftlich und organisatorisch
-            zum Vorhaben passt.
+            Förderberatung erfolgt ohne Garantie auf eine Förderung. Entscheidend ist immer, ob ein Vorhaben fachlich, wirtschaftlich und organisatorisch tragfähig ist.
           </p>
         </div>
       </section>
 
       <CtaSection
         eyebrow="Förderberatung"
-        title="Sie wollen klären, ob ein Vorhaben förderfähig und wirtschaftlich sinnvoll aufgesetzt werden kann?"
-        description="Ein Gespräch schafft Klarheit darüber, wie Förderthemen sauber mit Strategie, Digitalisierung oder Innovation zusammenhängen."
-        primaryLabel="Förderthema besprechen"
+        title="Sie möchten klären, ob ein Vorhaben förderfähig und sinnvoll aufgesetzt werden kann?"
+        description="In einem Gespräch ordnen wir das Projekt, die Förderlogik und die nächsten Schritte gemeinsam ein."
+        primaryLabel="Förderfähigkeit besprechen"
         primaryHref="/kontakt"
       />
     </>

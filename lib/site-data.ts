@@ -38,6 +38,21 @@ export type TeamContact = {
   photoUrl?: string;
 };
 
+export type TrustItem = {
+  title: string;
+  text: string;
+};
+
+export type ProofTeaser = {
+  title: string;
+  text: string;
+};
+
+export type OfferModule = {
+  title: string;
+  text: string;
+};
+
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
@@ -71,13 +86,11 @@ export const addressLines = ["Mariahilfer Straße 101", "1060 Wien", "Österreic
 export const toTelHref = (phone: string) => `tel:${phone.replace(/\s+/g, "")}`;
 
 export const navItems: NavItem[] = [
-  { href: "/", label: "Home" },
-  { href: "/#leistungen", label: "Leistungen" },
-  { href: "/ai-consulting", label: "AI Consulting" },
-  { href: "/digitalisierung", label: "Digitalisierung" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/digitalisierung", label: "KI & Digitalisierung" },
   { href: "/foerderungen", label: "Förderungen" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/kunden-erfahrung", label: "Kunden / Erfahrung" },
+  { href: "/kunden-erfahrung", label: "Referenzen" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -92,44 +105,44 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Strategie & Wachstum",
     description:
-      "Wir schärfen Positionierung, Zielgruppen, Marktchancen und Wachstumslogik für klare Entscheidungsgrundlagen und priorisierte Maßnahmen.",
+      "Wir unterstützen Geschäftsführungen dabei, Marktchancen, Zielgruppen, Angebote und Ressourcen realistisch einzuordnen und daraus belastbare Prioritäten für Wachstum, Vertrieb und Investitionen abzuleiten.",
     href: "/leistungen",
-    points: ["Positionierung", "Zielgruppen", "Wachstumslogik"],
+    points: ["Positionierung", "Zielgruppen", "Prioritäten"],
   },
   {
     title: "Marketing & Kampagnen",
     description:
       "Wir entwickeln strategisch fundierte Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Marktumfeld und zu relevanten digitalen Kanälen passen.",
     href: "/leistungen",
-    points: ["Kommunikationsstrategie", "Kampagnen Set Up", "Digitale Kanäle"],
+    points: ["Kommunikationsstrategie", "Kampagnen-Setup", "Digitale Kanäle"],
   },
   {
     title: "Vertrieb & Marktbearbeitung",
     description:
-      "Wir strukturieren Vertriebsprozesse, Marktbearbeitung und operative Verkaufsaktivitäten mit Blick auf Steuerbarkeit und Prioritäten.",
+      "Wir analysieren Vertriebsprozesse, Rollen und Marktbearbeitung und schaffen eine Struktur, mit der Teams Chancen konsequenter verfolgen und Aktivitäten nachvollziehbar steuern können.",
     href: "/leistungen",
     points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
   },
   {
     title: "Digitalisierung & E-Commerce",
     description:
-      "Wir entwickeln digitale Prozesse, Websites und E-Commerce in Richtung einer realistischen Roadmap mit klaren nächsten Schritten weiter.",
+      "Wir analysieren bestehende Prozesse, Websites und E-Commerce-Strukturen, identifizieren Engpässe und priorisieren Maßnahmen nach Aufwand, Wirkung und Umsetzbarkeit.",
     href: "/leistungen",
-    points: ["Digitale Prozesse", "Websites", "E-Commerce"],
+    points: ["Prozessanalyse", "Website & E-Commerce", "Systemprioritäten"],
   },
   {
-    title: "AI Consulting",
+    title: "KI-Beratung",
     description:
-      "Wir identifizieren sinnvolle KI-Anwendungsfälle, priorisieren Use Cases und begleiten Pilotierung und Einführung mit klarem Business-Fokus.",
+      "Wir finden KI-Anwendungsfälle, die tatsächlich Zeit sparen, Qualität erhöhen oder Entscheidungen verbessern, und testen sie in klar abgegrenzten Pilotprojekten.",
     href: "/ai-consulting",
-    points: ["Use Cases", "Pilotierung", "Einführung"],
+    points: ["Potenzialanalyse", "Use Cases", "Pilotprojekte"],
   },
   {
     title: "Förderberatung",
     description:
-      "Wir ordnen ein, ob Fördermöglichkeiten fachlich und wirtschaftlich zu Strategie-, Digitalisierungs- oder Innovationsvorhaben passen.",
+      "Wir unterstützen bei der Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten, wenn ein Vorhaben mit Digitalisierung, Innovation oder Wachstum verbunden ist.",
     href: "/foerderungen",
-    points: ["Einordnung", "Förderfähigkeit", "Projektbezug"],
+    points: ["Förderfähigkeit", "Projektlogik", "Nächste Schritte"],
   },
 ];
 
@@ -138,6 +151,33 @@ export const expertiseAreas = [
   "Strategie, Marketing, Vertrieb und digitale Transformation aus einer Hand",
   "Direkte Zusammenarbeit mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
   "Persönlich, pragmatisch und mit Fokus auf klare Entscheidungsgrundlagen",
+];
+
+export const homepageTrustItems: TrustItem[] = [
+  {
+    title: "Seit 2004",
+    text: "Beratungserfahrung in Strategie, Digitalisierung, Vertrieb und Wachstum.",
+  },
+  {
+    title: "250+ Projekte",
+    text: "Begleitete Vorhaben in unterschiedlichen Unternehmenssituationen und Branchen.",
+  },
+  {
+    title: "150+ Kunden",
+    text: "Langjährige Zusammenarbeit mit KMU, Eigentümer:innen und Entscheidungsteams.",
+  },
+  {
+    title: "Breite Branchenpraxis",
+    text: "Erfahrung mit KMU, Handel, Dienstleistung, Bildung, Institutionen, Gastronomie und Start-ups.",
+  },
+];
+
+export const typicalSituations = [
+  "Wir haben viele digitale Baustellen, aber keine klare Priorität.",
+  "Wir wollen KI nutzen, wissen aber nicht, welche Use Cases wirklich sinnvoll sind.",
+  "Marketing und Vertrieb brauchen mehr Struktur und bessere Entscheidungsgrundlagen.",
+  "Wir planen ein Projekt und möchten prüfen, ob eine Förderung möglich ist.",
+  "Wir wachsen, aber Strategie, Prozesse und Kommunikation müssen mitziehen.",
 ];
 
 export const homeFaqs: FaqItem[] = [
@@ -157,7 +197,7 @@ export const homeFaqs: FaqItem[] = [
       "Die Zusammenarbeit verbindet Analyse, Priorisierung und konkrete Umsetzung. Ziel sind klare Entscheidungsgrundlagen, abgestimmte Maßnahmen und Fortschritte, die operativ anschlussfähig bleiben.",
   },
   {
-    question: "Kann Förderberatung mit Digitalisierungs- oder AI-Projekten verbunden werden?",
+    question: "Kann Förderberatung mit Digitalisierungs- oder KI-Projekten verbunden werden?",
     answer:
       "Ja. Förderthemen können sinnvoll sein, wenn sie zu einem realen Vorhaben passen. Entscheidend ist immer der fachliche Projektbezug und nicht die Förderung als Selbstzweck.",
   },
@@ -170,16 +210,35 @@ export const footerLinks = [
 
 export const testimonials = [
   {
-    title: "Langjährige Projekterfahrung",
-    text: "Seit vielen Jahren begleitet POSITIVconsult Unternehmen in Strategie, Marktbearbeitung, Digitalisierung und Wachstum.",
+    title: "Strategie & Wachstum",
+    text: "Strukturierung von Marktchancen, Zielgruppen, Angeboten und internen Ressourcen.",
   },
   {
-    title: "Digitale Kompetenz mit Business-Fokus",
-    text: "Digitalisierung, E-Commerce und AI Consulting werden aus unternehmerischer Sicht gedacht und in realistische Roadmaps, priorisierte Maßnahmen und konkrete Umsetzungsschritte übersetzt.",
+    title: "E-Commerce & Handel",
+    text: "Priorisierung digitaler Maßnahmen für Sortiment, Website, Vertrieb und Kundenerlebnis.",
   },
   {
-    title: "Direkte Zusammenarbeit mit Entscheidern",
-    text: "Die Beratung erfolgt persönlich, direkt und mit kurzen Wegen zwischen Analyse, Entscheidung und dem nächsten sinnvollen Umsetzungsschritt.",
+    title: "Förderberatung",
+    text: "Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten vor Antragstellung.",
+  },
+];
+
+export const proofTeasers: ProofTeaser[] = [
+  {
+    title: "E-Commerce & Handel",
+    text: "Priorisierung digitaler Maßnahmen für Sortiment, Website, Vertrieb und Kundenerlebnis.",
+  },
+  {
+    title: "Förderberatung",
+    text: "Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten vor Antragstellung.",
+  },
+  {
+    title: "KI in Marketing & Vertrieb",
+    text: "Auswahl sinnvoller Use Cases, Pilotierung und Einführung mit realistischem Aufwand.",
+  },
+  {
+    title: "Strategie & Wachstum",
+    text: "Strukturierung von Marktchancen, Zielgruppen, Angeboten und internen Ressourcen.",
   },
 ];
 
@@ -209,13 +268,59 @@ export const companyStory: TimelineItem[] = [
   { year: "2017", title: "Förderberatung für EPU und KMU" },
   { year: "2019", title: "Vorträge zu digitaler Kommunikation und KI" },
   { year: "2021", title: "Advisor im Doctor of Business Administration Umfeld" },
-  { year: "2024", title: "AI Consulting als eigener Schwerpunkt" },
+  { year: "2024", title: "KI-Beratung als eigener Schwerpunkt" },
 ];
 
 export const fundingFacts = [
   "Beraterpool der Wirtschaftskammer Wien",
   "incite zertifizierte Digital Consultant (CDC) sowie eCommerce & Social Media Consultant im KMU.DIGITAL-Umfeld",
   "Beraterpool der Wirtschaftskammer Niederösterreich",
+];
+
+export const aiOfferModules: OfferModule[] = [
+  {
+    title: "KI-Potenzialanalyse",
+    text: "Wir prüfen, wo KI im Unternehmen Zeit sparen, Qualität erhöhen oder Entscheidungsprozesse verbessern kann.",
+  },
+  {
+    title: "Use-Case-Workshop",
+    text: "Mögliche Einsatzfelder werden gemeinsam mit Fachbereichen, Geschäftsführung und Verantwortlichen konkretisiert.",
+  },
+  {
+    title: "Priorisierung",
+    text: "Use Cases werden nach Aufwand, Nutzen, Risiko und organisatorischer Passung bewertet.",
+  },
+  {
+    title: "Pilotprojekt-Konzept",
+    text: "Für ausgewählte Themen definieren wir einen klar abgegrenzten Test mit Zielbild, Rollen und Erfolgskriterien.",
+  },
+  {
+    title: "Einführung in Teams & Prozesse",
+    text: "Damit KI nicht isoliert bleibt, begleiten wir die Verankerung in Abläufen, Verantwortlichkeiten und Zusammenarbeit.",
+  },
+];
+
+export const digitalOfferModules: OfferModule[] = [
+  {
+    title: "Prozessanalyse",
+    text: "Wir prüfen, wo historisch gewachsene Abläufe Reibung erzeugen und welche Arbeitsschritte digital sauber unterstützt werden können.",
+  },
+  {
+    title: "Website- & E-Commerce-Einordnung",
+    text: "Websites, Shops und digitale Touchpoints werden nach Nutzen, Engpässen und Weiterentwicklungsbedarf bewertet.",
+  },
+  {
+    title: "Tool- & Systempriorisierung",
+    text: "Wir ordnen bestehende Tools, Schnittstellen und Datenflüsse und priorisieren, was zuerst gelöst werden sollte.",
+  },
+  {
+    title: "Maßnahmenplan",
+    text: "Sie erhalten einen nachvollziehbaren Maßnahmenplan mit sinnvollen Etappen statt einer überladenen Wunschliste.",
+  },
+  {
+    title: "Umsetzungsbegleitung",
+    text: "Bei Bedarf begleiten wir die nächsten Schritte in Richtung Einführung, Abstimmung mit Partnern oder operativer Umsetzung.",
+  },
 ];
 
 export const teamContacts = [
@@ -237,27 +342,32 @@ export const teamContacts = [
 
 export const clientCategories: ClientCategory[] = [
   {
-    category: "Handel",
+    category: "Handel & E-Commerce",
     names: [
+      "B-Dressed",
       "BIPA",
       "Bikestore",
+      "Burggasse 24",
       "Depot",
       "Dorotheum",
       "Gissinger",
+      "Herbanima",
       "Intersport Alpensport",
       "Lobmeyr",
       "Morawa",
+      "Weingut Polz",
     ],
   },
   {
-    category: "Dienstleister",
+    category: "Dienstleistung & KMU",
     names: [
       "ArtforArt",
-      "Herbanima",
       "Kager Knapp Hausverwaltung",
       "Klimabündnis Oberösterreich",
       "Onlim GmbH",
       "SOL4 IT-Consulting GmbH",
+      "smec smarter-ecommerce",
+      "Oceanum Salzgrotte",
       "Wallner & Partner",
       "Wine & Partners",
     ],
@@ -267,22 +377,32 @@ export const clientCategories: ClientCategory[] = [
     names: [
       "KMU Akademie und Management AG",
       "Medizinische Universität Wien",
+      "New Design University",
       "WIFI Wien",
       "Wirtschaftskammer Wien",
+      "Wirtschaftskammer Niederösterreich",
       "WKO",
       "WK Wien",
     ],
   },
   {
-    category: "Gastronomie",
+    category: "Gastronomie & Lifestyle",
     names: [
       "Bellaria",
       "Cafe Burggasse 24",
       "Cafe Kriemhild",
-      "Finetime",
       "Mochi GmbH",
-      "Orbis Reisen",
       "Restaurant Zsom",
+    ],
+  },
+  {
+    category: "Öffentliche & wirtschaftsnahe Organisationen",
+    names: [
+      "Klimabündnis Oberösterreich",
+      "KMU Digital",
+      "Wirtschaftskammer Wien",
+      "Wirtschaftskammer Niederösterreich",
+      "WKO",
     ],
   },
 ];

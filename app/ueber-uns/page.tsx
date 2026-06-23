@@ -7,7 +7,7 @@ import { ContactCard } from "@/components/contact-card";
 export const metadata = createMetadata({
   title: "Über uns",
   description:
-    "Über POSITIVconsult: erfahrene Unternehmensberatung mit langjähriger Erfahrung und internationaler Perspektive.",
+    "Über POSITIVconsult: persönliche Beratungserfahrung seit 2004 in Strategie, Digitalisierung, Vertrieb und Wachstumsfragen.",
   path: "/ueber-uns",
 });
 
@@ -16,12 +16,12 @@ export default function UeberUnsPage() {
     <>
       <PageHeader
         eyebrow="Über uns"
-        title="Erfahrung, Klarheit und Umsetzungsnähe als Beratungsstandard."
-        description="POSITIVconsult ist eine Unternehmensberatung mit Fokus auf Strategie, Digitalisierung, Marketing und Vertrieb. Im Zentrum stehen persönliche Zusammenarbeit, klare Struktur und konkrete nächste Schritte."
+        title="Beratungserfahrung seit 2004 – direkt, pragmatisch und entscheidungsnah."
+        description="POSITIVconsult begleitet Eigentümer:innen, Geschäftsführungen und Entscheidungsteams in Phasen, in denen Wachstum, Digitalisierung, Marktbearbeitung oder Förderthemen neu eingeordnet werden müssen."
         highlights={[
           "Sitz in Wien",
           "30 Jahre Berufserfahrung im digitalen Umfeld",
-          "Beratung für Konzerne, KMU, Startups und EPU",
+          "Beratung für Konzerne, KMU, Start-ups und EPU",
           "Arbeit direkt mit Eigentümer:innen und Geschäftsführung",
         ]}
       />
@@ -33,13 +33,14 @@ export default function UeberUnsPage() {
       <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-8 md:px-8 lg:grid-cols-2">
         <article className="surface-card p-6 md:p-8">
           <h2 className="font-serif text-3xl font-semibold text-[var(--ink)]">
-            Beratung für Entscheider
+            Beratung für Eigentümer:innen und Geschäftsführungen
           </h2>
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
             Seit 2004 begleitet POSITIVconsult Unternehmen in Phasen, in denen
             Wachstum, Marktposition, Vertrieb oder digitale Entwicklung neu
-            justiert werden müssen. Die Beratung ist persönlich, direkt und auf
-            klare Entscheidungen und anschlussfähige Umsetzung ausgerichtet.
+            eingeordnet werden müssen. Die Beratung ist persönlich, direkt und
+            auf tragfähige Entscheidungen und umsetzbare Prioritäten
+            ausgerichtet.
           </p>
         </article>
         <article className="surface-card p-6 md:p-8">
@@ -49,7 +50,8 @@ export default function UeberUnsPage() {
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
             Zwei erfahrene Partner arbeiten direkt mit Eigentümer:innen,
             Geschäftsführung und Entscheidungsteams. Das sorgt für kurze Wege,
-            Verbindlichkeit und einen klaren Blick auf das Wesentliche.
+            Verbindlichkeit und einen klaren Blick auf Markt, Ressourcen und
+            sinnvolle nächste Schritte.
           </p>
         </article>
       </section>

@@ -6,7 +6,7 @@ import { addressLines, teamContacts } from "@/lib/site-data";
 export const metadata = createMetadata({
   title: "Kontakt",
   description:
-    "Kontakt zu POSITIVconsult in Wien. Für Strategie, Digitalisierung, Vertrieb, Förderberatung und AI Consulting.",
+    "Kontakt zu POSITIVconsult für Strategie, Digitalisierung, KI-Beratung, Vertrieb und Förderthemen.",
   path: "/kontakt",
 });
 
@@ -15,8 +15,8 @@ export default function KontaktPage() {
     <>
       <PageHeader
         eyebrow="Kontakt"
-        title="Der direkte Weg zum ersten Gespräch."
-        description="Ob Strategie, Digitalisierung, Vertrieb, E-Commerce, Förderthemen oder AI Consulting — wir klären gemeinsam, wo POSITIVconsult sinnvoll unterstützen kann."
+        title="Projekt oder Fragestellung besprechen."
+        description="Ob Strategie, Digitalisierung, KI-Beratung, Vertrieb, E-Commerce oder Förderthemen: Wir klären gemeinsam, worum es geht und welcher Beratungsansatz sinnvoll ist."
       />
 
       <section className="site-shell section-space space-y-8">
@@ -28,8 +28,8 @@ export default function KontaktPage() {
             {addressLines.join(", ")}
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
-            In einem ersten Gespräch klären wir Ausgangslage, Prioritäten und
-            sinnvolle nächste Schritte.
+            In einem ersten Gespräch ordnen wir Ausgangslage, Zielbild und
+            nächste Schritte gemeinsam ein.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">

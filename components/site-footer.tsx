@@ -24,7 +24,7 @@ export function SiteFooter() {
           />
           <p className="max-w-md text-sm leading-7 text-slate-300">
             Erfahrene Unternehmensberatung mit Fokus auf Wachstum,
-            Digitalisierung, Vertrieb, Förderthemen und AI Consulting.
+            Digitalisierung, Vertrieb, Förderthemen und KI-Beratung.
           </p>
         </div>
 
