@@ -59,7 +59,7 @@ export default function Home() {
                 KMU. Zwei erfahrene Ansprechpartner begleiten Unternehmen bei
                 Positionierung, Marketing, Vertrieb, digitaler Transformation,
                 E-Commerce, Förderthemen und AI Consulting — von der Analyse
-                bis zum konkreten nächsten Umsetzungsschritt.
+                bis zum konkreten nächsten Umsetzungsschritt. Hallo Konsti.
               </p>
             </div>
 
