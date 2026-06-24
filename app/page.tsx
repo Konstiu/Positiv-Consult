@@ -1,20 +1,16 @@
+import { Suspense } from "react";
 import Link from "next/link";
 
 import { ContactPanel } from "@/components/contact-panel";
 import { CtaSection } from "@/components/cta-section";
-import { FaqSection } from "@/components/faq-section";
+import { ScrollToSection } from "@/components/scroll-to-section";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { createMetadata } from "@/lib/metadata";
 import {
-  clientCategories,
   coreServices,
-  homeFaqs,
   homepageTrustItems,
-  proofTeasers,
-  serviceProcess, stats,
-  typicalSituations,
-  testimonials,
+  clientCategoriesSelected,
 } from "@/lib/site-data";
 
 export const metadata = createMetadata({
@@ -34,7 +30,20 @@ export const metadata = createMetadata({
 export default function Home() {
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-white">
+      <Suspense fallback={null}>
+        <ScrollToSection />
+      </Suspense>
+
+      <section className="relative isolate overflow-hidden bg-[var(--paper)]">
+        <div
+            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.34] mask-[linear-gradient(to_bottom,black_0%,black_68%,transparent_100%)]"
+            style={{ backgroundImage: "url('/ai-images/background_img.png')" }}
+            aria-hidden="true"
+        />
+        <div
+            className="absolute inset-0 bg-[rgba(248,250,252,0.62)]"
+            aria-hidden="true"
+        />
         <div className="site-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-24">
           <div className="fade-up space-y-8">
             <span className="eyebrow">Unternehmensberatung</span>
@@ -52,10 +61,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row lg:pb-32  pt-1 ">
               <Link
                 href="/kontakt"
-                className="button-primary px-6 text-sm font-semibold"
+                className="button-primary-dark px-5 text-sm font-semibold"
               >
                 Erstgespräch vereinbaren
               </Link>
@@ -93,9 +102,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </section>
 
-      <section className="site-shell pb-6 md:pb-10">
+
+      <section className="site-shell relative -mt-10 pb-6 md:pb-10">
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {homepageTrustItems.map((item) => (
             <article key={item.title} className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
@@ -110,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-shell section-space flex flex-col gap-10">
+      <section id="leistungen" className="site-shell section-space flex flex-col gap-10">
         <SectionHeading
           eyebrow="Leistungen"
           title="Beratungsfelder, die auf konkrete Entscheidungen und Vorhaben einzahlen."
@@ -123,85 +134,91 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-shell section-space flex flex-col gap-10">
-        <SectionHeading
-            eyebrow="Erfahrung"
-            title="Vertrauen entsteht durch Erfahrung, Klarheit und persönliche Begleitung."
-            description="Zwei erfahrene Partner begleiten Projekte direkt. Das schafft kurze Wege, Verbindlichkeit und eine Beratung, die strategisch denkt und operativ anschlussfähig bleibt."
-            align="center"
-        />
-        <div className="grid gap-5 lg:grid-cols-3">
-          {testimonials.map((item) => (
-              <article key={item.title} className="surface-card p-6 md:p-7">
-                <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-base leading-7 text-[var(--muted)]">
-                  {item.text}
-                </p>
-              </article>
-          ))}
-        </div>
-      </section>
+      {/*<section className="site-shell section-space flex flex-col gap-10">*/}
+      {/*  <SectionHeading*/}
+      {/*      eyebrow="Erfahrung"*/}
+      {/*      title="Vertrauen entsteht durch Erfahrung, Klarheit und persönliche Begleitung."*/}
+      {/*      description="Zwei erfahrene Partner begleiten Projekte direkt. Das schafft kurze Wege, Verbindlichkeit und eine Beratung, die strategisch denkt und operativ anschlussfähig bleibt."*/}
+      {/*      align="center"*/}
+      {/*  />*/}
+      {/*  <div className="grid gap-5 lg:grid-cols-3">*/}
+      {/*    {testimonials.map((item) => (*/}
+      {/*        <article key={item.title} className="surface-card p-6 md:p-7">*/}
+      {/*          <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">*/}
+      {/*            {item.title}*/}
+      {/*          </h3>*/}
+      {/*          <p className="mt-4 text-base leading-7 text-[var(--muted)]">*/}
+      {/*            {item.text}*/}
+      {/*          </p>*/}
+      {/*        </article>*/}
+      {/*    ))}*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
 
-      <section className="site-shell section-space relative isolate flex flex-col gap-8 overflow-hidden">
-        <div className="max-w-4xl space-y-4">
-          <span className="eyebrow">Arbeitsweise</span>
-          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
-            Von der Einordnung zur Umsetzung.
-          </h2>
-          <p className="max-w-3xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
-            Wir arbeiten nicht mit Standardrezepten, sondern mit einer klaren Abfolge aus Analyse, Priorisierung und Umsetzung. Dadurch wird aus einer unklaren Ausgangslage ein greifbarer Handlungsrahmen.
-          </p>
-        </div>
-        <div className="grid gap-4 lg:grid-cols-3">
-          {serviceProcess.map((item) => (
-            <article key={item.step} className="surface-card p-6 md:p-7">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-red)]">
-                {item.step}
-              </p>
-              <h3 className="mt-3 font-serif text-2xl font-semibold text-[var(--brand-blue)]">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-base leading-7 text-[var(--muted)]">
-                {item.text}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
+      {/*<section className="site-shell section-space relative isolate flex flex-col gap-8 overflow-hidden">*/}
+      {/*  <div className="max-w-4xl space-y-4">*/}
+      {/*    <span className="eyebrow">Arbeitsweise</span>*/}
+      {/*    <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">*/}
+      {/*      Von der Einordnung zur Umsetzung.*/}
+      {/*    </h2>*/}
+      {/*    <p className="max-w-3xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">*/}
+      {/*      Wir arbeiten nicht mit Standardrezepten, sondern mit einer klaren Abfolge aus Analyse, Priorisierung und Umsetzung. Dadurch wird aus einer unklaren Ausgangslage ein greifbarer Handlungsrahmen.*/}
+      {/*    </p>*/}
+      {/*  </div>*/}
+      {/*  <div className="grid gap-4 lg:grid-cols-3">*/}
+      {/*    {serviceProcess.map((item) => (*/}
+      {/*      <article key={item.step} className="surface-card p-6 md:p-7">*/}
+      {/*        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-red)]">*/}
+      {/*          {item.step}*/}
+      {/*        </p>*/}
+      {/*        <h3 className="mt-3 font-serif text-2xl font-semibold text-[var(--brand-blue)]">*/}
+      {/*          {item.title}*/}
+      {/*        </h3>*/}
+      {/*        <p className="mt-3 text-base leading-7 text-[var(--muted)]">*/}
+      {/*          {item.text}*/}
+      {/*        </p>*/}
+      {/*      </article>*/}
+      {/*    ))}*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
-      <section className="site-shell section-space flex flex-col gap-8">
+      <section id="referenzen" className="site-shell section-space flex flex-col gap-8">
         <SectionHeading
             eyebrow="Referenzen"
             title="Erfahrung aus unterschiedlichen Branchen und Organisationen."
-            description="Ein kompakter Auszug aus Unternehmen und Institutionen, mit denen POSITIVconsult gearbeitet hat – von Handel und E-Commerce bis zu Bildung, Gastronomie und wirtschaftsnahen Organisationen."
-        />
+            description="Ein kompakter Auszug aus Unternehmen und Institutionen, mit denen POSITIVconsult gearbeitet hat – von Handel und E-Commerce über Dienstleistungen bis zu Bildung und wirtschaftsnahen Organisationen."        />
 
         <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
-          {clientCategories.map((group) => (
-              <article key={group.category} className="surface-card p-6 md:p-7">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
-                    {group.category}
+          {clientCategoriesSelected.map((group) => (
+              <article
+                  key={group.category}
+                  className="surface-card flex h-full flex-col p-6 md:p-7"
+              >                  <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
+                      {group.category}
                   </h3>
 
-                  <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
-            {group.names.length} Referenzen
-          </span>
-                </div>
+                  <div className="mt-7 space-y-3 border-l border-[rgba(31,78,140,0.18)] pl-5">
+                      {group.featured.map((name) => (
+                          <div
+                              key={name}
+                              className="text-base font-semibold leading-6 text-[var(--ink)]"
+                          >
+                              {name}
+                          </div>
+                      ))}
+                  </div>
 
-                <div className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2">
-                  {group.names.map((name) => (
-                      <div
-                          key={name}
-                          className="border-t border-[rgba(31,78,140,0.12)] pt-4 text-sm font-medium leading-6 text-[var(--ink)]"
-                      >
-                        {name}
-                      </div>
-                  ))}
-                </div>
+                  <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                      {group.names.map((name) => (
+                          <span
+                              key={name}
+                              className="whitespace-nowrap text-sm font-medium leading-6 text-[var(--muted)]"
+                          >
+      {name}
+    </span>
+                      ))}
+                  </div>
               </article>
           ))}
         </div>
@@ -215,7 +232,7 @@ export default function Home() {
         primaryHref="/kontakt"
       />
 
-      <ContactPanel />
+      <ContactPanel id="kontakt" />
     </>
   );
 }

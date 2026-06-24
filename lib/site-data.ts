@@ -29,6 +29,11 @@ export type ClientCategory = {
   category: string;
   names: string[];
 };
+export type ClientCategoryWithFeatures = {
+  category: string;
+  featured: string[];
+  names: string[];
+};
 
 export type TeamContact = {
   name: string;
@@ -402,6 +407,50 @@ export const clientCategories: ClientCategory[] = [
       "KMU Digital",
       "Wirtschaftskammer Wien",
       "Wirtschaftskammer Niederösterreich",
+      "WKO",
+    ],
+  },
+];
+
+export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
+  {
+    category: "Handel & E-Commerce",
+    featured: ["BIPA", "Dorotheum", "Lobmeyr"],
+    names: [
+      "Depot",
+      "Morawa",
+      "Bikestore",
+      "Burggasse 24",
+      "Intersport Alpensport",
+      "Weingut Polz",
+    ],
+  },
+  {
+    category: "Dienstleistung & KMU",
+    featured: [
+      "smec smarter-ecommerce",
+      "Onlim GmbH",
+      "Klimabündnis Oberösterreich",
+    ],
+    names: [
+      "ArtforArt",
+      "SOL4 IT-Consulting GmbH",
+      "Oceanum Salzgrotte",
+      "Wallner & Partner",
+      "Kager Knapp Hausverwaltung",
+    ],
+  },
+  {
+    category: "Bildung & Institutionen",
+    featured: [
+      "Medizinische Universität Wien",
+      "WIFI Wien",
+      "KMU Akademie und Management AG",
+    ],
+    names: [
+      "New Design University",
+      "KMU Digital",
+      "Middlesex University",
       "WKO",
     ],
   },

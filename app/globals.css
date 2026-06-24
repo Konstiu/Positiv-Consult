@@ -37,16 +37,13 @@ body {
 }
 
 html {
-  background:
-    radial-gradient(circle at top, rgba(31, 78, 140, 0.12), transparent 36%),
-    linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+  background: var(--brand-dark);
 }
 
 body {
   color: var(--ink);
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 251, 0.92));
+  background: var(--paper);
   line-height: 1.6;
   text-wrap: pretty;
 }
@@ -73,7 +70,7 @@ summary {
   border-radius: 1.75rem;
   background: var(--surface);
   backdrop-filter: blur(16px);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07);
+  box-shadow: 0 18px 36px -28px rgba(15, 23, 42, 0.22);
 }
 
 .site-shell {
@@ -127,11 +124,38 @@ summary {
   background: var(--brand-red);
   color: white;
   box-shadow: 0 14px 28px rgba(215, 38, 61, 0.22);
+  transition:
+          background-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 180ms ease;
 }
 
 .button-primary:hover {
   background: var(--brand-red-strong);
   box-shadow: 0 18px 34px rgba(215, 38, 61, 0.3);
+  transform: translateY(-1px);
+}
+
+
+.button-primary-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border-radius: 999px;
+  background: var(--brand-dark);
+  color: white;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.14);
+  transition:
+          background-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 180ms ease;
+}
+
+.button-primary-dark:hover {
+  background: #1b2d4a;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
+  transform: translateY(-1px);
 }
 
 .button-secondary {
@@ -143,12 +167,18 @@ summary {
   border: 1px solid rgba(31, 78, 140, 0.2);
   background: rgba(255, 255, 255, 0.88);
   color: var(--brand-dark);
+  transition:
+          background-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 180ms ease;
 }
 
 .button-secondary:hover {
   border-color: rgba(31, 78, 140, 0.36);
   background: rgba(223, 234, 248, 0.42);
   color: var(--brand-blue);
+  transform: translateY(-1px);
+
 }
 
 .text-link {

@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 import { navItems, withBasePath } from "@/lib/site-data";
+
+const homeSectionLinks: Record<string, string> = {
+  "/leistungen": "leistungen",
+  // "/kunden-erfahrung": "referenzen",
+  // "/kontakt": "kontakt",
+};
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -31,12 +37,132 @@ function MenuIcon({ open }: { open: boolean }) {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+
+    if (!section) return;
+
+    const headerOffset = 88;
+    const top = section.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+
+    window.history.replaceState(null, "", window.location.pathname);
+  };
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    const sections = Object.values(homeSectionLinks)
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        setActiveSection(visibleEntries[0]?.target.id ?? null);
+      },
+      {
+        root: null,
+        rootMargin: "-30% 0px -55% 0px",
+        threshold: [0.1, 0.25, 0.5],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  const handleNavClick = (href: string) => {
+    const sectionId = homeSectionLinks[href];
+
+    setOpen(false);
+
+    if (!sectionId) return;
+
+    if (pathname === "/") {
+      scrollToSection(sectionId);
+      return;
+    }
+
+    router.push(`/?scrollTo=${sectionId}`);
+  };
+
+  const isActive = (href: string) => {
+    const sectionId = homeSectionLinks[href];
+
+    if (pathname === "/" && sectionId) {
+      return activeSection === sectionId;
+    }
+
+    if (href === "/digitalisierung") {
+      return pathname === "/digitalisierung" || pathname === "/ai-consulting";
+    }
+
+    return pathname === href;
+  };
+
+  const renderNavItem = (item: (typeof navItems)[number], mobile = false) => {
+    const active = isActive(item.href);
+    const sectionId = homeSectionLinks[item.href];
+    const className = mobile
+      ? `inline-flex min-h-[3rem] items-center px-4 text-base transition ${
+          active
+            ? "text-white"
+            : "text-white/72 hover:bg-white/10 hover:text-white"
+        }`
+      : `inline-flex h-10 items-center whitespace-nowrap px-4 text-[0.95rem] font-medium transition ${
+          active
+            ? "text-white"
+            : "text-white/72 hover:bg-white/10 hover:text-white"
+        }`;
+
+    if (sectionId) {
+      return (
+        <button
+          key={item.href}
+          type="button"
+          onClick={() => handleNavClick(item.href)}
+          className={className}
+          aria-current={active ? "page" : undefined}
+        >
+          {item.label}
+        </button>
+      );
+    }
+
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={() => setOpen(false)}
+        className={className}
+        aria-current={active ? "page" : undefined}
+      >
+        {item.label}
+      </Link>
+    );
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-[var(--brand-dark)] text-white backdrop-blur-xl">
       <div className="site-shell flex min-h-[5rem] items-center justify-between gap-5 py-3">
-        <Link href="/" className="flex h-10 shrink-0 items-center">
+        <Link href="/" className="flex h-10 shrink-0 items-center" onClick={() => setOpen(false)}>
           <Image
             src={withBasePath("/brand/positivconsult-logo.png")}
             alt="POSITIVconsult"
@@ -47,27 +173,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-end gap-1 lg:flex">
-          {navItems.map((item) => {
-            const active =
-              item.href === "/digitalisierung"
-                ? pathname === "/digitalisierung" || pathname === "/ai-consulting"
-                : pathname === item.href;
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={`inline-flex h-10 items-center whitespace-nowrap px-4 text-[0.95rem] font-medium transition ${
-                  active
-                    ? "text-white"
-                    : "text-white/72 hover:bg-white/10 hover:text-white"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {navItems.map((item) => renderNavItem(item))}
         </nav>
 
         <div className="flex shrink-0 items-center lg:hidden">
@@ -86,27 +192,7 @@ export function SiteHeader() {
       {open ? (
         <div className="border-t border-white/8 bg-[var(--brand-dark)] lg:hidden">
           <nav className="site-shell flex flex-col gap-1 py-4">
-            {navItems.map((item) => {
-              const active =
-                item.href === "/digitalisierung"
-                  ? pathname === "/digitalisierung" || pathname === "/ai-consulting"
-                  : pathname === item.href;
-
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`inline-flex min-h-[3rem] items-center px-4 text-base transition ${
-                    active
-                      ? "text-white"
-                      : "text-white/72 hover:bg-white/10 hover:text-white"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {navItems.map((item) => renderNavItem(item, true))}
           </nav>
         </div>
       ) : null}

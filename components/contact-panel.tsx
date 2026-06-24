@@ -1,9 +1,9 @@
 import { ContactCard } from "@/components/contact-card";
 import { addressLines, teamContacts } from "@/lib/site-data";
 
-export function ContactPanel() {
+export function ContactPanel({ id }: { id?: string }) {
   return (
-    <section className="site-shell section-space grid gap-10">
+    <section id={id} className="site-shell section-space grid gap-10">
       <div className="max-w-3xl space-y-6">
         <span className="eyebrow">Kontakt</span>
         <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] md:text-5xl">
