@@ -31,7 +31,7 @@ export default function FoerderungenPage() {
       <PageHeader
         eyebrow="Förderungen"
         title="Förderthemen sachlich prüfen, ohne das Projekt aus den Augen zu verlieren."
-        description="Förderberatung ist dann sinnvoll, wenn ein Vorhaben inhaltlich schlüssig ist und die Projektlogik trägt. Genau dort setzen wir an – ohne Förderversprechen und ohne künstliche Aufblähung."
+        description="Förderberatung ist dann sinnvoll, wenn sie zu einem klaren Vorhaben passt. POSITIVconsult unterstützt dabei, Förderfähigkeit einzuordnen und das Thema mit Strategie, Digitalisierung oder Innovation sinnvoll zu verbinden. Genau dort setzen wir an – ohne Förderversprechen und ohne künstliche Aufblähung."
         highlights={[
           "WKO- und KMU.DIGITAL-nahe Beratungserfahrung",
           "Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten",
@@ -71,6 +71,39 @@ export default function FoerderungenPage() {
           <p className="mt-5 rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
             Förderberatung erfolgt ohne Garantie auf eine Förderung. Entscheidend ist immer, ob ein Vorhaben fachlich, wirtschaftlich und organisatorisch tragfähig ist.
           </p>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-5 py-4 md:px-8">
+        <div className="surface-card p-6 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+            Partner & Netzwerke
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-8">
+            <div className="flex h-16 items-center rounded-xl border border-black/8 bg-white px-6 py-3">
+              <span className="font-serif text-lg font-bold text-[var(--ink)]">KMU<span className="text-[var(--brand-red)]">.</span>DIGITAL</span>
+            </div>
+            <div className="flex h-16 items-center rounded-xl border border-black/8 bg-white px-6 py-3">
+              <span className="font-serif text-lg font-bold text-[var(--ink)]">WKO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="site-shell pb-6 md:pb-10">
+        <div className="grid gap-4 sm:grid-cols-3">
+          <article className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
+            <p className="font-serif text-3xl font-semibold text-(--brand-red)">KMU.DIGITAL</p>
+            <p className="mt-2 text-sm tracking-[0.18em] text-(--brand-blue-soft)">Zertifizierte Berater:innen</p>
+          </article>
+          <article className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
+            <p className="font-serif text-3xl font-semibold text-(--brand-red)">WKO</p>
+            <p className="mt-2 text-sm tracking-[0.18em] text-(--brand-blue-soft)">Beraterpool Wien & NÖ</p>
+          </article>
+          <article className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
+            <p className="font-serif text-3xl font-semibold text-(--brand-red)">Seit 2017</p>
+            <p className="mt-2 text-sm tracking-[0.18em] text-(--brand-blue-soft)">Förderberatung für EPU und KMU</p>
+          </article>
         </div>
       </section>
 

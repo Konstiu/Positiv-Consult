@@ -11,6 +11,7 @@ import {
   coreServices,
   homepageTrustItems,
   clientCategoriesSelected,
+  testimonials,
   withBasePath,
 } from "@/lib/site-data";
 import {StatsStrip} from "@/components/stats-strip";
@@ -124,55 +125,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/*<section className="site-shell section-space flex flex-col gap-10">*/}
-      {/*  <SectionHeading*/}
-      {/*      eyebrow="Erfahrung"*/}
-      {/*      title="Vertrauen entsteht durch Erfahrung, Klarheit und persönliche Begleitung."*/}
-      {/*      description="Zwei erfahrene Partner begleiten Projekte direkt. Das schafft kurze Wege, Verbindlichkeit und eine Beratung, die strategisch denkt und operativ anschlussfähig bleibt."*/}
-      {/*      align="center"*/}
-      {/*  />*/}
-      {/*  <div className="grid gap-5 lg:grid-cols-3">*/}
-      {/*    {testimonials.map((item) => (*/}
-      {/*        <article key={item.title} className="surface-card p-6 md:p-7">*/}
-      {/*          <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">*/}
-      {/*            {item.title}*/}
-      {/*          </h3>*/}
-      {/*          <p className="mt-4 text-base leading-7 text-[var(--muted)]">*/}
-      {/*            {item.text}*/}
-      {/*          </p>*/}
-      {/*        </article>*/}
-      {/*    ))}*/}
-      {/*  </div>*/}
-      {/*</section>*/}
-
-
-      {/*<section className="site-shell section-space relative isolate flex flex-col gap-8 overflow-hidden">*/}
-      {/*  <div className="max-w-4xl space-y-4">*/}
-      {/*    <span className="eyebrow">Arbeitsweise</span>*/}
-      {/*    <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">*/}
-      {/*      Von der Einordnung zur Umsetzung.*/}
-      {/*    </h2>*/}
-      {/*    <p className="max-w-3xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">*/}
-      {/*      Wir arbeiten nicht mit Standardrezepten, sondern mit einer klaren Abfolge aus Analyse, Priorisierung und Umsetzung. Dadurch wird aus einer unklaren Ausgangslage ein greifbarer Handlungsrahmen.*/}
-      {/*    </p>*/}
-      {/*  </div>*/}
-      {/*  <div className="grid gap-4 lg:grid-cols-3">*/}
-      {/*    {serviceProcess.map((item) => (*/}
-      {/*      <article key={item.step} className="surface-card p-6 md:p-7">*/}
-      {/*        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-red)]">*/}
-      {/*          {item.step}*/}
-      {/*        </p>*/}
-      {/*        <h3 className="mt-3 font-serif text-2xl font-semibold text-[var(--brand-blue)]">*/}
-      {/*          {item.title}*/}
-      {/*        </h3>*/}
-      {/*        <p className="mt-3 text-base leading-7 text-[var(--muted)]">*/}
-      {/*          {item.text}*/}
-      {/*        </p>*/}
-      {/*      </article>*/}
-      {/*    ))}*/}
-      {/*  </div>*/}
-      {/*</section>*/}
-
       <section id="referenzen" className="site-shell section-space flex flex-col gap-8">
         <SectionHeading
             eyebrow="Referenzen"
@@ -209,6 +161,27 @@ export default function Home() {
     </span>
                       ))}
                   </div>
+              </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="site-shell section-space flex flex-col gap-10">
+        <SectionHeading
+            eyebrow="Erfahrung"
+            title="Vertrauen entsteht durch Erfahrung, Klarheit und persönliche Begleitung."
+            description="Zwei erfahrene Partner begleiten Projekte direkt. Das schafft kurze Wege, Verbindlichkeit und eine Beratung, die strategisch denkt und operativ anschlussfähig bleibt."
+            align="center"
+        />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {testimonials.map((item) => (
+              <article key={item.title} className="surface-card p-6 md:p-7">
+                <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-[var(--muted)]">
+                  {item.text}
+                </p>
               </article>
           ))}
         </div>
