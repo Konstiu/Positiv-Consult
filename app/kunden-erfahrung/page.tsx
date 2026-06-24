@@ -54,14 +54,14 @@ export default function KundenErfahrungPage() {
               <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
                 {group.category}
               </h3>
-              <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-5 space-y-3 border-l border-[rgba(31,78,140,0.18)] pl-5">
                 {group.names.map((name) => (
-                  <span
+                  <div
                     key={name}
-                    className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-[var(--ink)]"
+                    className="text-base font-medium leading-6 text-[var(--muted)]"
                   >
                     {name}
-                  </span>
+                  </div>
                 ))}
               </div>
             </article>

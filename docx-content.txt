@@ -1,0 +1,182 @@
+000: Home: 
+001: 
+002: Menüführung von 2 
+003: 
+004: Container: 
+005: Titel:  
+006: UNTERNEHMENSBERATUNG 
+007: von 1 
+008: Titel 2: 
+009: Strategie, Digitalisierung, Automatisierung und KI für moderne Unternehmen 
+010: von 1 
+011: Text linker Block: 
+012: POSITIVconsult ist eine Unternehmensberatung aus Wien für Eigentümer:innen, Geschäftsführung, Entscheidungsteams, Start-Ups, EPU und KMU. Zwei erfahrene Ansprechpartner begleiten Unternehmen bei Positionierung, Marketing, Vertrieb, digitaler Transformation, E-Commerce, Förderthemen und AI Consulting — von der Analyse bis zum konkreten nächsten Umsetzungsschritt.
+013: Von 1 
+014: Button 1: Erstgespräch vereinbaren
+015: Von 2
+016: Button 2: ok 
+017: Text rechter Block: 
+018: Zusätzlich: Aktuelle Impulse mit konsequentem Fokus auf die praktische Umsetzung 
+019: als vorletzter Punkt 
+020: 
+021: Container 
+022: 
+023: Dunklerer Block von Version 1 layouttechnisch 
+024: Inhalte von Version 2 
+025: 
+026: Container: 
+027: Typische Ausganslagen – rausgeben 
+028: 
+029: Container LEISTUNGEN 
+030: Text von Version 2 
+031: Erster 3er Block von Version 2 
+032: Zweiter 3er Block von Version 2 
+033: Container 
+034: Erfahrung (in der Praxis) – wie in Version 1 aber weiter unten  
+035: 
+036: 
+037: Container 
+038: Arbeitsweise ok, in in beiden Versionen gleich 
+039: 
+040: Container REFERENZEN 
+041: Wie in Version 2, aber die Aufzählung der Kunden nicht in Button design, sondern in anderem Design – hier bitte um Ideen 
+042: 
+043: Container 
+044: ERSTGESPRÄCH 
+045: Zweiten Button entfernen 
+046: 
+047: Container 
+048: FAQ raus 
+049: 
+050: Container 
+051: Kontakt ok bei beiden gleich 
+052: 
+053: FOOTER: wie in Version 2 
+054: 
+055: 
+056: 
+057: 
+058: LEISTUNGEN LINK Anchor ok 
+059: 
+060: 
+061: KI & DIGITALISIERUNG 
+062: Eine Seite für beides in ok, aber inhaltlich besser getrennt auf einer Seite darstellen 
+063: 
+064: Titel: 
+065: 
+066: KI CONSULTING UND DIGITALISIERUNG 
+067: 
+068: Künstliche Intelligenz mit Substanz statt Hype.
+069: 
+070: KI Consulting ist dann sinnvoll, wenn Nutzen, Prozesse und Umsetzung klar zusammenpassen. POSITIVconsult begleitet Unternehmen dabei mit einem nüchternen Blick auf Business-Relevanz und Machbarkeit.
+071: 
+072: Aufzählungen in 2x2 er Blöcken 
+073: 1. Analyse von Prozessen, Systemen und digitalen Kanälen
+074: Wir bewerten bestehende Prozesse, Systemlandschaften, Websites und E-Commerce-Strukturen im Hinblick auf Effizienz, Nutzererlebnis, Automatisierungspotenzial und digitale Weiterentwicklung.
+075: 2. Identifikation von KI- und Digitalisierungs-Use-Cases
+076: Wir entwickeln konkrete Anwendungsfälle für KI und Digitalisierung mit realem Geschäftsnutzen – etwa zur Prozessautomatisierung, Vertriebsunterstützung, Kundenkommunikation, Datenanalyse oder Effizienzsteigerung.
+077: 3. Bewertung von Chancen, Risiken und Prioritäten
+078: Wir ordnen mögliche Maßnahmen realistisch ein: nach Business-Wirkung, Aufwand, Umsetzbarkeit, Risiken und strategischer Relevanz. So entsteht Klarheit darüber, welche Themen kurzfristig sinnvoll sind und welche vorbereitet werden müssen.
+079: 4. Maßnahmenplan, Pilotierung und Einführung
+080: Wir übersetzen die Analyse in einen konkreten Maßnahmenplan und begleiten Pilotprojekte sowie die Einführung digitaler oder KI-basierter Lösungen – inklusive Priorisierung, Erfolgskriterien und optionaler Verbindung zu Förderthemen.
+081: 
+082: 
+083: CONTAINER 
+084: OPTION 1 LANG 
+085: Typische digitale Baustellen
+086: Viele Unternehmen stehen nicht vor einem einzelnen Digitalisierungsproblem, sondern vor einer Mischung aus gewachsenen Prozessen, verstreuten Systemen und offenen Ideen. Genau dort setzen wir an.
+087: Typische Ausgangspunkte sind:
+088: historisch gewachsene Prozesse mit vielen manuellen Arbeitsschritten 
+089: unklare Systemlandschaften mit zu vielen Tools, Schnittstellen und Dateninseln 
+090: Websites, Shops oder digitale Touchpoints, die nicht mehr zum heutigen Kundenverhalten passen 
+091: Digitalisierungs- und KI-Vorhaben, die parallel laufen, aber ohne klare Priorisierung 
+092: operative Engpässe, bei denen Automatisierung oder KI echten Mehrwert schaffen könnte 
+093: 
+094: Worauf wir schauen
+095: Digitalisierung beginnt selten auf der grünen Wiese. Meist geht es um bestehende Abläufe, vorhandene Systeme, operative Engpässe und viele einzelne Ideen, die bewertet und in eine sinnvolle Reihenfolge gebracht werden müssen.
+096: Wir helfen dabei, digitale Baustellen zu strukturieren, relevante Hebel zu erkennen und Maßnahmen abzuleiten, die nicht nur technisch möglich sind, sondern einen klaren geschäftlichen Nutzen haben. Dabei betrachten wir auch, wo KI sinnvoll unterstützen kann — etwa bei Automatisierung, Datenanalyse, Kundenkommunikation oder internen Arbeitsabläufen.
+097: 
+098: Prozessanalyse
+099: Wir analysieren bestehende Abläufe und zeigen auf, wo Reibung, Medienbrüche oder unnötige manuelle Arbeit entstehen. Ziel ist es, Prozesse so zu strukturieren, dass sie effizienter, transparenter und digital besser unterstützbar werden.
+100: Dabei prüfen wir auch, an welchen Stellen Automatisierung oder KI-Anwendungen realistisch Mehrwert schaffen können — ohne vorschnell technische Lösungen vorzuschlagen.
+101: 
+102: Website- & E-Commerce-Einordnung
+103: Wir bewerten Websites, Shops und digitale Touchpoints im Hinblick auf Nutzerführung, Wirkung, technische Struktur und geschäftlichen Beitrag.
+104: Dabei geht es nicht nur um Design oder einzelne Funktionen, sondern um die Frage, ob die digitalen Kanäle die Unternehmensziele wirksam unterstützen: mehr Anfragen, bessere Conversion, klarere Kommunikation, effizientere Prozesse oder stärkere Kundenbindung.
+105: 
+106: Tool- & Systempriorisierung
+107: Wir schaffen Transparenz in bestehenden Tool- und Systemlandschaften. Dazu betrachten wir Schnittstellen, Datenflüsse, Zuständigkeiten und operative Abhängigkeiten.
+108: Auf dieser Basis priorisieren wir, welche Systeme stabilisiert, vereinfacht, ersetzt oder besser miteinander verbunden werden sollten. So entsteht Klarheit darüber, welche Maßnahmen zuerst angegangen werden sollten und welche Themen warten können.
+109: 
+110: KI- und Digitalisierungspotenziale
+111: Nicht jede digitale Idee ist automatisch sinnvoll. Wir prüfen, wo Digitalisierung, Automatisierung oder KI tatsächlich zur Wertschöpfung beitragen können.
+112: Mögliche Einsatzfelder sind zum Beispiel effizientere interne Abläufe, bessere Datenverfügbarkeit, automatisierte Kundenkommunikation, Unterstützung im Vertrieb, Wissensmanagement oder Entscheidungsunterstützung. Der Fokus liegt immer auf konkretem Nutzen statt auf Trendrhetorik.
+113: 
+114: Maßnahmenplan
+115: Sie erhalten einen nachvollziehbaren Maßnahmenplan mit klaren Etappen, Prioritäten und nächsten Schritten.
+116: Die Maßnahmen werden nach Aufwand, Wirkung, Umsetzbarkeit und strategischer Relevanz eingeordnet. So entsteht keine überladene Wunschliste, sondern ein realistischer Fahrplan für Digitalisierung, Systemoptimierung und sinnvolle KI-Anwendungen.
+117: 
+118: Umsetzungsbegleitung
+119: Bei Bedarf begleiten wir die nächsten Schritte — von der Abstimmung mit internen Teams und externen Partnern bis zur Pilotierung und Einführung neuer digitaler Lösungen.
+120: Dabei achten wir darauf, dass Vorhaben verständlich bleiben, intern mitgetragen werden und praktisch umsetzbar sind. Wo sinnvoll, prüfen wir außerdem Bezüge zu Fördermöglichkeiten, insbesondere bei Digitalisierungs- oder KI-Projekten.
+121: 
+122: OPTION 2 KURZ: 
+123: Digitale Baustellen erkennen, priorisieren und wirksam lösen
+124: Digitalisierung beginnt selten bei null. Häufig bestehen bereits gewachsene Prozesse, viele Tools, manuelle Arbeitsschritte und zahlreiche Ideen für Verbesserungen. Wir helfen dabei, diese Themen zu ordnen, echte Hebel zu erkennen und daraus einen realistischen Maßnahmenplan abzuleiten.
+125: Wir analysieren Prozesse, Websites, E-Commerce-Strukturen, Tools und Schnittstellen mit Blick auf Effizienz, Nutzererlebnis, Automatisierungspotenzial und geschäftlichen Nutzen. Dabei betrachten wir auch, wo KI sinnvoll eingesetzt werden kann — etwa zur Prozessautomatisierung, Datenanalyse, Kundenkommunikation oder Vertriebsunterstützung.
+126: Das Ergebnis ist ein klar priorisierter Fahrplan: mit sinnvollen Etappen, realistischen Maßnahmen und einer fundierten Einordnung nach Aufwand, Wirkung und Umsetzbarkeit. Auf Wunsch begleiten wir auch Pilotierung, Einführung und die Abstimmung mit Umsetzungspartnern oder Förderstellen.
+127: 
+128: 
+129: KONTAKTBLOCK wie in Version 1, aber mit Zusatztext DIGITALISIERUNG 
+130: 
+131: 
+132: 
+133: FÖRDERUNGEN 
+134: 
+135: Titel ok 1 und 2 
+136: Titel: Version 1 
+137: Text: 
+138: Förderberatung ist dann sinnvoll, wenn sie zu einem klaren Vorhaben passt. POSITIVconsult unterstützt dabei, Förderfähigkeit einzuordnen und das Thema mit Strategie, Digitalisierung oder Innovation sinnvoll zu verbinden. Genau dort setzen wir an – ohne Förderversprechen und ohne künstliche Aufblähung.
+139: 
+140: 3er Block wie in Version 2 
+141: 
+142: FÖRDERBERATUNG IM ÜBERBLICK 
+143: Logos von KMU Digital und WKO einbauen 
+144: 
+145: Buttonstyle layouttechnisch ändern 
+146: 
+147: Dunkler Block wie in Version 1 
+148: Abstand zum Footer optimieren 
+149: 
+150: ******* 
+151: 
+152: ÜBER UNS  wie Version 2
+153: 
+154: 
+155: 
+156: REFERENZEN 
+157: 
+158: Text Version 2: Erfahrung aus unterschiedlichen Branchen und Unternehmensrealitäten.
+159: 
+160: Text Version 2: POSITIVconsult arbeitet mit KMU, Start-ups, Institutionen und wirtschaftsnahen Organisationen. Die Referenzen zeigen keine dekorativen Behauptungen, sondern echte Branchenbreite und typische Themenfelder. 
+161: 
+162: Kunden & Branchen
+163: Ein Auszug aus Unternehmen und Organisationen, mit denen POSITIVconsult gearbeitet hat.
+164: 
+165: Die Auswahl zeigt die Bandbreite der Branchen und Aufgabenfelder von Handel über Dienstleistung bis zu Bildung und Institutionen.
+166: 
+167: Blöcke wie in Version 2, aber nicht mit Buttons bei Namen 
+168: 
+169: Kontaktblock Version 2 ok 
+170: 
+171: 
+172: Kontakt 
+173: 
+174: Version 2 
+175: 
+176: 
+177: Impressum Fokus auf Heidrun aber ok 
+178: 
+179: Datenschutz ok 
+180: 
+181: 
