@@ -2,17 +2,27 @@ import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { companyName, siteUrl } from "@/lib/site-data";
+import { companyName, deploymentSiteUrl, isPreviewDeployment } from "@/lib/site-data";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(deploymentSiteUrl),
   title: {
     default: `${companyName} | Strategie, Digitalisierung & KI-Beratung`,
     template: `%s | ${companyName}`,
   },
   description:
     "Unternehmensberatung für KMU, Eigentümer:innen und Geschäftsführungen: Strategie, Digitalisierung, KI-Beratung, Vertrieb und Förderberatung.",
+  robots: isPreviewDeployment
+    ? {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      }
+    : undefined,
 };
 
 export default function RootLayout({

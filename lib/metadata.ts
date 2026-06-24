@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 
 import {
   companyName,
-  toAbsoluteAssetUrl,
-  toAbsoluteSiteUrl,
+  isPreviewDeployment,
+  toAbsoluteDeploymentAssetUrl,
+  toAbsoluteProductionUrl,
 } from "@/lib/site-data";
 
 type MetadataInput = {
@@ -13,7 +14,7 @@ type MetadataInput = {
   keywords?: string[];
 };
 
-const defaultImage = toAbsoluteAssetUrl("/brand/positivconsult-logo.png");
+const defaultImage = toAbsoluteDeploymentAssetUrl("/brand/positivconsult-logo.png");
 
 export function createMetadata({
   title,
@@ -21,12 +22,22 @@ export function createMetadata({
   path = "/",
   keywords = [],
 }: MetadataInput): Metadata {
-  const canonical = toAbsoluteSiteUrl(path);
+  const canonical = toAbsoluteProductionUrl(path);
 
   return {
     title,
     description,
     keywords,
+    robots: isPreviewDeployment
+      ? {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false,
+          },
+        }
+      : undefined,
     alternates: {
       canonical,
     },

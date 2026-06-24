@@ -2,12 +2,29 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const publicDir = join(process.cwd(), "public");
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+function normalizeBasePath(rawBasePath) {
+  if (!rawBasePath || rawBasePath === "/") {
+    return "";
+  }
+
+  const withLeadingSlash = rawBasePath.startsWith("/")
+    ? rawBasePath
+    : `/${rawBasePath}`;
+
+  return withLeadingSlash.endsWith("/")
+    ? withLeadingSlash.slice(0, -1)
+    : withLeadingSlash;
+}
+
+function normalizeSiteUrl(rawSiteUrl) {
+  return rawSiteUrl?.replace(/\/+$/, "");
+}
+
+const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (basePath
-    ? `https://konstiu.github.io${basePath}`
-    : "https://positiv-consult.unterweger.tech");
+  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  `https://positiv-consult.unterweger.tech${basePath}`;
 
 const routes = [
   "",

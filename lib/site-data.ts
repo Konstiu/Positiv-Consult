@@ -58,12 +58,30 @@ export type OfferModule = {
   text: string;
 };
 
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (basePath
-    ? `https://konstiu.github.io${basePath}`
-    : "https://positiv-consult.unterweger.tech");
+function normalizeBasePath(rawBasePath?: string) {
+  if (!rawBasePath || rawBasePath === "/") {
+    return "";
+  }
+
+  const withLeadingSlash = rawBasePath.startsWith("/")
+    ? rawBasePath
+    : `/${rawBasePath}`;
+
+  return withLeadingSlash.endsWith("/")
+    ? withLeadingSlash.slice(0, -1)
+    : withLeadingSlash;
+}
+
+function normalizeSiteUrl(rawSiteUrl?: string) {
+  return rawSiteUrl?.replace(/\/+$/, "");
+}
+
+export const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+export const isPreviewDeployment = basePath.startsWith("/pr-preview/");
+export const productionSiteUrl = "https://positiv-consult.unterweger.tech";
+export const deploymentSiteUrl =
+  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  `${productionSiteUrl}${basePath}`;
 
 export function withBasePath(path: string) {
   if (!path.startsWith("/")) {
@@ -73,13 +91,13 @@ export function withBasePath(path: string) {
   return `${basePath}${path}`;
 }
 
-export function toAbsoluteSiteUrl(path: string) {
+export function toAbsoluteProductionUrl(path: string) {
   const normalizedPath = path === "/" ? "/" : `${path.replace(/\/$/, "")}/`;
-  return `${siteUrl}${normalizedPath === "/" ? "/" : normalizedPath}`;
+  return `${productionSiteUrl}${normalizedPath === "/" ? "/" : normalizedPath}`;
 }
 
-export function toAbsoluteAssetUrl(path: string) {
-  return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
+export function toAbsoluteDeploymentAssetUrl(path: string) {
+  return `${deploymentSiteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
 export const companyName = "POSITIVconsult";
