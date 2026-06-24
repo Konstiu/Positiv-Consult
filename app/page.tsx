@@ -63,7 +63,20 @@ export default function Home() {
               </p>
             </div>
 
-           
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/kontakt"
+                className="button-primary inline-flex justify-center rounded-full px-6 text-sm font-semibold"
+              >
+                Erstgespräch vereinbaren
+              </Link>
+              <Link
+                href="/leistungen"
+                className="button-secondary inline-flex justify-center rounded-full px-6 text-sm font-semibold"
+              >
+                Leistungen ansehen
+              </Link>
+            </div>
           </div>
 
           <div className="fade-up max-w-xl lg:justify-self-end">
