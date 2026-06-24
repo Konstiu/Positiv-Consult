@@ -49,3 +49,5 @@ jobs:
           source-dir: ./out
           preview-branch: gh-pages
           umbrella-dir: pr-preview
+          pages-base-url: positiv-consult.unterweger.tech
+          wait-for-pages-deployment: true

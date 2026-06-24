@@ -11,6 +11,7 @@ import {
   coreServices,
   homepageTrustItems,
   clientCategoriesSelected,
+  withBasePath,
 } from "@/lib/site-data";
 import {StatsStrip} from "@/components/stats-strip";
 
@@ -38,7 +39,7 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-[var(--paper)]">
         <div
             className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.34] mask-[linear-gradient(to_bottom,black_0%,black_68%,transparent_100%)]"
-            style={{ backgroundImage: "url('/ai-images/background_img.png')" }}
+            style={{ backgroundImage: `url('${withBasePath("/ai-images/background_img.png")}')` }}
             aria-hidden="true"
         />
         <div
