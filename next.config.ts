@@ -1,6 +1,20 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+function normalizeBasePath(rawBasePath?: string) {
+  if (!rawBasePath || rawBasePath === "/") {
+    return "";
+  }
+
+  const withLeadingSlash = rawBasePath.startsWith("/")
+    ? rawBasePath
+    : `/${rawBasePath}`;
+
+  return withLeadingSlash.endsWith("/")
+    ? withLeadingSlash.slice(0, -1)
+    : withLeadingSlash;
+}
+
+const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
 
 const nextConfig: NextConfig = {
   output: "export",

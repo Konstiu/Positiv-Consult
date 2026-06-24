@@ -58,12 +58,28 @@ export type OfferModule = {
   text: string;
 };
 
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+function normalizeBasePath(rawBasePath?: string) {
+  if (!rawBasePath || rawBasePath === "/") {
+    return "";
+  }
+
+  const withLeadingSlash = rawBasePath.startsWith("/")
+    ? rawBasePath
+    : `/${rawBasePath}`;
+
+  return withLeadingSlash.endsWith("/")
+    ? withLeadingSlash.slice(0, -1)
+    : withLeadingSlash;
+}
+
+function normalizeSiteUrl(rawSiteUrl?: string) {
+  return rawSiteUrl?.replace(/\/+$/, "");
+}
+
+export const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (basePath
-    ? `https://konstiu.github.io${basePath}`
-    : "https://positiv-consult.unterweger.tech");
+  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  `https://positiv-consult.unterweger.tech${basePath}`;
 
 export function withBasePath(path: string) {
   if (!path.startsWith("/")) {
