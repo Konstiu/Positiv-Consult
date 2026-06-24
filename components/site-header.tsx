@@ -9,8 +9,8 @@ import { navItems, withBasePath } from "@/lib/site-data";
 
 const homeSectionLinks: Record<string, string> = {
   "/leistungen": "leistungen",
-  // "/kunden-erfahrung": "referenzen",
-  // "/kontakt": "kontakt",
+   //"/kunden-erfahrung": "referenzen",
+   //"/kontakt": "kontakt",
 };
 
 function MenuIcon({ open }: { open: boolean }) {

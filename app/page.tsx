@@ -61,20 +61,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row lg:pb-32  pt-1 ">
-              <Link
-                href="/kontakt"
-                className="button-primary-dark px-5 text-sm font-semibold"
-              >
-                Erstgespräch vereinbaren
-              </Link>
-              <Link
-                href="/leistungen"
-                className="button-secondary px-6 text-sm font-semibold"
-              >
-                Leistungen ansehen
-              </Link>
-            </div>
+           
           </div>
 
           <div className="fade-up max-w-xl lg:justify-self-end">
@@ -106,7 +93,7 @@ export default function Home() {
       </section>
 
 
-      <section className="site-shell relative -mt-10 pb-6 md:pb-10">
+      <section className="site-shell relative pb-6 md:pb-10">
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {homepageTrustItems.map((item) => (
             <article key={item.title} className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
