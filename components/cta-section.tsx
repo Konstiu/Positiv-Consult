@@ -22,7 +22,7 @@ export function CtaSection({
   backgroundImageSrc,
 }: CtaSectionProps) {
   return (
-    <section className="site-shell">
+    <section className="site-shell pb-10 pt-10">
       <div className="relative overflow-hidden rounded-[2rem] bg-[var(--brand-dark)] px-6 py-10 text-white shadow-[0_30px_80px_rgba(15,23,42,0.22)] md:px-10 md:py-14">
         {backgroundImageSrc ? (
           <div className="pointer-events-none absolute inset-0">
@@ -56,14 +56,6 @@ export function CtaSection({
             >
               {primaryLabel}
             </Link>
-            {secondaryLabel && secondaryHref ? (
-              <Link
-                href={secondaryHref}
-                className="inline-flex min-h-[3rem] items-center justify-center rounded-full border border-white/18 bg-transparent px-5 text-sm font-semibold text-white/92 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04)] hover:border-white/34 hover:bg-white/8 hover:text-white"
-              >
-                {secondaryLabel}
-              </Link>
-            ) : null}
           </div>
         </div>
       </div>

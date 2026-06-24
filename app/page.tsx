@@ -12,6 +12,7 @@ import {
   homepageTrustItems,
   clientCategoriesSelected,
 } from "@/lib/site-data";
+import {StatsStrip} from "@/components/stats-strip";
 
 export const metadata = createMetadata({
   title: "POSITIVconsult – Strategie, Digitalisierung & KI-Beratung für KMU",
@@ -92,21 +93,9 @@ export default function Home() {
 
       </section>
 
-
-      <section className="site-shell relative pb-6 md:pb-10">
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {homepageTrustItems.map((item) => (
-            <article key={item.title} className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
-              <p className="font-serif text-3xl font-semibold text-(--brand-red)">
-                {item.title}
-              </p>
-              <p className="mt-2 text-sm tracking-[0.18em] text-(--brand-blue-soft)">
-                {item.text}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <div>
+        <StatsStrip />
+      </div>
 
       <section id="leistungen" className="site-shell section-space flex flex-col gap-10">
         <SectionHeading

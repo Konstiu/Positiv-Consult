@@ -1,20 +1,20 @@
-import { stats } from "@/lib/site-data";
+import {homepageTrustItems} from "@/lib/site-data";
 
 export function StatsStrip() {
   return (
-    <section className="site-shell">
-      <div className="surface-card grid gap-px overflow-hidden bg-[rgba(31,78,140,0.08)] md:grid-cols-4">
-        {stats.map((stat) => (
-          <div key={stat.label} className="bg-[var(--brand-dark)] px-6 py-8 text-center md:px-8 md:text-left">
-            <p className="font-serif text-4xl font-semibold text-[var(--brand-red)]">
-              {stat.value}
-            </p>
-            <p className="mt-2 text-sm uppercase tracking-[0.18em] text-[var(--brand-blue-soft)]">
-              {stat.label}
-            </p>
+      <section className="site-shell relative pb-6 md:pb-10">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {homepageTrustItems.map((item) => (
+                  <article key={item.title} className="surface-card px-5 py-6 md:px-6 !bg-(--brand-dark)">
+                      <p className="font-serif text-3xl font-semibold text-(--brand-red)">
+                          {item.title}
+                      </p>
+                      <p className="mt-2 text-sm tracking-[0.18em] text-(--brand-blue-soft)">
+                          {item.text}
+                      </p>
+                  </article>
+              ))}
           </div>
-        ))}
-      </div>
-    </section>
+      </section>
   );
 }

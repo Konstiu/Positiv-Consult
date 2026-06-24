@@ -16,7 +16,7 @@ export function PageHeader({
   aside,
 }: PageHeaderProps) {
   return (
-    <section className="hero-grid overflow-hidden border-b border-black/5">
+    <section className="hero-grid overflow-hidden">
       <div className="site-shell grid gap-10 py-16 md:py-18 lg:grid-cols-[minmax(0,1.4fr)_minmax(300px,0.8fr)] lg:items-end lg:py-22">
         <div className="max-w-4xl space-y-8">
           <span className="eyebrow">{eyebrow}</span>

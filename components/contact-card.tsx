@@ -39,9 +39,9 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
 
         <div className="mt-auto w-full space-y-4 pt-8">
           <div className="space-y-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
-              E-Mail
-            </p>
+            {/*<p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">*/}
+            {/*  E-Mail*/}
+            {/*</p>*/}
             <a
               href={`mailto:${email}`}
               className="text-link block break-all text-base font-semibold"
@@ -50,9 +50,9 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
             </a>
           </div>
           <div className="space-y-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
-              Telefon
-            </p>
+            {/*<p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">*/}
+            {/*  Telefon*/}
+            {/*</p>*/}
             <a
               href={toTelHref(phone)}
               className="block text-base font-semibold text-[var(--ink)]"

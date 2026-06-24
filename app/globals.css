@@ -103,9 +103,8 @@ summary {
 
 .hero-grid {
   background:
-    radial-gradient(circle at top left, rgba(215, 38, 61, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(31, 78, 140, 0.12), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 251, 0.72));
+    radial-gradient(circle at top right, rgba(31, 78, 140, 0.1), transparent 30%),
+    linear-gradient(180deg, var(--paper), var(--paper));
 }
 
 .grid-lines {

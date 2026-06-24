@@ -74,7 +74,7 @@ export default function DigitalisierungPage() {
         eyebrow="Digitalisierung"
         title="Sie möchten digitale Baustellen priorisieren und in eine sinnvolle Reihenfolge bringen?"
         description="Ein Gespräch hilft dabei, Engpässe, Systemfragen, Website-Themen und E-Commerce-Vorhaben gemeinsam einzuordnen."
-        primaryLabel="Digitale Baustellen priorisieren"
+        primaryLabel="Erstgespräch vereinbaren"
         primaryHref="/kontakt"
         secondaryLabel="KI-Beratung ansehen"
         secondaryHref="/ai-consulting"
