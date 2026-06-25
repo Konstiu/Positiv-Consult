@@ -48,7 +48,7 @@ export default function Home() {
         />
         <div className="site-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-24">
           <div className="fade-up space-y-8">
-            <span className="eyebrow">Unternehmensberatung</span>
+            <span className="eyebrow">HEIDRUN</span>
             <div className="space-y-5">
               <h1 className="max-w-5xl text-balance font-serif text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl lg:text-[4.1rem] lg:leading-[1.02]">
                 Strategie, Digitalisierung, Automatisierung und KI für moderne Unternehmen.
