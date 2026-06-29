@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { ContactPanel } from "@/components/contact-panel";
 import { CtaSection } from "@/components/cta-section";
+import { ContactCard } from "@/components/contact-card";
 import { ScrollToSection } from "@/components/scroll-to-section";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
@@ -12,6 +13,7 @@ import {
   homepageTrustItems,
   clientCategoriesSelected,
   withBasePath,
+  teamContacts,
 } from "@/lib/site-data";
 import {StatsStrip} from "@/components/stats-strip";
 
@@ -63,35 +65,38 @@ export default function Home() {
            
           </div>
 
-          <div className="fade-up max-w-xl lg:justify-self-end">
-            <div className="border-l-2 border-[rgba(31,78,140,0.28)] pl-5 md:pl-6">
-              <p className="text-base font-semibold uppercase tracking-[0.24em] text-[var(--brand-blue)] md:text-lg">
-                Wofür Unternehmen uns holen
-              </p>
-              <ul className="mt-6 space-y-4">
-                {[
-                  "Strategie, Marketing, Vertrieb und Digitalisierung integriert",
-                  "Direkter Austausch mit Geschäftsführung und Entscheidungsteams",
-                  "Pragmatische Einschätzung von KI und Förderthemen",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
-                    <span
-                      aria-hidden="true"
-                      className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+
         </div>
 
       </section>
 
-      <div>
-        <StatsStrip />
-      </div>
+      <StatsStrip />
+
+      {/* Team Section - Gesichter schaffen Vertrauen */}
+      <section className="site-shell section-space flex flex-col gap-10 bg-[var(--paper)] py-16 md:py-20">
+        <div className="max-w-3xl space-y-4">
+          <span className="eyebrow">Das Team</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
+            Zwei erfahrene Ansprechpartner für Ihr Unternehmen.
+          </h2>
+          <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Dr. Heidrun Unterweger und Mag. Marc Isop begleiten Ihre Projekte direkt –
+            mit kurzer Entscheidungsweg und langjähriger Erfahrung.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {teamContacts.map((person) => (
+            <ContactCard
+              key={person.email}
+              name={person.name}
+              role={person.role}
+              email={person.email}
+              phone={person.phone}
+              photoUrl={person.photoUrl}
+            />
+          ))}
+        </div>
+      </section>
 
       <section id="leistungen" className="site-shell section-space flex flex-col gap-12">
         <SectionHeading
@@ -215,14 +220,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <CtaSection
-        eyebrow="Erstgespräch"
-        title="Welches Thema hat für Ihr Unternehmen gerade Priorität?"
-        description="Im Erstgespräch klären wir Ausgangslage und nächste Schritte – pragmatisch und ohne Beratungsfloskeln."
-        primaryLabel="Jetzt Gespräch vereinbaren"
-        primaryHref="/kontakt"
-      />
 
       <ContactPanel id="kontakt" />
     </>
