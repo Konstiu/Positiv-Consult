@@ -40,8 +40,8 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden bg-[var(--paper)]">
         <div
-            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.20] mask-[linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
-            style={{ backgroundImage: `url('${withBasePath("/ai-images/background_img.png")}')` }}
+            className="absolute inset-0 bg-cover bg-position-[center_30%] opacity-[0.12] mask-[linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)]"
+            style={{ backgroundImage: `url('${withBasePath("/ai-images/output.png")}')` }}
             aria-hidden="true"
         />
         <div
@@ -84,7 +84,7 @@ export default function Home() {
             mit kurzer Entscheidungsweg und langjähriger Erfahrung.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
           {teamContacts.map((person) => (
             <ContactCard
               key={person.email}
