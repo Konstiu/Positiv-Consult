@@ -38,15 +38,15 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden bg-[var(--paper)]">
         <div
-            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.25] mask-[linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]"
+            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.20] mask-[linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
             style={{ backgroundImage: `url('${withBasePath("/ai-images/background_img.png")}')` }}
             aria-hidden="true"
         />
         <div
-            className="absolute inset-0 bg-[rgba(248,250,252,0.75)]"
+            className="absolute inset-0 bg-[rgba(248,250,252,0.80)]"
             aria-hidden="true"
         />
-        <div className="site-shell relative grid gap-12 py-20 md:py-24 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-28">
+        <div className="site-shell relative grid gap-12 py-24 md:py-32 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-36">
           <div className="fade-up space-y-8">
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
@@ -155,39 +155,36 @@ export default function Home() {
       {/*  </div>*/}
       {/*</section>*/}
 
-      <section className="site-shell section-space flex flex-col gap-10 bg-[var(--brand-dark)] py-16 text-white md:py-20">
+      <section className="site-shell section-space flex flex-col gap-12 py-16 md:py-20">
         <div className="max-w-3xl space-y-4">
-          <span className="eyebrow text-[var(--brand-red)]">Warum POSITIVconsult</span>
-          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <span className="eyebrow">Warum POSITIVconsult</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
             25 Jahre Erfahrung im digitalen Umfeld.
           </h2>
-          <p className="max-w-3xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
-            Wir arbeiten seit 25 Jahren im digitalen Umfeld und haben mehrere hundert Projekte begleitet. Unsere Kunden begleiten wir oft mehrere Jahre auf dem Weg ins digitale Zeitalter.
-          </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-3">
-          <article className="rounded-lg bg-white/5 p-6 backdrop-blur">
-            <h3 className="font-serif text-xl font-semibold text-white">Breites Agentur & E-Commerce Know-how</h3>
-            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Wir kennen die Spielregeln der Digitalen Kommunikation und sind am Puls der Zeit. Laufendes Trendscouting ist für uns Selbstverständlichkeit.
+          <article className="surface-card p-6">
+            <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">Breites Agentur & E-Commerce Know-how</h3>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+              Wir kennen die Spielregeln der Digitalen Kommunikation und sind am Puls der Zeit.
             </p>
           </article>
-          <article className="rounded-lg bg-white/5 p-6 backdrop-blur">
-            <h3 className="font-serif text-xl font-semibold text-white">Exzellentes Netzwerk</h3>
-            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Wir arbeiten national und international mit langjährigen Partnern. Das gibt uns und unseren Kunden Sicherheit und Vertrauen.
+          <article className="surface-card p-6">
+            <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">Exzellentes Netzwerk</h3>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+              Langjährige Partner national und international – Sicherheit und Vertrauen.
             </p>
           </article>
-          <article className="rounded-lg bg-white/5 p-6 backdrop-blur">
-            <h3 className="font-serif text-xl font-semibold text-white">Direkter Zugang zur Geschäftsführung</h3>
-            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Zwei erfahrene Ansprechpartner begleiten Ihre Projekte. Das schafft kurze Wege, Verbindlichkeit und pragmatische Lösungen.
+          <article className="surface-card p-6">
+            <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">Direkter Zugang zur Geschäftsführung</h3>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+              Zwei erfahrene Ansprechpartner. Kurze Wege, Verbindlichkeit, pragmatische Lösungen.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="referenzen" className="site-shell section-space flex flex-col gap-10">
+      <section id="referenzen" className="site-shell section-space flex flex-col gap-12">
         <SectionHeading
             eyebrow="Referenzen"
             title="150+ Kunden aus unterschiedlichen Branchen."

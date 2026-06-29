@@ -10,13 +10,7 @@ export function ContactPanel({ id }: { id?: string }) {
           Lassen Sie uns über Ihr Vorhaben sprechen.
         </h2>
         <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
-          Ob Strategie, Digitalisierung, KI-Beratung, Vertrieb, E-Commerce oder
-          Förderthemen: Wir klären gemeinsam, wo POSITIVconsult sinnvoll
-          unterstützen kann und welcher Schwerpunkt gerade Priorität hat.
-        </p>
-        <p className="max-w-2xl text-sm leading-7 text-[var(--muted)]">
-          In einem ersten Gespräch ordnen wir Ausgangslage, Zielbild und
-          Handlungsoptionen gemeinsam ein.
+          Strategie, Digitalisierung, KI, Vertrieb oder Förderthemen – wir klären, wo wir unterstützen können.
         </p>
         <p className="text-sm text-[var(--muted)]">{addressLines.join(", ")}</p>
       </div>
