@@ -1,2 +1,2 @@
-:HL["/pr-preview/pr-7/_next/static/css/7bfb6d93ebd8b05d.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"digitalisierung","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"z2cPlbBpeyRHzu5KBVsyF"}
+:HL["/pr-preview/pr-7/_next/static/css/fd557190344d3b8d.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"digitalisierung","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"7wulO12PEGB2NXr7CvWpl"}
