@@ -38,15 +38,15 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden bg-[var(--paper)]">
         <div
-            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.34] mask-[linear-gradient(to_bottom,black_0%,black_68%,transparent_100%)]"
+            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.25] mask-[linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]"
             style={{ backgroundImage: `url('${withBasePath("/ai-images/background_img.png")}')` }}
             aria-hidden="true"
         />
         <div
-            className="absolute inset-0 bg-[rgba(248,250,252,0.62)]"
+            className="absolute inset-0 bg-[rgba(248,250,252,0.75)]"
             aria-hidden="true"
         />
-        <div className="site-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-24">
+        <div className="site-shell relative grid gap-12 py-20 md:py-24 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-28">
           <div className="fade-up space-y-8">
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
@@ -93,13 +93,13 @@ export default function Home() {
         <StatsStrip />
       </div>
 
-      <section id="leistungen" className="site-shell section-space flex flex-col gap-10">
+      <section id="leistungen" className="site-shell section-space flex flex-col gap-12">
         <SectionHeading
           eyebrow="Leistungen"
           title="Beratungsfelder mit klarem Fokus auf Umsetzung."
           description="Wir unterstützen bei Strategie, Digitalisierung, KI und Förderthemen — von der Analyse bis zum nächsten Schritt."
         />
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {coreServices.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
@@ -155,40 +155,63 @@ export default function Home() {
       {/*  </div>*/}
       {/*</section>*/}
 
-      <section id="referenzen" className="site-shell section-space flex flex-col gap-8">
+      <section className="site-shell section-space flex flex-col gap-10 bg-[var(--brand-dark)] py-16 text-white md:py-20">
+        <div className="max-w-3xl space-y-4">
+          <span className="eyebrow text-[var(--brand-red)]">Warum POSITIVconsult</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+            25 Jahre Erfahrung im digitalen Umfeld.
+          </h2>
+          <p className="max-w-3xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Wir arbeiten seit 25 Jahren im digitalen Umfeld und haben mehrere hundert Projekte begleitet. Unsere Kunden begleiten wir oft mehrere Jahre auf dem Weg ins digitale Zeitalter.
+          </p>
+        </div>
+        <div className="grid gap-6 lg:grid-cols-3">
+          <article className="rounded-lg bg-white/5 p-6 backdrop-blur">
+            <h3 className="font-serif text-xl font-semibold text-white">Breites Agentur & E-Commerce Know-how</h3>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              Wir kennen die Spielregeln der Digitalen Kommunikation und sind am Puls der Zeit. Laufendes Trendscouting ist für uns Selbstverständlichkeit.
+            </p>
+          </article>
+          <article className="rounded-lg bg-white/5 p-6 backdrop-blur">
+            <h3 className="font-serif text-xl font-semibold text-white">Exzellentes Netzwerk</h3>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              Wir arbeiten national und international mit langjährigen Partnern. Das gibt uns und unseren Kunden Sicherheit und Vertrauen.
+            </p>
+          </article>
+          <article className="rounded-lg bg-white/5 p-6 backdrop-blur">
+            <h3 className="font-serif text-xl font-semibold text-white">Direkter Zugang zur Geschäftsführung</h3>
+            <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+              Zwei erfahrene Ansprechpartner begleiten Ihre Projekte. Das schafft kurze Wege, Verbindlichkeit und pragmatische Lösungen.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="referenzen" className="site-shell section-space flex flex-col gap-10">
         <SectionHeading
             eyebrow="Referenzen"
-            title="Erfahrung aus unterschiedlichen Branchen."
-            description="Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben."        />
+            title="150+ Kunden aus unterschiedlichen Branchen."
+            description="Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben."
+        />
 
-        <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
           {clientCategoriesSelected.map((group) => (
               <article
                   key={group.category}
-                  className="surface-card flex h-full flex-col p-6 md:p-7"
-              >                  <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
+                  className="surface-card flex flex-col gap-4 p-6"
+              >
+                  <h3 className="font-serif text-xl font-semibold text-[var(--brand-blue)]">
                       {group.category}
                   </h3>
 
-                  <div className="mt-7 space-y-3 border-l border-[rgba(31,78,140,0.18)] pl-5">
+                  <div className="flex flex-wrap gap-3">
                       {group.featured.map((name) => (
-                          <div
-                              key={name}
-                              className="text-base font-semibold leading-6 text-[var(--ink)]"
-                          >
-                              {name}
-                          </div>
-                      ))}
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
-                      {group.names.map((name) => (
                           <span
                               key={name}
-                              className="whitespace-nowrap text-sm font-medium leading-6 text-[var(--muted)]"
+                              className="rounded-full bg-[var(--brand-blue)]/10 px-4 py-2 text-sm font-semibold text-[var(--brand-blue)]"
                           >
-      {name}
-    </span>
+                              {name}
+                          </span>
                       ))}
                   </div>
               </article>
