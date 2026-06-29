@@ -45,10 +45,6 @@ export function CtaSection({
           <p className="text-pretty text-base leading-8 text-white/74 md:text-lg">
             {description}
           </p>
-          <p className="max-w-2xl text-sm leading-7 text-white/72">
-            In einem ersten Gespräch klären wir Ausgangslage, Prioritäten und
-            sinnvolle nächste Schritte.
-          </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               href={primaryHref}

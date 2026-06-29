@@ -51,10 +51,10 @@ export default function Home() {
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
               <h1 className="max-w-5xl text-balance font-serif text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl lg:text-[4.1rem] lg:leading-[1.02]">
-                Strategie, Digitalisierung, Automatisierung und KI für moderne Unternehmen.
+                Sie wollen wachsen. Wir machen den Weg frei.
               </h1>
               <p className="max-w-3xl text-pretty text-lg leading-8 text-[var(--muted)]">
-                Unternehmensberatung aus Wien für KMU und Geschäftsführungen. Zwei erfahrene
+                Unternehmensberatung für KMU und Geschäftsführungen. Zwei erfahrene
                 Ansprechpartner für Strategie, Marketing, Vertrieb, Digitalisierung und KI —
                 pragmatisch und umsetzungsnah.
               </p>
@@ -220,7 +220,7 @@ export default function Home() {
         eyebrow="Erstgespräch"
         title="Welches Thema hat für Ihr Unternehmen gerade Priorität?"
         description="Im Erstgespräch klären wir Ausgangslage und nächste Schritte – pragmatisch und ohne Beratungsfloskeln."
-        primaryLabel="Erstgespräch vereinbaren"
+        primaryLabel="Jetzt Gespräch vereinbaren"
         primaryHref="/kontakt"
       />
 
