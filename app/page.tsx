@@ -54,12 +54,9 @@ export default function Home() {
                 Strategie, Digitalisierung, Automatisierung und KI für moderne Unternehmen.
               </h1>
               <p className="max-w-3xl text-pretty text-lg leading-8 text-[var(--muted)]">
-                POSITIVconsult ist eine Unternehmensberatung aus Wien für
-                Eigentümer:innen, Geschäftsführung, Entscheidungsteams, Start-Ups, EPU und
-                KMU. Zwei erfahrene Ansprechpartner begleiten Unternehmen bei
-                Positionierung, Marketing, Vertrieb, digitaler Transformation,
-                E-Commerce, Förderthemen und AI Consulting — von der Analyse
-                bis zum konkreten nächsten Umsetzungsschritt.
+                Unternehmensberatung aus Wien für KMU und Geschäftsführungen. Zwei erfahrene
+                Ansprechpartner für Strategie, Marketing, Vertrieb, Digitalisierung und KI —
+                pragmatisch und umsetzungsnah.
               </p>
             </div>
 
@@ -73,11 +70,9 @@ export default function Home() {
               </p>
               <ul className="mt-6 space-y-4">
                 {[
-                  "Strategie, Marketing, Vertrieb und digitale Transformation integriert gedacht",
-                  "Direkter Austausch mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
-                  "Pragmatische Einschätzung von KI-, Digitalisierungs- und Förderthemen",
-                  "Aktuelle Impulse mit konsequentem Fokus auf die praktische Umsetzung",
-                  "Langjährige Partnerschaften und ein belastbares Netzwerk in Umsetzung und Spezialthemen",
+                  "Strategie, Marketing, Vertrieb und Digitalisierung integriert",
+                  "Direkter Austausch mit Geschäftsführung und Entscheidungsteams",
+                  "Pragmatische Einschätzung von KI und Förderthemen",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">
                     <span
@@ -101,8 +96,8 @@ export default function Home() {
       <section id="leistungen" className="site-shell section-space flex flex-col gap-10">
         <SectionHeading
           eyebrow="Leistungen"
-          title="Beratungsfelder, die auf konkrete Entscheidungen und Vorhaben einzahlen."
-          description="POSITIVconsult begleitet Unternehmen dort, wo Strategie, Marktbearbeitung, Digitalisierung, KI und Förderthemen in operative Entscheidungen übergehen."
+          title="Beratungsfelder mit klarem Fokus auf Umsetzung."
+          description="Wir unterstützen bei Strategie, Digitalisierung, KI und Förderthemen — von der Analyse bis zum nächsten Schritt."
         />
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {coreServices.map((service) => (
@@ -163,8 +158,8 @@ export default function Home() {
       <section id="referenzen" className="site-shell section-space flex flex-col gap-8">
         <SectionHeading
             eyebrow="Referenzen"
-            title="Erfahrung aus unterschiedlichen Branchen und Organisationen."
-            description="Ein kompakter Auszug aus Unternehmen und Institutionen, mit denen POSITIVconsult gearbeitet hat – von Handel und E-Commerce über Dienstleistungen bis zu Bildung und wirtschaftsnahen Organisationen."        />
+            title="Erfahrung aus unterschiedlichen Branchen."
+            description="Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben."        />
 
         <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {clientCategoriesSelected.map((group) => (
@@ -203,8 +198,8 @@ export default function Home() {
 
       <CtaSection
         eyebrow="Erstgespräch"
-        title="Sie möchten klären, welches Thema für Ihr Unternehmen gerade wirklich Priorität hat?"
-        description="Im Erstgespräch ordnen wir Ausgangslage, Zielbild und Handlungsoptionen gemeinsam ein – ohne Hype, ohne Beratungsfloskeln und mit Blick auf das, was für Ihr Unternehmen jetzt sinnvoll ist."
+        title="Welches Thema hat für Ihr Unternehmen gerade Priorität?"
+        description="Im Erstgespräch klären wir Ausgangslage und nächste Schritte – pragmatisch und ohne Beratungsfloskeln."
         primaryLabel="Erstgespräch vereinbaren"
         primaryHref="/kontakt"
       />

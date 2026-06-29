@@ -118,7 +118,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "30+", label: "Beratungserfahrung in Strategie, Digitalisierung, Vertrieb und Wachstum." },
+  { value: "30+", label: "Jahre Erfahrung" },
   { value: "250+", label: "Projekte" },
   { value: "150+", label: "Kunden" },
   { value: "7", label: "Länder" },
@@ -128,42 +128,42 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Strategie & Wachstum",
     description:
-      "Wir unterstützen Geschäftsführungen dabei, Marktchancen, Zielgruppen, Angebote und Ressourcen realistisch einzuordnen und daraus belastbare Prioritäten für Wachstum, Vertrieb und Investitionen abzuleiten.",
+      "Wir helfen Geschäftsführungen, Marktchancen und Ressourcen realistisch einzuschätzen und klare Prioritäten für Wachstum zu setzen.",
     href: "/leistungen",
     points: ["Positionierung", "Zielgruppen", "Prioritäten"],
   },
   {
     title: "Marketing & Kampagnen",
     description:
-      "Wir entwickeln strategisch fundierte Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Marktumfeld und zu relevanten digitalen Kanälen passen.",
+      "Strategisch fundierte Kommunikationsansätze, die zu Ihrer Zielgruppe und den relevanten digitalen Kanälen passen.",
     href: "/leistungen",
     points: ["Kommunikationsstrategie", "Kampagnen-Setup", "Digitale Kanäle"],
   },
   {
     title: "Vertrieb & Marktbearbeitung",
     description:
-      "Wir analysieren Vertriebsprozesse, Rollen und Marktbearbeitung und schaffen eine Struktur, mit der Teams Chancen konsequenter verfolgen und Aktivitäten nachvollziehbar steuern können.",
+      "Wir schaffen Vertriebsstrukturen, mit denen Teams Chancen konsequenter verfolgen und Aktivitäten steuern können.",
     href: "/leistungen",
     points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
   },
   {
     title: "Digitalisierung & E-Commerce",
     description:
-      "Wir analysieren bestehende Prozesse, Websites und E-Commerce-Strukturen, identifizieren Engpässe und priorisieren Maßnahmen nach Aufwand, Wirkung und Umsetzbarkeit.",
+      "Wir analysieren Prozesse und digitale Touchpoints, identifizieren Engpässe und priorisieren Maßnahmen nach Wirkung.",
     href: "/leistungen",
     points: ["Prozessanalyse", "Website & E-Commerce", "Systemprioritäten"],
   },
   {
     title: "KI-Beratung",
     description:
-      "Wir finden KI-Anwendungsfälle, die tatsächlich Zeit sparen, Qualität erhöhen oder Entscheidungen verbessern, und testen sie in klar abgegrenzten Pilotprojekten.",
+      "Wir finden KI-Anwendungsfälle, die Zeit sparen oder Qualität erhöhen, und testen sie in klaren Pilotprojekten.",
     href: "/ai-consulting",
     points: ["Potenzialanalyse", "Use Cases", "Pilotprojekte"],
   },
   {
     title: "Förderberatung",
     description:
-      "Wir unterstützen bei der Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten, wenn ein Vorhaben mit Digitalisierung, Innovation oder Wachstum verbunden ist.",
+      "Wir prüfen Förderfähigkeit und unterstützen bei Projektlogik und nächsten Schritten für Digitalisierung und Innovation.",
     href: "/foerderungen",
     points: ["Förderfähigkeit", "Projektlogik", "Nächste Schritte"],
   },
@@ -179,19 +179,19 @@ export const expertiseAreas = [
 export const homepageTrustItems: TrustItem[] = [
   {
     title: "Seit 2004",
-    text: "Beratungserfahrung in Strategie, Digitalisierung, Vertrieb und Wachstum.",
+    text: "Beratungserfahrung in Strategie, Digitalisierung und Vertrieb.",
   },
   {
     title: "250+ Projekte",
-    text: "Begleitete Vorhaben in unterschiedlichen Unternehmenssituationen und Branchen.",
+    text: "In unterschiedlichen Branchen und Unternehmenssituationen.",
   },
   {
     title: "150+ Kunden",
-    text: "Langjährige Zusammenarbeit mit KMU, Eigentümer:innen und Entscheidungsteams.",
+    text: "Langjährige Zusammenarbeit mit KMU und Geschäftsführungen.",
   },
   {
     title: "Breite Branchenpraxis",
-    text: "Erfahrung mit KMU, Handel, Dienstleistung, Bildung, Institutionen, Gastronomie und Start-ups.",
+    text: "Handel, Dienstleistung, Bildung, Institutionen, Gastronomie.",
   },
 ];
 
@@ -434,14 +434,7 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
   {
     category: "Handel & E-Commerce",
     featured: ["BIPA", "Dorotheum", "Lobmeyr"],
-    names: [
-      "Depot",
-      "Morawa",
-      "Bikestore",
-      "Burggasse 24",
-      "Intersport Alpensport",
-      "Weingut Polz",
-    ],
+    names: [],
   },
   {
     category: "Dienstleistung & KMU",
@@ -450,26 +443,15 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
       "Onlim GmbH",
       "Klimabündnis Oberösterreich",
     ],
-    names: [
-      "ArtforArt",
-      "SOL4 IT-Consulting GmbH",
-      "Oceanum Salzgrotte",
-      "Wallner & Partner",
-      "Kager Knapp Hausverwaltung",
-    ],
+    names: [],
   },
   {
     category: "Bildung & Institutionen",
     featured: [
       "Medizinische Universität Wien",
       "WIFI Wien",
-      "KMU Akademie und Management AG",
+      "KMU Akademie",
     ],
-    names: [
-      "New Design University",
-      "KMU Digital",
-      "Middlesex University",
-      "WKO",
-    ],
+    names: [],
   },
 ];
