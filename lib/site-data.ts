@@ -110,10 +110,7 @@ export const toTelHref = (phone: string) => `tel:${phone.replace(/\s+/g, "")}`;
 
 export const navItems: NavItem[] = [
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/digitalisierung", label: "KI & Digitalisierung" },
-  { href: "/foerderungen", label: "Förderungen" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/kunden-erfahrung", label: "Referenzen" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
