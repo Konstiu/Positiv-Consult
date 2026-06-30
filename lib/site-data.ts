@@ -110,7 +110,10 @@ export const toTelHref = (phone: string) => `tel:${phone.replace(/\s+/g, "")}`;
 
 export const navItems: NavItem[] = [
   { href: "/leistungen", label: "Leistungen" },
+  { href: "/digitalisierung", label: "KI & Digitalisierung" },
+  { href: "/foerderungen", label: "Förderungen" },
   { href: "/ueber-uns", label: "Über uns" },
+  { href: "/kunden-erfahrung", label: "Referenzen" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -125,28 +128,28 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Strategie & Wachstum",
     description:
-      "Wir helfen Geschäftsführungen, Marktchancen und Ressourcen realistisch einzuschätzen und klare Prioritäten für Wachstum zu setzen.",
+      "Wir unterstützen Geschäftsführungen dabei, Marktchancen, Zielgruppen und Ressourcen realistisch einzuordnen und daraus belastbare Prioritäten für Wachstum abzuleiten.",
     href: "/leistungen",
     points: ["Positionierung", "Zielgruppen", "Prioritäten"],
   },
   {
     title: "Marketing & Kampagnen",
     description:
-      "Strategisch fundierte Kommunikationsansätze, die zu Ihrer Zielgruppe und den relevanten digitalen Kanälen passen.",
+      "Wir entwickeln strategisch fundierte Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Marktumfeld und zu relevanten digitalen Kanälen passen.",
     href: "/leistungen",
     points: ["Kommunikationsstrategie", "Kampagnen-Setup", "Digitale Kanäle"],
   },
   {
     title: "Vertrieb & Marktbearbeitung",
     description:
-      "Wir schaffen Vertriebsstrukturen, mit denen Teams Chancen konsequenter verfolgen und Aktivitäten steuern können.",
+      "Wir analysieren Vertriebsprozesse, Rollen und Marktbearbeitung und schaffen eine Struktur, mit der Teams Chancen konsequenter verfolgen können.",
     href: "/leistungen",
     points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
   },
   {
     title: "Digitalisierung & E-Commerce",
     description:
-      "Wir analysieren Prozesse und digitale Touchpoints, identifizieren Engpässe und priorisieren Maßnahmen nach Wirkung.",
+      "Wir analysieren Prozesse und digitale Touchpoints, identifizieren Engpässe und priorisieren Maßnahmen nach Wirkung und Umsetzbarkeit.",
     href: "/leistungen",
     points: ["Prozessanalyse", "Website & E-Commerce", "Systemprioritäten"],
   },
@@ -196,8 +199,6 @@ export const typicalSituations = [
   "Wir haben viele digitale Baustellen, aber keine klare Priorität.",
   "Wir wollen KI nutzen, wissen aber nicht, welche Use Cases wirklich sinnvoll sind.",
   "Marketing und Vertrieb brauchen mehr Struktur und bessere Entscheidungsgrundlagen.",
-  "Wir planen ein Projekt und möchten prüfen, ob eine Förderung möglich ist.",
-  "Wir wachsen, aber Strategie, Prozesse und Kommunikation müssen mitziehen.",
 ];
 
 export const homeFaqs: FaqItem[] = [
@@ -431,7 +432,14 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
   {
     category: "Handel & E-Commerce",
     featured: ["BIPA", "Dorotheum", "Lobmeyr"],
-    names: [],
+    names: [
+      "Depot",
+      "Morawa",
+      "Bikestore",
+      "Burggasse 24",
+      "Intersport Alpensport",
+      "Weingut Polz",
+    ],
   },
   {
     category: "Dienstleistung & KMU",
@@ -440,15 +448,26 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
       "Onlim GmbH",
       "Klimabündnis Oberösterreich",
     ],
-    names: [],
+    names: [
+      "ArtforArt",
+      "SOL4 IT-Consulting GmbH",
+      "Oceanum Salzgrotte",
+      "Wallner & Partner",
+      "Kager Knapp Hausverwaltung",
+    ],
   },
   {
     category: "Bildung & Institutionen",
     featured: [
       "Medizinische Universität Wien",
       "WIFI Wien",
-      "KMU Akademie",
+      "KMU Akademie und Management AG",
     ],
-    names: [],
+    names: [
+      "New Design University",
+      "KMU Digital",
+      "Middlesex University",
+      "WKO",
+    ],
   },
 ];
