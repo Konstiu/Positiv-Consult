@@ -432,14 +432,7 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
   {
     category: "Handel & E-Commerce",
     featured: ["BIPA", "Dorotheum", "Lobmeyr"],
-    names: [
-      "Depot",
-      "Morawa",
-      "Bikestore",
-      "Burggasse 24",
-      "Intersport Alpensport",
-      "Weingut Polz",
-    ],
+    names: ["Depot", "Morawa", "Intersport Alpensport"],
   },
   {
     category: "Dienstleistung & KMU",
@@ -448,26 +441,15 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
       "Onlim GmbH",
       "Klimabündnis Oberösterreich",
     ],
-    names: [
-      "ArtforArt",
-      "SOL4 IT-Consulting GmbH",
-      "Oceanum Salzgrotte",
-      "Wallner & Partner",
-      "Kager Knapp Hausverwaltung",
-    ],
+    names: ["ArtforArt", "SOL4 IT-Consulting GmbH", "Wallner & Partner"],
   },
   {
     category: "Bildung & Institutionen",
     featured: [
       "Medizinische Universität Wien",
       "WIFI Wien",
-      "KMU Akademie und Management AG",
+      "KMU Akademie",
     ],
-    names: [
-      "New Design University",
-      "KMU Digital",
-      "Middlesex University",
-      "WKO",
-    ],
+    names: ["New Design University", "KMU Digital", "WKO"],
   },
 ];
