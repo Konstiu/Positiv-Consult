@@ -40,7 +40,7 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden bg-[var(--paper)]">
         <div
-            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.20] mask-[linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
+            className="absolute inset-0 bg-cover bg-position-[center] opacity-[0.18] mask-[linear-gradient(to_bottom,black_0%,black_50%,transparent_100%)]"
             style={{ backgroundImage: `url('${withBasePath("/ai-images/background_img.png")}')` }}
             aria-hidden="true"
         />
