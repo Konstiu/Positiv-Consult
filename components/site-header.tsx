@@ -37,9 +37,14 @@ export function SiteHeader() {
 
   const isActive = (href: string) => {
     // Remove basePath from pathname for comparison (only if basePath is not empty)
-    const normalizedPath = basePath && basePath !== "/" 
+    let normalizedPath = basePath && basePath !== "/" 
       ? pathname.replace(basePath, "") || "/"
       : pathname;
+
+    // Remove trailing slash for comparison (except for root)
+    if (normalizedPath !== "/" && normalizedPath.endsWith("/")) {
+      normalizedPath = normalizedPath.slice(0, -1);
+    }
 
     // Special case: /digitalisierung also matches /ai-consulting
     if (href === "/digitalisierung") {
