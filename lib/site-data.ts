@@ -367,6 +367,19 @@ export const teamContacts = [
 
 export const clientCategories: ClientCategory[] = [
   {
+    category: "Bildung & Institutionen",
+    names: [
+      "KMU Akademie und Management AG",
+      "Medizinische Universität Wien",
+      "New Design University",
+      "WIFI Wien",
+      "Wirtschaftskammer Wien",
+      "Wirtschaftskammer Niederösterreich",
+      "WKO",
+      "WK Wien",
+    ],
+  },
+  {
     category: "Handel & E-Commerce",
     names: [
       "B-Dressed",
@@ -384,6 +397,16 @@ export const clientCategories: ClientCategory[] = [
     ],
   },
   {
+    category: "Öffentliche & wirtschaftsnahe Organisationen",
+    names: [
+      "Klimabündnis Oberösterreich",
+      "KMU Digital",
+      "Wirtschaftskammer Wien",
+      "Wirtschaftskammer Niederösterreich",
+      "WKO",
+    ],
+  },
+  {
     category: "Dienstleistung & KMU",
     names: [
       "ArtforArt",
@@ -398,19 +421,6 @@ export const clientCategories: ClientCategory[] = [
     ],
   },
   {
-    category: "Bildung & Institutionen",
-    names: [
-      "KMU Akademie und Management AG",
-      "Medizinische Universität Wien",
-      "New Design University",
-      "WIFI Wien",
-      "Wirtschaftskammer Wien",
-      "Wirtschaftskammer Niederösterreich",
-      "WKO",
-      "WK Wien",
-    ],
-  },
-  {
     category: "Gastronomie & Lifestyle",
     names: [
       "Bellaria",
@@ -418,16 +428,6 @@ export const clientCategories: ClientCategory[] = [
       "Cafe Kriemhild",
       "Mochi GmbH",
       "Restaurant Zsom",
-    ],
-  },
-  {
-    category: "Öffentliche & wirtschaftsnahe Organisationen",
-    names: [
-      "Klimabündnis Oberösterreich",
-      "KMU Digital",
-      "Wirtschaftskammer Wien",
-      "Wirtschaftskammer Niederösterreich",
-      "WKO",
     ],
   },
 ];
