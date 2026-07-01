@@ -56,8 +56,8 @@ export default function Home() {
                 Sie wollen wachsen. Wir machen den Weg frei.
               </h1>
               <p className="max-w-3xl text-pretty text-lg leading-8 text-[var(--muted)]">
-                Unternehmensberatung für KMU und Geschäftsführungen. Zwei erfahrene
-                Ansprechpartner für Strategie, Marketing, Vertrieb, Digitalisierung und KI —
+                Für Eigentümer:innen, Geschäftsführung und Entscheidungsteams von KMU, EPU und Start-Ups.
+                Zwei erfahrene Ansprechpartner für Strategie, Marketing, Vertrieb, Digitalisierung und KI —
                 pragmatisch und umsetzungsnah.
               </p>
             </div>
@@ -65,7 +65,48 @@ export default function Home() {
            
           </div>
 
-
+          {/* Wofür Unternehmen uns holen – kompakte Self-Selection */}
+          <div className="fade-up mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: (
+                  <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                ),
+                title: "Strategie & Digitalisierung integriert",
+                desc: "Alle Fäden zusammengeführt",
+              },
+              {
+                icon: (
+                  <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                ),
+                title: "Direkt auf Augenhöhe",
+                desc: "Mit GF und Entscheidungsteams",
+              },
+              {
+                icon: (
+                  <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                title: "Pragmatisch & umsetzungsnah",
+                desc: "Fokus auf nächste Schritte",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex items-start gap-3 rounded-lg bg-white/60 p-4 backdrop-blur-sm">
+                <div className="shrink-0 rounded-md bg-[var(--brand-blue)]/10 p-2">
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[var(--ink)]">{item.title}</p>
+                  <p className="text-xs text-[var(--muted)]">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </section>
@@ -220,6 +261,14 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <CtaSection
+        eyebrow="Erstgespräch"
+        title="Sie möchten klären, welches Thema für Ihr Unternehmen gerade wirklich Priorität hat?"
+        description="Im Erstgespräch ordnen wir Ausgangslage, Zielbild und Handlungsoptionen gemeinsam ein – ohne Hype, ohne Beratungsfloskeln und mit Blick auf das, was für Ihr Unternehmen jetzt sinnvoll ist."
+        primaryLabel="Jetzt Gespräch vereinbaren"
+        primaryHref="/kontakt"
+      />
 
       <ContactPanel id="kontakt" />
     </>
