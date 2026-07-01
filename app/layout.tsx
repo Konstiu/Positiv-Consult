@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { BackgroundCanvas } from "@/components/background-canvas";
 import { companyName, deploymentSiteUrl, isPreviewDeployment } from "@/lib/site-data";
 import "./globals.css";
 
@@ -32,7 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="h-full scroll-smooth antialiased">
-      <body className="min-h-full bg-[var(--paper)] text-[var(--ink)]">
+      <body className="min-h-full text-[var(--ink)]">
+        <BackgroundCanvas />
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>

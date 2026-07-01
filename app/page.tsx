@@ -38,14 +38,10 @@ export default function Home() {
         <ScrollToSection />
       </Suspense>
 
-      <section className="relative isolate overflow-hidden bg-[var(--paper)]">
+      <section className="relative overflow-hidden">
         <div
             className="absolute inset-0 bg-cover bg-position-[center_30%] opacity-[0.12] mask-[linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)]"
             style={{ backgroundImage: `url('${withBasePath("/ai-images/output.png")}')` }}
-            aria-hidden="true"
-        />
-        <div
-            className="absolute inset-0 bg-[rgba(248,250,252,0.80)]"
             aria-hidden="true"
         />
         <div className="site-shell relative grid gap-12 py-24 md:py-32 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-36">
@@ -65,10 +61,11 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="h-8 md:h-12" />
       <StatsStrip />
 
       {/* Team Section - Gesichter schaffen Vertrauen */}
-      <section className="site-shell section-space flex flex-col gap-10 bg-[var(--paper)] py-16 md:py-20">
+      <section className="site-shell section-space flex flex-col gap-10">
         <div className="max-w-3xl space-y-4">
           <span className="eyebrow">Das Team</span>
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
@@ -163,7 +160,7 @@ export default function Home() {
       {/*  </div>*/}
       {/*</section>*/}
 
-      <section className="site-shell section-space flex flex-col gap-12 py-16 md:py-20">
+      <section className="site-shell section-space flex flex-col gap-12">
         <div className="max-w-3xl space-y-4">
           <span className="eyebrow">Warum POSITIVconsult</span>
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
@@ -195,7 +192,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="referenzen" className="site-shell section-space flex flex-col gap-12 bg-[var(--paper)] py-16 md:py-20">
+      <section id="referenzen" className="site-shell section-space flex flex-col gap-12">
         <div className="max-w-3xl space-y-4">
           <span className="eyebrow">Referenzen</span>
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
