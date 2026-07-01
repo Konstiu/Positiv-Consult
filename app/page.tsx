@@ -49,7 +49,7 @@ export default function Home() {
             aria-hidden="true"
         />
         <div className="site-shell relative grid gap-12 py-24 md:py-32 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-36">
-          <div className="fade-up space-y-8">
+          <div className="fade-up space-y-5">
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
               <h1 className="max-w-5xl text-balance font-serif text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl lg:text-[4.1rem] lg:leading-[1.02]">
@@ -61,54 +61,53 @@ export default function Home() {
                 pragmatisch und umsetzungsnah.
               </p>
             </div>
-
-           
-          </div>
-
-          {/* Wofür Unternehmen uns holen – kompakte Self-Selection */}
-          <div className="fade-up mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: (
-                  <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                ),
-                title: "Strategie & Digitalisierung integriert",
-                desc: "Alle Fäden zusammengeführt",
-              },
-              {
-                icon: (
-                  <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                ),
-                title: "Direkt auf Augenhöhe",
-                desc: "Mit GF und Entscheidungsteams",
-              },
-              {
-                icon: (
-                  <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "Pragmatisch & umsetzungsnah",
-                desc: "Fokus auf nächste Schritte",
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex items-start gap-3 rounded-lg bg-white/60 p-4 backdrop-blur-sm">
-                <div className="shrink-0 rounded-md bg-[var(--brand-blue)]/10 p-2">
-                  {item.icon}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[var(--ink)]">{item.title}</p>
-                  <p className="text-xs text-[var(--muted)]">{item.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
+      </section>
 
+      {/* Wofür Unternehmen uns holen – kompakte Self-Selection */}
+      <section className="site-shell relative -mt-8 pb-6 md:pb-10">
+        <div className="fade-up grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              icon: (
+                <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              ),
+              title: "Strategie & Digitalisierung integriert",
+              desc: "Alle Fäden zusammengeführt",
+            },
+            {
+              icon: (
+                <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              ),
+              title: "Direkt auf Augenhöhe",
+              desc: "Mit GF und Entscheidungsteams",
+            },
+            {
+              icon: (
+                <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              ),
+              title: "Pragmatisch & umsetzungsnah",
+              desc: "Fokus auf nächste Schritte",
+            },
+          ].map((item) => (
+            <div key={item.title} className="group surface-card flex items-start gap-3 p-5 transition-shadow hover:shadow-md">
+              <div className="shrink-0 rounded-lg bg-[var(--brand-blue)]/10 p-2.5 group-hover:bg-[var(--brand-blue)]/15">
+                {item.icon}
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[var(--ink)]">{item.title}</p>
+                <p className="mt-0.5 text-xs text-[var(--muted)]">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <StatsStrip />
@@ -122,7 +121,7 @@ export default function Home() {
           </h2>
           <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
             Dr. Heidrun Unterweger und Mag. Marc Isop begleiten Ihre Projekte direkt –
-            mit kurzer Entscheidungsweg und langjähriger Erfahrung.
+            mit kurzen Entscheidungswegen, persönlicher Verfügbarkeit und langjähriger Erfahrung.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
@@ -143,12 +142,20 @@ export default function Home() {
         <SectionHeading
           eyebrow="Leistungen"
           title="Beratungsfelder mit klarem Fokus auf Umsetzung."
-          description="Wir unterstützen bei Strategie, Digitalisierung, KI und Förderthemen — von der Analyse bis zum nächsten Schritt."
+          description="Sechs Bereiche, die ineinandergreifen. Klicken Sie sich durch – oder sprechen Sie uns direkt auf Ihr konkretes Vorhaben an."
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {coreServices.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
+        </div>
+        <div className="mt-4 flex justify-center">
+          <Link
+            href="/leistungen"
+            className="text-sm font-semibold text-[var(--brand-blue)] hover:underline underline-offset-4"
+          >
+            Alle Leistungen im Detail →
+          </Link>
         </div>
       </section>
 
@@ -207,6 +214,9 @@ export default function Home() {
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
             25 Jahre Erfahrung im digitalen Umfeld.
           </h2>
+          <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Wir verbinden strategisches Denken mit operativer Umsetzung – und das seit einem Vierteljahrhundert.
+          </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-3">
           <article className="surface-card p-6">
@@ -234,7 +244,7 @@ export default function Home() {
         <SectionHeading
             eyebrow="Referenzen"
             title="150+ Kunden aus unterschiedlichen Branchen."
-            description="Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben."
+            description="Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben. Vertrauen entsteht durch Ergebnisse – fragen Sie gerne nach."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
