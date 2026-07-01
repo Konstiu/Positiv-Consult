@@ -1,4 +1,3 @@
-import { CtaSection } from "@/components/cta-section";
 import { PageHeader } from "@/components/page-header";
 import { createMetadata } from "@/lib/metadata";
 import { fundingFacts } from "@/lib/site-data";
@@ -32,55 +31,56 @@ export default function FoerderungenPage() {
         eyebrow="Förderungen"
         title="Förderthemen sachlich prüfen, ohne das Projekt aus den Augen zu verlieren."
         description="Förderberatung ist dann sinnvoll, wenn ein Vorhaben inhaltlich schlüssig ist und die Projektlogik trägt. Genau dort setzen wir an – ohne Förderversprechen und ohne künstliche Aufblähung."
-        highlights={[
-          "WKO- und KMU.DIGITAL-nahe Beratungserfahrung",
-          "Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten",
-          "Verbindung zu Digitalisierungs-, KI- und Wachstumsvorhaben",
-          "Keine Garantien, sondern realistische Einschätzung",
-        ]}
       />
 
-      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-3 md:py-24">
-        {fundingSections.map((item) => (
-          <article key={item.title} className="surface-card p-6 md:p-7">
-            <h2 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
-              {item.title}
-            </h2>
-            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
-              {item.text}
-            </p>
-          </article>
-        ))}
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-5 py-4 md:px-8">
-        <div className="surface-card p-6 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
-            Förderberatung im Überblick
-          </p>
-          <div className="mt-5 grid gap-3">
-            {fundingFacts.map((item) => (
-              <p
-                key={item}
-                className="rounded-[1.35rem] border border-black/8 bg-white/72 px-4 py-4 text-sm leading-7 text-[var(--muted)]"
-              >
-                {item}
+      <section className="mx-auto w-full max-w-5xl px-5 py-18 md:px-8 md:py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-serif text-3xl font-semibold text-[var(--brand-blue)]">
+            Wie wir arbeiten
+          </h2>
+        </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {fundingSections.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-black/5 bg-white/60 p-5">
+              <h3 className="font-serif text-xl font-semibold text-[var(--brand-blue)]">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                {item.text}
               </p>
-            ))}
-          </div>
-          <p className="mt-5 rounded-2xl border border-dashed border-[var(--line)] bg-white/70 px-4 py-4 text-sm leading-7 text-[var(--muted)]">
-            Förderberatung erfolgt ohne Garantie auf eine Förderung. Entscheidend ist immer, ob ein Vorhaben fachlich, wirtschaftlich und organisatorisch tragfähig ist.
-          </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <CtaSection
-        eyebrow="Förderberatung"
-        title="Sie möchten klären, ob ein Vorhaben förderfähig und sinnvoll aufgesetzt werden kann?"
-        description="In einem Gespräch ordnen wir das Projekt, die Förderlogik und die nächsten Schritte gemeinsam ein."
-        primaryLabel="Förderfähigkeit besprechen"
-        primaryHref="/kontakt"
-      />
+      <section className="mx-auto w-full max-w-5xl px-5 pb-18 md:px-8 md:pb-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-serif text-3xl font-semibold text-[var(--brand-blue)]">
+            Fakten zur Förderberatung
+          </h2>
+          <div className="mt-8 space-y-3 text-left">
+            {fundingFacts.map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-3 rounded-2xl border border-black/5 bg-white/60 px-4 py-4"
+              >
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]" />
+                <p className="text-sm leading-7 text-[var(--muted)]">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 flex items-start gap-3 rounded-2xl border border-dashed border-[var(--brand-blue)]/30 bg-[var(--brand-blue)]/[0.04] px-4 py-4">
+            <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-sm leading-7 text-[var(--brand-blue)]">
+              Förderberatung erfolgt ohne Garantie auf eine Förderung. Entscheidend ist immer, ob ein Vorhaben fachlich, wirtschaftlich und organisatorisch tragfähig ist.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
