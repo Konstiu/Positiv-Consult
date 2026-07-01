@@ -342,6 +342,10 @@ export const digitalOfferModules: OfferModule[] = [
     title: "Umsetzungsbegleitung",
     text: "Bei Bedarf begleiten wir die nächsten Schritte in Richtung Einführung, Abstimmung mit Partnern oder operativer Umsetzung.",
   },
+  {
+    title: "Change-Begleitung",
+    text: "Digitale Veränderung braucht Akzeptanz. Wir unterstützen bei Kommunikation, Schulung und der Einbindung der Mitarbeitenden.",
+  },
 ];
 
 export const teamContacts = [
