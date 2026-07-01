@@ -37,13 +37,13 @@ body {
 }
 
 html {
-  background: var(--brand-dark);
+  background: transparent;
 }
 
 body {
   color: var(--ink);
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-  background: var(--paper);
+  background: transparent;
   line-height: 1.6;
   text-wrap: pretty;
 }
@@ -102,9 +102,7 @@ summary {
 }
 
 .hero-grid {
-  background:
-    radial-gradient(circle at top right, rgba(31, 78, 140, 0.1), transparent 30%),
-    linear-gradient(180deg, var(--paper), var(--paper));
+  background: transparent;
 }
 
 .grid-lines {

@@ -36,8 +36,7 @@ export function CtaSection({
             <div className="absolute inset-0 bg-[rgba(17,24,39,0.72)]" />
           </div>
         ) : null}
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top,rgba(215,38,61,0.24),transparent_56%)]" />
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-[radial-gradient(circle_at_bottom_left,rgba(31,78,140,0.22),transparent_52%)]" />
+
         <div className="relative max-w-3xl space-y-5">
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight md:text-4xl">
             {title}
