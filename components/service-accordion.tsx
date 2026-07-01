@@ -76,7 +76,7 @@ export function ServiceAccordion({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-start gap-4 p-6 text-left transition hover:bg-black/[0.02]"
+        className="flex w-full items-center gap-4 p-6 text-left transition hover:bg-black/[0.02]"
         aria-expanded={isOpen}
       >
         <div className="shrink-0 rounded-xl bg-[var(--brand-blue)]/10 p-2.5 text-[var(--brand-blue)]">
@@ -86,9 +86,6 @@ export function ServiceAccordion({
           <h2 className="font-serif text-xl font-semibold text-[var(--brand-blue)]">
             {title}
           </h2>
-          <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-            {problem.length > 120 ? `${problem.slice(0, 120)}...` : problem}
-          </p>
         </div>
         <svg
           className={`h-5 w-5 shrink-0 text-[var(--muted)] transition ${isOpen ? "rotate-180" : ""}`}
@@ -104,24 +101,24 @@ export function ServiceAccordion({
         <div className="border-t border-black/5 px-6 pb-6 pt-4">
           <div className="grid gap-5">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                Wann das relevant ist
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-red)]">
+                Problem
               </p>
               <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
                 {problem}
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                Wie wir arbeiten
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                Lösung
               </p>
               <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
                 {approach}
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                Was Sie mitnehmen
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                Ergebnis
               </p>
               <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
                 {result}
