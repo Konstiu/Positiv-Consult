@@ -65,51 +65,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Wofür Unternehmen uns holen – kompakte Self-Selection */}
-      <section className="site-shell relative -mt-8 pb-6 md:pb-10">
-        <div className="fade-up grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              icon: (
-                <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              ),
-              title: "Strategie & Digitalisierung integriert",
-              desc: "Alle Fäden zusammengeführt",
-            },
-            {
-              icon: (
-                <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              ),
-              title: "Direkt auf Augenhöhe",
-              desc: "Mit GF und Entscheidungsteams",
-            },
-            {
-              icon: (
-                <svg className="h-6 w-6 text-[var(--brand-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              ),
-              title: "Pragmatisch & umsetzungsnah",
-              desc: "Fokus auf nächste Schritte",
-            },
-          ].map((item) => (
-            <div key={item.title} className="group surface-card flex items-start gap-3 p-5 transition-shadow hover:shadow-md">
-              <div className="shrink-0 rounded-lg bg-[var(--brand-blue)]/10 p-2.5 group-hover:bg-[var(--brand-blue)]/15">
-                {item.icon}
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-[var(--ink)]">{item.title}</p>
-                <p className="mt-0.5 text-xs text-[var(--muted)]">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <StatsStrip />
 
       {/* Team Section - Gesichter schaffen Vertrauen */}
@@ -124,7 +79,7 @@ export default function Home() {
             mit kurzen Entscheidungswegen, persönlicher Verfügbarkeit und langjähriger Erfahrung.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto w-full">
           {teamContacts.map((person) => (
             <ContactCard
               key={person.email}
@@ -240,45 +195,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="referenzen" className="site-shell section-space flex flex-col gap-12">
-        <SectionHeading
-            eyebrow="Referenzen"
-            title="150+ Kunden aus unterschiedlichen Branchen."
-            description="Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben. Vertrauen entsteht durch Ergebnisse – fragen Sie gerne nach."
-        />
+      <section id="referenzen" className="site-shell section-space flex flex-col gap-12 bg-[var(--paper)] py-16 md:py-20">
+        <div className="max-w-3xl space-y-4">
+          <span className="eyebrow">Referenzen</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
+            150+ Kunden aus unterschiedlichen Branchen.
+          </h2>
+          <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben.
+            Vertrauen entsteht durch Ergebnisse – fragen Sie gerne nach.
+          </p>
+        </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {clientCategoriesSelected.map((group) => (
-              <article
-                  key={group.category}
-                  className="surface-card flex flex-col gap-4 p-6"
-              >
-                  <h3 className="font-serif text-xl font-semibold text-[var(--brand-blue)]">
-                      {group.category}
-                  </h3>
-
-                  <div className="flex flex-wrap gap-3">
-                      {group.featured.map((name) => (
-                          <span
-                              key={name}
-                              className="rounded-full bg-[var(--brand-blue)]/10 px-4 py-2 text-sm font-semibold text-[var(--brand-blue)]"
-                          >
-                              {name}
-                          </span>
-                      ))}
-                  </div>
-              </article>
+            <article key={group.category} className="space-y-3">
+              <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">
+                {group.category}
+              </h3>
+              <ul className="space-y-1.5">
+                {group.featured.map((name) => (
+                  <li key={name} className="text-base text-[var(--ink)]">
+                    {name}
+                  </li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </section>
-
-      <CtaSection
-        eyebrow="Erstgespräch"
-        title="Sie möchten klären, welches Thema für Ihr Unternehmen gerade wirklich Priorität hat?"
-        description="Im Erstgespräch ordnen wir Ausgangslage, Zielbild und Handlungsoptionen gemeinsam ein – ohne Hype, ohne Beratungsfloskeln und mit Blick auf das, was für Ihr Unternehmen jetzt sinnvoll ist."
-        primaryLabel="Jetzt Gespräch vereinbaren"
-        primaryHref="/kontakt"
-      />
 
       <ContactPanel id="kontakt" />
     </>
