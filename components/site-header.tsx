@@ -8,7 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { navItems, withBasePath } from "@/lib/site-data";
 
 const homeSectionLinks: Record<string, string> = {
-  "/leistungen": "leistungen",
+  //"/leistungen": "leistungen",
    //"/kunden-erfahrung": "referenzen",
    //"/kontakt": "kontakt",
 };

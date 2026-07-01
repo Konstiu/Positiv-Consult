@@ -118,7 +118,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "30+", label: "Beratungserfahrung in Strategie, Digitalisierung, Vertrieb und Wachstum." },
+  { value: "30+", label: "Jahre Erfahrung" },
   { value: "250+", label: "Projekte" },
   { value: "150+", label: "Kunden" },
   { value: "7", label: "Länder" },
@@ -128,7 +128,7 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Strategie & Wachstum",
     description:
-      "Wir unterstützen Geschäftsführungen dabei, Marktchancen, Zielgruppen, Angebote und Ressourcen realistisch einzuordnen und daraus belastbare Prioritäten für Wachstum, Vertrieb und Investitionen abzuleiten.",
+      "Wir unterstützen Geschäftsführungen dabei, Marktchancen, Zielgruppen und Ressourcen realistisch einzuordnen und daraus belastbare Prioritäten für Wachstum abzuleiten.",
     href: "/leistungen",
     points: ["Positionierung", "Zielgruppen", "Prioritäten"],
   },
@@ -142,28 +142,28 @@ export const coreServices: ServiceItem[] = [
   {
     title: "Vertrieb & Marktbearbeitung",
     description:
-      "Wir analysieren Vertriebsprozesse, Rollen und Marktbearbeitung und schaffen eine Struktur, mit der Teams Chancen konsequenter verfolgen und Aktivitäten nachvollziehbar steuern können.",
+      "Wir analysieren Vertriebsprozesse, Rollen und Marktbearbeitung und schaffen eine Struktur, mit der Teams Chancen konsequenter verfolgen können.",
     href: "/leistungen",
     points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
   },
   {
     title: "Digitalisierung & E-Commerce",
     description:
-      "Wir analysieren bestehende Prozesse, Websites und E-Commerce-Strukturen, identifizieren Engpässe und priorisieren Maßnahmen nach Aufwand, Wirkung und Umsetzbarkeit.",
+      "Wir analysieren Prozesse und digitale Touchpoints, identifizieren Engpässe und priorisieren Maßnahmen nach Wirkung und Umsetzbarkeit.",
     href: "/leistungen",
     points: ["Prozessanalyse", "Website & E-Commerce", "Systemprioritäten"],
   },
   {
     title: "KI-Beratung",
     description:
-      "Wir finden KI-Anwendungsfälle, die tatsächlich Zeit sparen, Qualität erhöhen oder Entscheidungen verbessern, und testen sie in klar abgegrenzten Pilotprojekten.",
+      "Wir finden KI-Anwendungsfälle, die Zeit sparen oder Qualität erhöhen, und testen sie in klaren Pilotprojekten.",
     href: "/ai-consulting",
     points: ["Potenzialanalyse", "Use Cases", "Pilotprojekte"],
   },
   {
     title: "Förderberatung",
     description:
-      "Wir unterstützen bei der Einordnung von Förderfähigkeit, Projektlogik und nächsten Schritten, wenn ein Vorhaben mit Digitalisierung, Innovation oder Wachstum verbunden ist.",
+      "Wir prüfen Förderfähigkeit und unterstützen bei Projektlogik und nächsten Schritten für Digitalisierung und Innovation.",
     href: "/foerderungen",
     points: ["Förderfähigkeit", "Projektlogik", "Nächste Schritte"],
   },
@@ -179,19 +179,19 @@ export const expertiseAreas = [
 export const homepageTrustItems: TrustItem[] = [
   {
     title: "Seit 2004",
-    text: "Beratungserfahrung in Strategie, Digitalisierung, Vertrieb und Wachstum.",
+    text: "Beratungserfahrung in Strategie, Digitalisierung und Vertrieb.",
   },
   {
     title: "250+ Projekte",
-    text: "Begleitete Vorhaben in unterschiedlichen Unternehmenssituationen und Branchen.",
+    text: "In unterschiedlichen Branchen und Unternehmenssituationen.",
   },
   {
     title: "150+ Kunden",
-    text: "Langjährige Zusammenarbeit mit KMU, Eigentümer:innen und Entscheidungsteams.",
+    text: "Langjährige Zusammenarbeit mit KMU und Geschäftsführungen.",
   },
   {
     title: "Breite Branchenpraxis",
-    text: "Erfahrung mit KMU, Handel, Dienstleistung, Bildung, Institutionen, Gastronomie und Start-ups.",
+    text: "Handel, Dienstleistung, Bildung, Institutionen, Gastronomie.",
   },
 ];
 
@@ -199,8 +199,6 @@ export const typicalSituations = [
   "Wir haben viele digitale Baustellen, aber keine klare Priorität.",
   "Wir wollen KI nutzen, wissen aber nicht, welche Use Cases wirklich sinnvoll sind.",
   "Marketing und Vertrieb brauchen mehr Struktur und bessere Entscheidungsgrundlagen.",
-  "Wir planen ein Projekt und möchten prüfen, ob eine Förderung möglich ist.",
-  "Wir wachsen, aber Strategie, Prozesse und Kommunikation müssen mitziehen.",
 ];
 
 export const homeFaqs: FaqItem[] = [
