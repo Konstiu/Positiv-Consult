@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import type { ReactElement } from "react";
 
-const serviceIcons: Record<string, JSX.Element> = {
+const serviceIcons: Record<string, ReactElement> = {
   Strategie: (
     <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1.05-9m1.05 9a2.25 2.25 0 01-2.25-2.25V12m9 0a2.25 2.25 0 002.25-2.25V12m0 0v6.75m0-6.75h-9m9 0h1.5" />
