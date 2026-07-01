@@ -50,12 +50,12 @@ export function SiteHeader() {
     const className = mobile
       ? `inline-flex min-h-[3rem] items-center px-4 text-base transition ${
           active
-            ? "rounded-full bg-white/12 text-white"
+            ? "rounded-full bg-[var(--brand-blue)] text-white font-semibold"
             : "text-white/72 hover:bg-white/10 hover:text-white"
         }`
       : `inline-flex h-10 items-center whitespace-nowrap px-4 text-[0.95rem] font-medium transition rounded-full ${
           active
-            ? "bg-white/12 text-white"
+            ? "bg-[var(--brand-blue)] text-white font-semibold"
             : "text-white/72 hover:bg-white/10 hover:text-white"
         }`;
 
