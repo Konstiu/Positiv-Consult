@@ -1,5 +1,5 @@
-import { CtaSection } from "@/components/cta-section";
 import { PageHeader } from "@/components/page-header";
+import { ServiceAccordion } from "@/components/service-accordion";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -109,57 +109,19 @@ export default function LeistungenPage() {
         eyebrow="Leistungen"
         title="Beratungsfelder für Entscheidungen, Prioritäten und konkrete Vorhaben."
         description="POSITIVconsult unterstützt bei Strategie, Marketing, Vertrieb, Digitalisierung, KI-Beratung, Förderthemen und angrenzenden Wachstumsvorhaben – mit einem klaren Blick auf Umsetzbarkeit und unternehmerische Relevanz."
-        highlights={[
-          "Strategie, Marktbearbeitung und Wachstum",
-          "KI-Beratung, Digitalisierung und E-Commerce",
-          "Förderberatung, Ausschreibungen und Internationalisierung",
-          "Persönliche Zusammenarbeit mit Eigentümer:innen und Geschäftsführungen",
-        ]}
       />
 
-      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-18 md:px-8 lg:grid-cols-2 md:py-24">
+      <section className="mx-auto grid w-full max-w-5xl gap-4 px-5 py-18 md:px-8 md:py-24">
         {serviceBlocks.map((service) => (
-          <article key={service.title} className="surface-card p-6 md:p-7">
-            <h2 className="font-serif text-3xl font-semibold text-[var(--brand-blue)]">
-              {service.title}
-            </h2>
-            <div className="mt-5 grid gap-4">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Wann das relevant ist
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
-                  {service.problem}
-                </p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Wie wir arbeiten
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
-                  {service.approach}
-                </p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                  Was Sie mitnehmen
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[var(--muted)]">
-                  {service.result}
-                </p>
-              </div>
-            </div>
-          </article>
+          <ServiceAccordion
+            key={service.title}
+            title={service.title}
+            problem={service.problem}
+            approach={service.approach}
+            result={service.result}
+          />
         ))}
       </section>
-
-      <CtaSection
-        eyebrow="Leistungsabgleich"
-        title="Sie möchten herausfinden, welcher Beratungsansatz für Ihr Thema gerade wirklich passt?"
-        description="In einem Gespräch klären wir, ob es primär um Strategie, KI, Digitalisierung, Vertrieb, Förderthemen oder eine Kombination daraus geht."
-        primaryLabel="Passenden Beratungsansatz finden"
-        primaryHref="/kontakt"
-      />
     </>
   );
 }

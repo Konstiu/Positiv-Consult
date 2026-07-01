@@ -3,15 +3,16 @@ import Link from "next/link";
 
 import { ContactPanel } from "@/components/contact-panel";
 import { CtaSection } from "@/components/cta-section";
+import { ContactCard } from "@/components/contact-card";
 import { ScrollToSection } from "@/components/scroll-to-section";
 import { SectionHeading } from "@/components/section-heading";
-import { ServiceCard } from "@/components/service-card";
 import { createMetadata } from "@/lib/metadata";
 import {
   coreServices,
   homepageTrustItems,
   clientCategoriesSelected,
   withBasePath,
+  teamContacts,
 } from "@/lib/site-data";
 import {StatsStrip} from "@/components/stats-strip";
 
@@ -36,18 +37,14 @@ export default function Home() {
         <ScrollToSection />
       </Suspense>
 
-      <section className="relative isolate overflow-hidden bg-[var(--paper)]">
+      <section className="relative overflow-hidden">
         <div
-            className="absolute inset-0 bg-cover bg-position-[center_right] opacity-[0.34] mask-[linear-gradient(to_bottom,black_0%,black_68%,transparent_100%)]"
-            style={{ backgroundImage: `url('${withBasePath("/ai-images/background_img.png")}')` }}
+            className="absolute inset-0 bg-cover bg-position-[center_30%] opacity-[0.12] mask-[linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)]"
+            style={{ backgroundImage: `url('${withBasePath("/ai-images/output.png")}')` }}
             aria-hidden="true"
         />
-        <div
-            className="absolute inset-0 bg-[rgba(248,250,252,0.62)]"
-            aria-hidden="true"
-        />
-        <div className="site-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-24">
-          <div className="fade-up space-y-8">
+        <div className="site-shell relative grid gap-12 py-24 md:py-32 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-36">
+          <div className="fade-up space-y-5">
             <span className="eyebrow">Unternehmensberatung</span>
             <div className="space-y-5">
               <h1 className="max-w-5xl text-balance font-serif text-4xl font-semibold tracking-tight text-[var(--ink)] sm:text-5xl lg:text-[4.1rem] lg:leading-[1.02]">
@@ -91,23 +88,66 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </section>
 
-      <div>
-        <StatsStrip />
-      </div>
+      <div className="h-8 md:h-12" />
+      <StatsStrip />
 
-      <section id="leistungen" className="site-shell section-space flex flex-col gap-10">
+      {/* Team Section - Gesichter schaffen Vertrauen */}
+      <section className="site-shell section-space flex flex-col gap-10">
+        <div className="mx-auto max-w-3xl space-y-4 text-center">
+          <span className="eyebrow">Das Team</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
+            Persönliche Beratung von Anfang an.
+          </h2>
+          <p className="mx-auto max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Dr. Heidrun Unterweger und Mag. Marc Isop begleiten Ihre Projekte direkt –
+            mit kurzen Entscheidungswegen, persönlicher Verfügbarkeit und langjähriger Erfahrung.
+          </p>
+        </div>
+        <div className="grid gap-8 max-w-5xl mx-auto w-full">
+          {teamContacts.map((person) => (
+            <ContactCard
+              key={person.email}
+              name={person.name}
+              role={person.role}
+              email={person.email}
+              phone={person.phone}
+              photoUrl={person.photoUrl}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section id="leistungen" className="site-shell section-space flex flex-col gap-12">
         <SectionHeading
           eyebrow="Leistungen"
-          title="Beratungsfelder, die auf konkrete Entscheidungen und Vorhaben einzahlen."
-          description="POSITIVconsult begleitet Unternehmen dort, wo Strategie, Marktbearbeitung, Digitalisierung, KI und Förderthemen in operative Entscheidungen übergehen."
+          title="Beratungsfelder mit klarem Fokus auf Umsetzung."
+          description="Ein breites Spektrum an Beratungsfeldern, die ineinandergreifen. Entdecken Sie unsere Schwerpunkte – oder sprechen Sie uns direkt auf Ihr konkretes Vorhaben an."
+          align="center"
         />
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
-            <ServiceCard key={service.title} service={service} />
+            <article key={service.title} className="surface-card p-5 md:p-6">
+              <h3 className="font-serif text-xl font-semibold text-[var(--brand-blue)]">
+                {service.title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                {service.description}
+              </p>
+            </article>
           ))}
+        </div>
+        <div className="mt-4 flex justify-center">
+          <Link
+            href="/leistungen"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand-blue)] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--brand-blue)]/90"
+          >
+            Zu weiteren Leistungen
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
         </div>
       </section>
 
@@ -160,54 +200,53 @@ export default function Home() {
       {/*  </div>*/}
       {/*</section>*/}
 
-      <section id="referenzen" className="site-shell section-space flex flex-col gap-8">
-        <SectionHeading
-            eyebrow="Referenzen"
-            title="Erfahrung aus unterschiedlichen Branchen und Organisationen."
-            description="Ein kompakter Auszug aus Unternehmen und Institutionen, mit denen POSITIVconsult gearbeitet hat – von Handel und E-Commerce über Dienstleistungen bis zu Bildung und wirtschaftsnahen Organisationen."        />
+      <section id="referenzen" className="site-shell section-space flex flex-col gap-12">
+        <div className="mx-auto max-w-3xl space-y-4 text-center">
+          <span className="eyebrow">Referenzen</span>
+          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
+            150+ Kunden aus unterschiedlichen Branchen.
+          </h2>
+          <p className="mx-auto max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+            Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben.
+            Vertrauen entsteht durch Ergebnisse – fragen Sie gerne nach.
+          </p>
+        </div>
 
-        <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {clientCategoriesSelected.map((group) => (
-              <article
-                  key={group.category}
-                  className="surface-card flex h-full flex-col p-6 md:p-7"
-              >                  <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
-                      {group.category}
-                  </h3>
+            <article
+              key={group.category}
+              className="surface-card flex h-full flex-col p-6 md:p-7"
+            >
+              <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
+                {group.category}
+              </h3>
 
-                  <div className="mt-7 space-y-3 border-l border-[rgba(31,78,140,0.18)] pl-5">
-                      {group.featured.map((name) => (
-                          <div
-                              key={name}
-                              className="text-base font-semibold leading-6 text-[var(--ink)]"
-                          >
-                              {name}
-                          </div>
-                      ))}
+              <div className="mt-7 space-y-3 border-l border-[rgba(31,78,140,0.18)] pl-5">
+                {group.featured.map((name) => (
+                  <div
+                    key={name}
+                    className="text-base font-semibold leading-6 text-[var(--ink)]"
+                  >
+                    {name}
                   </div>
+                ))}
+              </div>
 
-                  <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
-                      {group.names.map((name) => (
-                          <span
-                              key={name}
-                              className="whitespace-nowrap text-sm font-medium leading-6 text-[var(--muted)]"
-                          >
-      {name}
-    </span>
-                      ))}
-                  </div>
-              </article>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                {group.names.map((name) => (
+                  <span
+                    key={name}
+                    className="whitespace-nowrap text-sm font-medium leading-6 text-[var(--muted)]"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </section>
-
-      <CtaSection
-        eyebrow="Erstgespräch"
-        title="Sie möchten klären, welches Thema für Ihr Unternehmen gerade wirklich Priorität hat?"
-        description="Im Erstgespräch ordnen wir Ausgangslage, Zielbild und Handlungsoptionen gemeinsam ein – ohne Hype, ohne Beratungsfloskeln und mit Blick auf das, was für Ihr Unternehmen jetzt sinnvoll ist."
-        primaryLabel="Erstgespräch vereinbaren"
-        primaryHref="/kontakt"
-      />
 
       <ContactPanel id="kontakt" />
     </>

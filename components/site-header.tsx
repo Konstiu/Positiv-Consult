@@ -2,16 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
-import { navItems, withBasePath } from "@/lib/site-data";
+import { navItems, withBasePath, basePath } from "@/lib/site-data";
 
-const homeSectionLinks: Record<string, string> = {
-  "/leistungen": "leistungen",
-   //"/kunden-erfahrung": "referenzen",
-   //"/kontakt": "kontakt",
-};
+const homeSectionLinks: Record<string, string> = {};
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -37,114 +33,41 @@ function MenuIcon({ open }: { open: boolean }) {
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-
-    if (!section) return;
-
-    const headerOffset = 88;
-    const top = section.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-    window.scrollTo({
-      top,
-      behavior: "smooth",
-    });
-
-    window.history.replaceState(null, "", window.location.pathname);
-  };
-
-  useEffect(() => {
-    if (pathname !== "/") {
-      return;
-    }
-
-    const sections = Object.values(homeSectionLinks)
-      .map((id) => document.getElementById(id))
-      .filter(Boolean) as HTMLElement[];
-
-    if (!sections.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        setActiveSection(visibleEntries[0]?.target.id ?? null);
-      },
-      {
-        root: null,
-        rootMargin: "-30% 0px -55% 0px",
-        threshold: [0.1, 0.25, 0.5],
-      },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, [pathname]);
-
-  const handleNavClick = (href: string) => {
-    const sectionId = homeSectionLinks[href];
-
-    setOpen(false);
-
-    if (!sectionId) return;
-
-    if (pathname === "/") {
-      scrollToSection(sectionId);
-      return;
-    }
-
-    router.push(`/?scrollTo=${sectionId}`);
-  };
 
   const isActive = (href: string) => {
-    const sectionId = homeSectionLinks[href];
+    // Remove basePath from pathname for comparison (only if basePath is not empty)
+    let normalizedPath = basePath && basePath !== "/" 
+      ? pathname.replace(basePath, "") || "/"
+      : pathname;
 
-    if (pathname === "/" && sectionId) {
-      return activeSection === sectionId;
+    // Remove trailing slash for comparison (except for root)
+    if (normalizedPath !== "/" && normalizedPath.endsWith("/")) {
+      normalizedPath = normalizedPath.slice(0, -1);
     }
 
+    // Special case: /digitalisierung also matches /ai-consulting
     if (href === "/digitalisierung") {
-      return pathname === "/digitalisierung" || pathname === "/ai-consulting";
+      return normalizedPath === "/digitalisierung" || normalizedPath === "/ai-consulting";
     }
 
-    return pathname === href;
+    // Direct match for all other pages
+    return normalizedPath === href;
   };
 
   const renderNavItem = (item: (typeof navItems)[number], mobile = false) => {
     const active = isActive(item.href);
-    const sectionId = homeSectionLinks[item.href];
     const className = mobile
       ? `inline-flex min-h-[3rem] items-center px-4 text-base transition ${
           active
-            ? "text-white"
+            ? "rounded-full bg-white/15 text-white font-semibold"
             : "text-white/72 hover:bg-white/10 hover:text-white"
         }`
-      : `inline-flex h-10 items-center whitespace-nowrap px-4 text-[0.95rem] font-medium transition ${
+      : `inline-flex h-10 items-center whitespace-nowrap px-4 text-[0.95rem] font-medium transition rounded-full ${
           active
-            ? "text-white"
+            ? "bg-white/15 text-white font-semibold"
             : "text-white/72 hover:bg-white/10 hover:text-white"
         }`;
-
-    if (sectionId) {
-      return (
-        <button
-          key={item.href}
-          type="button"
-          onClick={() => handleNavClick(item.href)}
-          className={className}
-          aria-current={active ? "page" : undefined}
-        >
-          {item.label}
-        </button>
-      );
-    }
 
     return (
       <Link
