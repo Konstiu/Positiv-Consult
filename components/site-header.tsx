@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-import { navItems, withBasePath } from "@/lib/site-data";
+import { navItems, withBasePath, basePath } from "@/lib/site-data";
 
 const homeSectionLinks: Record<string, string> = {};
 
@@ -36,13 +36,17 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   const isActive = (href: string) => {
+    // Remove basePath from pathname for comparison
+    const currentPath = basePath ? pathname.replace(basePath, "") : pathname;
+    const normalizedPath = currentPath || "/";
+
     // Special case: /digitalisierung also matches /ai-consulting
     if (href === "/digitalisierung") {
-      return pathname === "/digitalisierung" || pathname === "/ai-consulting";
+      return normalizedPath === "/digitalisierung" || normalizedPath === "/ai-consulting";
     }
 
     // Direct match for all other pages
-    return pathname === href;
+    return normalizedPath === href;
   };
 
   const renderNavItem = (item: (typeof navItems)[number], mobile = false) => {
