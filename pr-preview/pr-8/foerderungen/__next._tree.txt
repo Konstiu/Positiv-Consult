@@ -1,0 +1,2 @@
+:HL["/pr-preview/pr-8/_next/static/css/9e74283bc85f9095.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"foerderungen","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"53teIEFKFKTD2UcAUUU1R"}
