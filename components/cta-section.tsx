@@ -47,7 +47,7 @@ export function CtaSection({
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
               href={primaryHref}
-              className="button-primary inline-flex justify-center rounded-full px-5 text-sm font-semibold"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--brand-blue)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[rgba(31,78,140,0.25)] transition hover:bg-[var(--brand-blue)]/90 hover:shadow-xl hover:-translate-y-0.5"
             >
               {primaryLabel}
             </Link>

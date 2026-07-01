@@ -95,17 +95,17 @@ export default function Home() {
 
       {/* Team Section - Gesichter schaffen Vertrauen */}
       <section className="site-shell section-space flex flex-col gap-10">
-        <div className="max-w-3xl space-y-4">
+        <div className="mx-auto max-w-3xl space-y-4 text-center">
           <span className="eyebrow">Das Team</span>
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
-            Zwei erfahrene Ansprechpartner für Ihr Unternehmen.
+            Persönliche Beratung von Anfang an.
           </h2>
-          <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+          <p className="mx-auto max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
             Dr. Heidrun Unterweger und Mag. Marc Isop begleiten Ihre Projekte direkt –
             mit kurzen Entscheidungswegen, persönlicher Verfügbarkeit und langjähriger Erfahrung.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto w-full">
+        <div className="grid gap-8 max-w-5xl mx-auto w-full">
           {teamContacts.map((person) => (
             <ContactCard
               key={person.email}
@@ -124,6 +124,7 @@ export default function Home() {
           eyebrow="Leistungen"
           title="Beratungsfelder mit klarem Fokus auf Umsetzung."
           description="Ein breites Spektrum an Beratungsfeldern, die ineinandergreifen. Entdecken Sie unsere Schwerpunkte – oder sprechen Sie uns direkt auf Ihr konkretes Vorhaben an."
+          align="center"
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
@@ -199,63 +200,49 @@ export default function Home() {
       {/*  </div>*/}
       {/*</section>*/}
 
-      <section className="site-shell section-space flex flex-col gap-12">
-        <div className="max-w-3xl space-y-4">
-          <span className="eyebrow">Warum POSITIVconsult</span>
-          <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
-            25 Jahre Erfahrung im digitalen Umfeld.
-          </h2>
-          <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
-            Wir verbinden strategisches Denken mit operativer Umsetzung – und das seit einem Vierteljahrhundert.
-          </p>
-        </div>
-        <div className="grid gap-6 lg:grid-cols-3">
-          <article className="surface-card p-6">
-            <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">Breites Agentur & E-Commerce Know-how</h3>
-            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Wir kennen die Spielregeln der Digitalen Kommunikation und sind am Puls der Zeit.
-            </p>
-          </article>
-          <article className="surface-card p-6">
-            <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">Exzellentes Netzwerk</h3>
-            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Langjährige Partner national und international – Sicherheit und Vertrauen.
-            </p>
-          </article>
-          <article className="surface-card p-6">
-            <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">Direkter Zugang zur Geschäftsführung</h3>
-            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Zwei erfahrene Ansprechpartner. Kurze Wege, Verbindlichkeit, pragmatische Lösungen.
-            </p>
-          </article>
-        </div>
-      </section>
-
       <section id="referenzen" className="site-shell section-space flex flex-col gap-12">
-        <div className="max-w-3xl space-y-4">
+        <div className="mx-auto max-w-3xl space-y-4 text-center">
           <span className="eyebrow">Referenzen</span>
           <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
             150+ Kunden aus unterschiedlichen Branchen.
           </h2>
-          <p className="max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+          <p className="mx-auto max-w-2xl text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
             Ein Auszug aus Unternehmen und Institutionen, mit denen wir gearbeitet haben.
             Vertrauen entsteht durch Ergebnisse – fragen Sie gerne nach.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {clientCategoriesSelected.map((group) => (
-            <article key={group.category} className="space-y-3">
-              <h3 className="font-serif text-lg font-semibold text-[var(--brand-blue)]">
+            <article
+              key={group.category}
+              className="surface-card flex h-full flex-col p-6 md:p-7"
+            >
+              <h3 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
                 {group.category}
               </h3>
-              <ul className="space-y-1.5">
+
+              <div className="mt-7 space-y-3 border-l border-[rgba(31,78,140,0.18)] pl-5">
                 {group.featured.map((name) => (
-                  <li key={name} className="text-base text-[var(--ink)]">
+                  <div
+                    key={name}
+                    className="text-base font-semibold leading-6 text-[var(--ink)]"
+                  >
                     {name}
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                {group.names.map((name) => (
+                  <span
+                    key={name}
+                    className="whitespace-nowrap text-sm font-medium leading-6 text-[var(--muted)]"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
             </article>
           ))}
         </div>
