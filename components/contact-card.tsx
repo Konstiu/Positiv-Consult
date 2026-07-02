@@ -36,7 +36,7 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
             <p className="text-sm font-medium text-[var(--muted)]">{role}</p>
           </div>
 
-          <div className="mt-6 space-y-4">
+          <dl className="mt-6 space-y-4">
             <div className="flex flex-col">
               <dt className="sr-only">E-Mail</dt>
               <dd className="flex flex-col m-0">
@@ -61,7 +61,7 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
                 </a>
               </dd>
             </div>
-          </div>
+          </dl>
         </div>
       </div>
     </article>
