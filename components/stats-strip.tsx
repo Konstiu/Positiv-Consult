@@ -3,6 +3,7 @@ import {homepageTrustItems} from "@/lib/site-data";
 export function StatsStrip() {
     return (
         <section className="site-shell relative py-10 md:py-14">
+            <h2 className="sr-only">Vertrauen und Erfahrung</h2>
             <div className="grid gap-6 items-stretch sm:grid-cols-2 xl:grid-cols-4">
                 {homepageTrustItems.map((item) => (
                     <article key={item.title}
