@@ -60,6 +60,12 @@ export function SiteFooter() {
                     ))}
                 </div>
             </div>
+
+            <div className="border-t border-white/10">
+                <div className="site-shell py-6 text-center text-sm text-slate-400">
+                    <p>&copy; 2004–{new Date().getFullYear()} POSITIVconsult</p>
+                </div>
+            </div>
         </footer>
     );
 }
