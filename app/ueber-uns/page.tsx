@@ -68,33 +68,56 @@ export default function UeberUnsPage() {
           </p>
         </div>
         
-        <div className="mt-12 relative">
-          {/* Timeline line: Mobile left, Desktop center */}
-          <div className="absolute left-[27px] top-0 md:left-1/2 h-full w-0.5 bg-[var(--brand-blue)]/20 md:-translate-x-1/2" />
-          
-          {/* Timeline items */}
+        {/* MOBILE: Simple vertical list, line on left */}
+        <div className="mt-12 space-y-8 md:hidden">
+          {companyStory.map((item) => (
+            <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
+              {/* Dot */}
+              <div className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0">
+                <div className="h-1.5 w-1.5 rounded-full bg-white" />
+              </div>
+              {/* Card */}
+              <div className="flex-1">
+                <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                    {item.year}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
+                    {item.title}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* Line - behind everything */}
+          <div className="absolute left-[11px] top-12 h-[calc(100%-3rem)] w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
+        </div>
+
+        {/* DESKTOP: Alternating layout (original working version) */}
+        <div className="mt-12 hidden md:block relative">
+          <div className="absolute left-1/2 h-full w-0.5 bg-[var(--brand-blue)]/20 -translate-x-1/2" />
           <div className="space-y-8">
             {companyStory.map((item, index) => (
-              <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
-                {/* Dot - sits on the line */}
-                <div className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0 md:h-8 md:w-8">
-                  <div className="h-1.5 w-1.5 rounded-full bg-white md:h-2 md:w-2" />
-                </div>
-                
-                {/* Card - Mobile: always right | Desktop: alternating */}
-                <div className={`flex-1 ${
-                  // Desktop: even index = right side (text-right), odd index = left side (text-left)
-                  index % 2 === 0 ? 'md:ml-auto md:max-w-md md:text-right' : 'md:mr-auto md:max-w-md md:text-left'
-                }`}>
-                  <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3 md:px-5 md:py-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+              <div
+                key={`${item.year}-${item.title}`}
+                className={`relative flex items-start gap-6 ${
+                  index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
+                }`}
+              >
+                <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                  <div className="rounded-2xl border border-black/5 bg-white/60 px-5 py-4">
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
                       {item.year}
                     </p>
-                    <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
+                    <p className="mt-2 text-sm leading-7 text-[var(--ink)]">
                       {item.title}
                     </p>
                   </div>
                 </div>
+                <div className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white">
+                  <div className="h-2 w-2 rounded-full bg-white" />
+                </div>
+                <div className="flex-1" />
               </div>
             ))}
           </div>
