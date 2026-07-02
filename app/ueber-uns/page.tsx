@@ -71,7 +71,7 @@ export default function UeberUnsPage() {
         {/* MOBILE: Simple vertical list, line on left */}
         <div className="mt-12 md:hidden relative pl-[27px]">
           {/* Line - on left side, full height */}
-          <div className="absolute left-0 top-0 h-full w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
           
           <div className="space-y-8">
             {companyStory.map((item) => (
