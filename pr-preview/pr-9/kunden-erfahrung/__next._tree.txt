@@ -1,2 +1,2 @@
 :HL["/pr-preview/pr-9/_next/static/css/f4ee91c5d87cb501.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"kunden-erfahrung","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"QZpduIINWPLCHdLPAYaGA"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"kunden-erfahrung","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"NvM6UIZyArXLDgz0LBNZs"}
