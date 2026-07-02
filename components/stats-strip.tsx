@@ -7,9 +7,9 @@ export function StatsStrip() {
                 {homepageTrustItems.map((item) => (
                     <article key={item.title}
                              className="surface-card px-6 py-8 text-center !bg-(--brand-dark) h-full flex flex-col justify-center">
-                        <p className="font-serif text-3xl md:text-4xl font-semibold text-(--brand-red) leading-tight text-balance min-h-[4.5rem] flex items-center justify-center">
+                        <h3 className="font-serif text-3xl md:text-4xl font-semibold text-(--brand-red) leading-tight text-balance min-h-[4.5rem] flex items-center justify-center">
                             {item.title}
-                        </p>
+                        </h3>
                         <p className="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-(--brand-blue-soft)">
                             {item.text}
                         </p>
