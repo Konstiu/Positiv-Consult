@@ -69,30 +69,32 @@ export default function UeberUnsPage() {
         </div>
         
         {/* MOBILE: Simple vertical list, line on left */}
-        <div className="mt-12 md:hidden relative pl-[27px]">
-          {/* Line - on left side, full height */}
-          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
-          
-          <div className="space-y-8">
-            {companyStory.map((item) => (
-              <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
-                {/* Dot */}
-                <div className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0">
-                  <div className="h-1.5 w-1.5 rounded-full bg-white" />
-                </div>
-                {/* Card */}
-                <div className="flex-1">
-                  <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
-                      {item.year}
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
-                      {item.title}
-                    </p>
+        <div className="mt-12 md:hidden relative">
+          <div className="relative pl-[27px]">
+            {/* Line - on left side */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
+            
+            <div className="space-y-8">
+              {companyStory.map((item) => (
+                <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
+                  {/* Dot */}
+                  <div className="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0">
+                    <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                  </div>
+                  {/* Card */}
+                  <div className="flex-1">
+                    <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                        {item.year}
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
+                        {item.title}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
