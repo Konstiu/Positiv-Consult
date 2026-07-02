@@ -69,7 +69,10 @@ export default function UeberUnsPage() {
         </div>
         
         {/* MOBILE: Simple vertical list, line on left */}
-        <div className="mt-12 space-y-8 md:hidden">
+        <div className="mt-12 space-y-8 md:hidden relative">
+          {/* Line - on left side */}
+          <div className="absolute left-[11px] top-0 h-full w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
+          
           {companyStory.map((item) => (
             <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
               {/* Dot */}
@@ -89,8 +92,6 @@ export default function UeberUnsPage() {
               </div>
             </div>
           ))}
-          {/* Line - behind everything */}
-          <div className="absolute left-[11px] top-12 h-[calc(100%-3rem)] w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
         </div>
 
         {/* DESKTOP: Alternating layout (original working version) */}
