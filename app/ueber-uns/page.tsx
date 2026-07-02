@@ -69,10 +69,10 @@ export default function UeberUnsPage() {
         </div>
         
         {/* MOBILE: Simple vertical list, line on left */}
-        <div className="mt-12 md:hidden relative">
-          <div className="relative pl-[27px]">
-            {/* Line - on left side */}
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
+        <div className="mt-12 md:hidden">
+          <div className="relative pl-[27px] pb-8">
+            {/* Line - on left side, solid color */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-900/30" />
             
             <div className="space-y-8">
               {companyStory.map((item) => (
