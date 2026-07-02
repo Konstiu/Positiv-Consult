@@ -136,7 +136,7 @@ export default function Home() {
                 <div className="mt-4 flex justify-center">
                     <Link
                         href="/leistungen"
-                        className="inline-flex items-center gap-2 rounded-lg bg-[var(--brand-blue)] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--brand-blue)]/90"
+                        className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-blue)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[rgba(31,78,140,0.25)] transition hover:bg-[var(--brand-blue)]/90 hover:shadow-xl hover:-translate-y-0.5"
                     >
                         Zu weiteren Leistungen
                         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

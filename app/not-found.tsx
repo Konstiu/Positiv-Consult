@@ -23,7 +23,7 @@ export default function NotFound() {
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link
             href="/"
-            className="inline-flex items-center justify-center rounded-full bg-[var(--brand-blue)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-blue)]/90"
+            className="inline-flex items-center justify-center rounded-full bg-[var(--brand-blue)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[rgba(31,78,140,0.25)] transition hover:bg-[var(--brand-blue)]/90 hover:shadow-xl hover:-translate-y-0.5"
           >
             Zur Startseite
           </Link>
