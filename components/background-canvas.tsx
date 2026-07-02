@@ -13,6 +13,13 @@ export function BackgroundCanvas() {
         pointerEvents: 'none',
       }}
       aria-hidden="true"
-    />
+    >
+      {/* Dark area for overscroll at top (matches navbar) */}
+      <div
+        className="absolute left-0 right-0 -top-[200%] h-[200%] bg-[var(--brand-dark)]"
+        style={{ pointerEvents: 'none' }}
+        aria-hidden="true"
+      />
+    </div>
   );
 }
