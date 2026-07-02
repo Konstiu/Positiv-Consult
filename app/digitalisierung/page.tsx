@@ -35,7 +35,7 @@ export default function DigitalisierungPage() {
                         <ul className="mt-5 space-y-3 text-sm leading-7 text-[var(--ink)]">
                             {painPoints.map((item) => (
                                 <li key={item} className="flex items-start gap-3">
-                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
+                                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
                                     <span>{item}</span>
                                 </li>
                             ))}

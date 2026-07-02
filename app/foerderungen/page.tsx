@@ -64,7 +64,7 @@ export default function FoerderungenPage() {
                                 key={item}
                                 className="flex items-start gap-3 rounded-2xl border border-black/5 bg-white/60 px-4 py-4"
                             >
-                                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
+                                <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
                                 <p className="text-sm leading-7 text-[var(--muted)]">
                                     {item}
                                 </p>

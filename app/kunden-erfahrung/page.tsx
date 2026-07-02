@@ -62,7 +62,7 @@ export default function KundenErfahrungPage() {
                                     <li key={name}
                                         className="flex items-start gap-3 text-sm leading-6 text-[var(--ink)]">
                                         <span
-                                            className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
+                                            aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
                                         <span>{name}</span>
                                     </li>
                                 ))}
@@ -81,7 +81,7 @@ export default function KundenErfahrungPage() {
                                     <li key={name}
                                         className="flex items-start gap-3 text-sm leading-6 text-[var(--ink)]">
                                         <span
-                                            className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
+                                            aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
                                         <span>{name}</span>
                                     </li>
                                 ))}
