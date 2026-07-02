@@ -29,7 +29,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/kontakt"
-            className="inline-flex items-center justify-center rounded-full border border-[var(--brand-blue)] bg-white px-6 py-3 text-sm font-semibold text-[var(--brand-blue)] transition hover:bg-[var(--brand-blue)]/10"
+            className="inline-flex items-center justify-center rounded-full border border-[var(--brand-blue)] bg-white px-6 py-3 text-sm font-semibold text-[var(--brand-blue)] shadow-lg shadow-[rgba(31,78,140,0.25)] transition hover:bg-[var(--brand-blue)]/10 hover:shadow-xl hover:-translate-y-0.5"
           >
             Kontakt aufnehmen
           </Link>
