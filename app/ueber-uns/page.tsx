@@ -68,25 +68,16 @@ export default function UeberUnsPage() {
           </p>
         </div>
         
-        {/* MOBILE: Simple vertical list, line on left */}
-        <div className="mt-12 md:hidden ml-[16px] pl-[11px] pb-8 border-l-2 border-[var(--brand-blue)]/30 space-y-8">
+        {/* MOBILE: Simple stacked cards, no timeline line */}
+        <div className="mt-12 space-y-4 md:hidden">
           {companyStory.map((item) => (
-            <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
-              {/* Dot */}
-              <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0">
-                <div className="h-1.5 w-1.5 rounded-full bg-white" />
-              </div>
-              {/* Card */}
-              <div className="flex-1">
-                <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
-                    {item.year}
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
-                    {item.title}
-                  </p>
-                </div>
-              </div>
+            <div key={`${item.year}-${item.title}`} className="rounded-2xl border border-black/5 bg-white/60 px-4 py-4">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                {item.year}
+              </p>
+              <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
+                {item.title}
+              </p>
             </div>
           ))}
         </div>
