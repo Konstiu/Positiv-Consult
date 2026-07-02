@@ -41,6 +41,7 @@ export default function DatenschutzPage() {
                                 href="https://www.positiv-consult.at/datenschutz/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Datenschutzerklärung auf positv-consult.at ansehen (öffnet in neuem Tab)"
                                 className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-blue)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[rgba(31,78,140,0.25)] transition hover:bg-[var(--brand-blue)]/90 hover:shadow-xl hover:-translate-y-0.5"
                             >
                                 Datenschutzerklärung ansehen

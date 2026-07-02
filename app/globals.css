@@ -40,6 +40,35 @@
   border-width: 0;
 }
 
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: inherit;
+}
+
+/* Custom focus styles for better accessibility */
+*:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Remove default outline when not using keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
 * {
     box-sizing: border-box;
 }

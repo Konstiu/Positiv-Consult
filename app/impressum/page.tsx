@@ -82,6 +82,7 @@ export default function ImpressumPage() {
                                 href="https://ec.europa.eu/consumers/odr"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="EU-Plattform zur Online-Streitbeilegung (öffnet in neuem Tab)"
                                 className="text-link"
                             >
                                 https://ec.europa.eu/consumers/odr
