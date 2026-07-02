@@ -73,10 +73,14 @@ export default function UeberUnsPage() {
             {companyStory.map((item, index) => (
               <div
                 key={`${item.year}-${item.title}`}
-                className="relative flex items-start gap-6 md:flex-row"
+                className="relative flex items-start gap-6"
               >
-                {/* Card: Always on right side on mobile, alternating on desktop */}
-                <div className="flex-1 md:order-2 md:text-right">
+                {/* Dot: Mobile on left line | Desktop centered */}
+                <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white md:order-2 md:mx-auto">
+                  <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
+                </div>
+                {/* Card: Right side on mobile, alternating on desktop */}
+                <div className="flex-1 md:order-3 md:text-right md:order-[3]">
                   <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3 md:px-5 md:py-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
                       {item.year}
@@ -86,12 +90,8 @@ export default function UeberUnsPage() {
                     </p>
                   </div>
                 </div>
-                {/* Dot: Mobile on left line | Desktop centered */}
-                <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white md:order-1 md:mx-auto">
-                  <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
-                </div>
-                {/* Empty space on mobile, flex-1 on desktop */}
-                <div className="hidden md:block flex-1 md:order-3" />
+                {/* Empty space on desktop for alternating layout */}
+                <div className="hidden md:block flex-1 md:order-1" />
               </div>
             ))}
           </div>
