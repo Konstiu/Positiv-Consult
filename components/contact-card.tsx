@@ -36,10 +36,10 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
             <p className="text-sm font-medium text-[var(--muted)]">{role}</p>
           </div>
 
-          <dl className="mt-6 space-y-4">
+          <div className="mt-6 space-y-4">
             <div className="flex flex-col">
               <dt className="sr-only">E-Mail</dt>
-              <dd>
+              <dd className="flex flex-col m-0">
                 <a
                   href={`mailto:${email}`}
                   className="text-link block break-all text-sm font-semibold sm:text-base"
@@ -51,7 +51,7 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
             </div>
             <div className="flex flex-col">
               <dt className="sr-only">Telefon</dt>
-              <dd>
+              <dd className="flex flex-col m-0">
                 <a
                   href={toTelHref(phone)}
                   className="block text-sm font-semibold text-[var(--ink)] sm:text-base"
@@ -61,7 +61,7 @@ export function ContactCard({ name, role, email, phone, photoUrl }: ContactCardP
                 </a>
               </dd>
             </div>
-          </dl>
+          </div>
         </div>
       </div>
     </article>
