@@ -66,35 +66,33 @@ export default function UeberUnsPage() {
             Von der Gründung 2004 bis heute – ein Überblick über die wichtigsten Meilensteine.
           </p>
         </div>
-        <div className="mt-12 relative">
-          {/* Mobile: Line on left | Desktop: Line in center */}
-          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-[var(--brand-blue)]/20" />
-          <div className="space-y-8">
-            {companyStory.map((item, index) => (
-              <div
-                key={`${item.year}-${item.title}`}
-                className="relative flex items-start gap-6 md:w-full"
-              >
-                {/* Dot on timeline */}
-                <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white shrink-0">
-                  <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
-                </div>
-                {/* Card: Mobile always right | Desktop alternating left/right */}
-                <div className={`flex-1 text-left ${
-                  index % 2 === 0 ? 'md:order-1 md:text-right md:mr-auto md:w-1/2' : 'md:order-3 md:text-left md:ml-auto md:w-1/2'
-                }`}>
-                  <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3 md:px-5 md:py-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
-                      {item.year}
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
-                      {item.title}
-                    </p>
-                  </div>
+        <div className="mt-12">
+          {companyStory.map((item, index) => (
+            <div
+              key={`${item.year}-${item.title}`}
+              className="relative flex items-start gap-6 md:justify-center md:gap-8"
+            >
+              {/* Dot on timeline */}
+              <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white shrink-0">
+                <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
+              </div>
+              {/* Card */}
+              <div className={`flex-1 max-w-[calc(100%-3rem)] md:max-w-md ${
+                index % 2 === 0 ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'
+              }`}>
+                <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3 md:px-5 md:py-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                    {item.year}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
+                    {item.title}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+          {/* Timeline line - separate from cards */}
+          <div className="absolute left-[27px] md:left-1/2 top-12 h-[calc(100%-3rem)] w-0.5 bg-[var(--brand-blue)]/20 -z-10" />
         </div>
       </section>
 
