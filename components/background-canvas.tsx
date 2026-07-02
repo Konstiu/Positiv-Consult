@@ -1,3 +1,3 @@
 export function BackgroundCanvas() {
-  return null;
+    return null;
 }
