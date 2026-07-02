@@ -73,12 +73,16 @@ export default function UeberUnsPage() {
             {companyStory.map((item, index) => (
               <div
                 key={`${item.year}-${item.title}`}
-                className={`relative flex items-start gap-6 ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
-                }`}
+                className="relative flex items-start gap-6 md:w-full"
               >
-                {/* Card */}
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                {/* Dot on timeline */}
+                <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white shrink-0">
+                  <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
+                </div>
+                {/* Card: Mobile always right | Desktop alternating left/right */}
+                <div className={`flex-1 text-left ${
+                  index % 2 === 0 ? 'md:order-1 md:text-right md:mr-auto md:w-1/2' : 'md:order-3 md:text-left md:ml-auto md:w-1/2'
+                }`}>
                   <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3 md:px-5 md:py-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
                       {item.year}
@@ -88,12 +92,6 @@ export default function UeberUnsPage() {
                     </p>
                   </div>
                 </div>
-                {/* Dot */}
-                <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white shrink-0">
-                  <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
-                </div>
-                {/* Empty space */}
-                <div className="hidden md:block flex-1" />
               </div>
             ))}
           </div>
