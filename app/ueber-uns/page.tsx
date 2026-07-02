@@ -69,28 +69,26 @@ export default function UeberUnsPage() {
         </div>
         
         {/* MOBILE: Simple vertical list, line on left */}
-        <div className="mt-12 md:hidden">
-          <div className="pl-[27px] pb-8 border-l-2 border-[var(--brand-blue)]/30 space-y-8">
-            {companyStory.map((item) => (
-              <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
-                {/* Dot */}
-                <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0">
-                  <div className="h-1.5 w-1.5 rounded-full bg-white" />
-                </div>
-                {/* Card */}
-                <div className="flex-1">
-                  <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
-                      {item.year}
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
-                      {item.title}
-                    </p>
-                  </div>
+        <div className="mt-12 md:hidden ml-[16px] pl-[11px] pb-8 border-l-2 border-[var(--brand-blue)]/30 space-y-8">
+          {companyStory.map((item) => (
+            <div key={`${item.year}-${item.title}`} className="relative flex items-start gap-6">
+              {/* Dot */}
+              <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white shrink-0">
+                <div className="h-1.5 w-1.5 rounded-full bg-white" />
+              </div>
+              {/* Card */}
+              <div className="flex-1">
+                <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                    {item.year}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
+                    {item.title}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* DESKTOP: Alternating layout (original working version) */}
