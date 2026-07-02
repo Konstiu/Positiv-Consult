@@ -67,6 +67,7 @@ export default function UeberUnsPage() {
           </p>
         </div>
         <div className="mt-12 relative">
+          {/* Mobile: Line on left | Desktop: Line in center */}
           <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-[var(--brand-blue)]/20" />
           <div className="space-y-8">
             {companyStory.map((item, index) => (
@@ -77,17 +78,18 @@ export default function UeberUnsPage() {
                 }`}
               >
                 <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                  <div className="rounded-2xl border border-black/5 bg-white/60 px-5 py-4">
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
+                  <div className="rounded-2xl border border-black/5 bg-white/60 px-4 py-3 md:px-5 md:py-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--brand-blue)]">
                       {item.year}
                     </p>
-                    <p className="mt-2 text-sm leading-7 text-[var(--ink)]">
+                    <p className="mt-1 text-sm leading-6 text-[var(--ink)]">
                       {item.title}
                     </p>
                   </div>
                 </div>
-                <div className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-4 ring-white">
-                  <div className="h-2 w-2 rounded-full bg-white" />
+                {/* Dot: Mobile on line (left) | Desktop centered */}
+                <div className="relative z-10 flex h-6 w-6 md:h-8 md:w-8 items-center justify-center rounded-full bg-[var(--brand-blue)] ring-2 md:ring-4 ring-white">
+                  <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white" />
                 </div>
                 <div className="flex-1" />
               </div>

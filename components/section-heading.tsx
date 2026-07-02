@@ -19,16 +19,16 @@ export function SectionHeading({
 
   return (
     <div
-      className={`flex flex-col gap-5 ${
+      className={`flex flex-col gap-5 px-2 ${
         centered ? "mx-auto max-w-3xl text-center items-center" : "max-w-3xl"
       }`}
     >
       {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
       <div className="space-y-4">
-        <h2 className="text-balance font-serif text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl md:text-5xl">
+        <h2 className="text-balance font-serif text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl md:text-4xl lg:text-5xl">
           {title}
         </h2>
-        <p className="text-pretty text-base leading-8 text-[var(--muted)] md:text-lg">
+        <p className="text-pretty text-sm leading-7 text-[var(--muted)] sm:text-base sm:leading-8 md:text-lg">
           {description}
         </p>
       </div>
