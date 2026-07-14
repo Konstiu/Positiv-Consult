@@ -1,6 +1,7 @@
 import {PageHeader} from "@/components/page-header";
 import {createMetadata} from "@/lib/metadata";
 import {fundingFacts} from "@/lib/site-data";
+import Image from "next/image";
 
 export const metadata = createMetadata({
     title: "Förderungen",
@@ -60,14 +61,27 @@ export default function FoerderungenPage() {
                     </h2>
                     <div className="mt-8 space-y-3 text-left">
                         {fundingFacts.map((item) => (
-                            <div
-                                key={item}
-                                className="flex items-start gap-3 rounded-2xl border border-black/5 bg-white/60 px-4 py-4"
-                            >
-                                <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"/>
-                                <p className="text-sm leading-7 text-[var(--muted)]">
-                                    {item}
-                                </p>
+                            <div key={item} className="space-y-4">
+                                <div className="flex items-start gap-3 rounded-2xl border border-black/5 bg-white/60 px-4 py-4">
+                                    <span
+                                        aria-hidden="true"
+                                        className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--brand-blue)]"
+                                    />
+                                    <p className="text-sm leading-7 text-[var(--muted)]">
+                                        {item}
+                                    </p>
+                                </div>
+                                {item.includes("incite zertifizierte Digital Consultant") ? (
+                                    <div className="rounded-2xl border border-black/5 bg-white/70 px-6 py-5">
+                                        <Image
+                                            src="/kmudigital-consultant-expert-300x96.jpg"
+                                            alt="KMU.DIGITAL Consultant Expert Zertifizierung"
+                                            width={300}
+                                            height={96}
+                                            className="h-auto w-full max-w-[300px]"
+                                        />
+                                    </div>
+                                ) : null}
                             </div>
                         ))}
                     </div>
