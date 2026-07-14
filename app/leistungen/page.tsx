@@ -20,7 +20,7 @@ const serviceBlocks = [
             "Sie erhalten eine belastbare Grundlage für Prioritäten, Entscheidungen und die nächsten strategischen Schritte.",
     },
     {
-        title: "Marketing & Kampagnen",
+        title: "Marketing & Kommunikation",
         problem:
             "Kommunikation verliert Wirkung, wenn Botschaften, Kanäle und Zielgruppen nicht mehr zusammenpassen oder Kampagnen nur operativ weiterlaufen.",
         approach:
@@ -33,7 +33,7 @@ const serviceBlocks = [
         problem:
             "Historisch gewachsene Vertriebsstrukturen machen Marktbearbeitung oft aufwendig, unübersichtlich oder schwer steuerbar.",
         approach:
-            "Wir analysieren Rollen, Prozesse, Angebotslogik und operative Vertriebsaktivitäten und bringen diese in eine klarere Struktur.",
+            "swdcwd Wir analysieren Rollen, Prozesse, Angebotslogik und operative Vertriebsaktivitäten und bringen diese in eine klarere Struktur.",
         result:
             "Sie bekommen eine belastbare Grundlage für Vertriebsorganisation, Prioritäten und die Weiterentwicklung laufender Aktivitäten.",
     },

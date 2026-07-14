@@ -71,7 +71,7 @@ export default function KundenErfahrungPage() {
                     ))}
                 </div>
                 <div className="mt-6 grid gap-6 md:grid-cols-2 md:w-2/3 md:mx-auto">
-                    {clientCategories.slice(3, 5).map((group) => (
+                    {clientCategories.slice(3, 6).map((group) => (
                         <article key={group.category} className="rounded-2xl border border-black/5 bg-white/60 p-6">
                             <h3 className="font-serif text-xl font-semibold text-[var(--brand-blue)]">
                                 {group.category}

@@ -70,9 +70,16 @@ export default function ImpressumPage() {
                         <p className="mt-4">
                             Umsatzsteuer-Identifikationsnummer: ATU 65057957
                         </p>
+                        <p className="mt-4">
+                            Mitglied der WK-Wien
+                        </p>
+                        <p className="mt-4">
+                            Unternehmensgegenstand: Unternehmsberatung
+                        </p>
                     </div>
 
                     <div>
+
                         <h2 className="font-serif text-2xl font-semibold text-[var(--brand-blue)]">
                             Streitbeilegung
                         </h2>

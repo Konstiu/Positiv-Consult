@@ -68,7 +68,7 @@ export default function Home() {
                                     "Direkter Austausch mit Eigentümer:innen, Geschäftsführung und Entscheidungsteams",
                                     "Pragmatische Einschätzung von KI-, Digitalisierungs- und Förderthemen",
                                     "Aktuelle Impulse mit konsequentem Fokus auf die praktische Umsetzung",
-                                    "Langjährige Partnerschaften und ein belastbares Netzwerk in Umsetzung und Spezialthemen",
+                                    "Langjährige Partnerschaften und ein verlässliches Netzwerk in Umsetzung und Spezialthemen",
                                 ].map((item) => (
                                     <li key={item}
                                         className="flex items-start gap-3 text-base leading-7 text-[var(--muted)]">

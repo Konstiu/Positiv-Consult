@@ -126,44 +126,44 @@ export const stats: StatItem[] = [
 
 export const coreServices: ServiceItem[] = [
     {
-        title: "Strategie & Wachstum",
+        title: "Strategie & Positionierung",
         description:
             "Wir unterstützen Geschäftsführungen dabei, Marktchancen, Zielgruppen und Ressourcen realistisch einzuordnen und daraus belastbare Prioritäten für Wachstum abzuleiten.",
         href: "/leistungen",
         points: ["Positionierung", "Zielgruppen", "Prioritäten"],
     },
     {
-        title: "Marketing & Kampagnen",
+        title: "Marketing & Kommunikation",
         description:
-            "Wir entwickeln strategisch fundierte Kommunikations- und Kampagnenansätze, die zur Zielgruppe, zum Marktumfeld und zu relevanten digitalen Kanälen passen.",
+            "Wir entwickeln Marketingstrategien und Kommunikationsansätze, die Zielgruppen präzise ansprechen, Marktumfelder berücksichtigen und digitale Kanäle wirkungsvoll nutzen.",
         href: "/leistungen",
         points: ["Kommunikationsstrategie", "Kampagnen-Setup", "Digitale Kanäle"],
     },
     {
         title: "Vertrieb & Marktbearbeitung",
         description:
-            "Wir analysieren Vertriebsprozesse, Rollen und Marktbearbeitung und schaffen eine Struktur, mit der Teams Chancen konsequenter verfolgen können.",
+            "Wir schaffen Klarheit in Vertriebsprozessen, Rollen und Marktbearbeitung – damit Teams Marktchancen gezielter nutzen und konsequenter verfolgen können.",
         href: "/leistungen",
         points: ["Vertriebsstruktur", "Marktbearbeitung", "Verkaufsaktivitäten"],
     },
     {
         title: "Digitalisierung & E-Commerce",
         description:
-            "Wir analysieren Prozesse und digitale Touchpoints, identifizieren Engpässe und priorisieren Maßnahmen nach Wirkung und Umsetzbarkeit.",
+            "Wir analysieren digitale Prozesse, Touchpoints und E-Commerce-Potenziale, identifizieren zentrale Hebel und priorisieren Maßnahmen nach Wirkung, Kundennutzen und Umsetzbarkeit.",
         href: "/leistungen",
         points: ["Prozessanalyse", "Website & E-Commerce", "Systemprioritäten"],
     },
     {
         title: "KI-Beratung",
         description:
-            "Wir finden KI-Anwendungsfälle, die Zeit sparen oder Qualität erhöhen, und testen sie in klaren Pilotprojekten.",
+            "Wir identifizieren konkrete KI-Anwendungsfälle mit klarem Mehrwert – dort, wo Prozesse beschleunigt, Qualität erhöht oder Teams spürbar entlastet werden können.",
         href: "/ai-consulting",
         points: ["Potenzialanalyse", "Use Cases", "Pilotprojekte"],
     },
     {
         title: "Förderberatung",
         description:
-            "Wir prüfen Förderfähigkeit und unterstützen bei Projektlogik und nächsten Schritten für Digitalisierung und Innovation.",
+            "Wir prüfen Fördermöglichkeiten für Digitalisierungs- und Innovationsprojekte und unterstützen dabei, Vorhaben förderfähig zu strukturieren.",
         href: "/foerderungen",
         points: ["Förderfähigkeit", "Projektlogik", "Nächste Schritte"],
     },
@@ -289,7 +289,7 @@ export const companyStory: TimelineItem[] = [
     {year: "2017", title: "Förderberatung für EPU und KMU"},
     {year: "2019", title: "Vorträge zu digitaler Kommunikation und KI"},
     {year: "2021", title: "Advisor im Doctor of Business Administration Umfeld"},
-    {year: "2024", title: "KI-Beratung als eigener Schwerpunkt"},
+    {year: "2022", title: "KI-Beratung als eigener Schwerpunkt"},
 ];
 
 export const fundingFacts = [
@@ -367,57 +367,25 @@ export const teamContacts = [
 
 export const clientCategories: ClientCategory[] = [
     {
-        category: "Bildung & Institutionen",
-        names: [
-            "KMU Akademie und Management AG",
-            "Medizinische Universität Wien",
-            "New Design University",
-            "WIFI Wien",
-            "Wirtschaftskammer Wien",
-            "Wirtschaftskammer Niederösterreich",
-            "WKO",
-            "WK Wien",
-        ],
-    },
-    {
-        category: "Handel & E-Commerce",
-        names: [
-            "B-Dressed",
-            "BIPA",
-            "Bikestore",
-            "Burggasse 24",
-            "Depot",
-            "Dorotheum",
-            "Gissinger",
-            "Herbanima",
-            "Intersport Alpensport",
-            "Lobmeyr",
-            "Morawa",
-            "Weingut Polz",
-        ],
-    },
-    {
         category: "Öffentliche & wirtschaftsnahe Organisationen",
         names: [
             "Klimabündnis Oberösterreich",
             "KMU Digital",
             "Wirtschaftskammer Wien",
             "Wirtschaftskammer Niederösterreich",
-            "WKO",
+            "Wirtschaftskammer Österreich",
         ],
-    },
-    {
-        category: "Dienstleistung & KMU",
+    },{
+        category: "Bildung & Ärzte",
         names: [
-            "ArtforArt",
-            "Kager Knapp Hausverwaltung",
-            "Klimabündnis Oberösterreich",
-            "Onlim GmbH",
-            "SOL4 IT-Consulting GmbH",
-            "smec smarter-ecommerce",
-            "Oceanum Salzgrotte",
-            "Wallner & Partner",
-            "Wine & Partners",
+            "KMU Akademie und Management AG",
+            "Medizinische Universität Wien",
+            "Middlesex University",
+            "New Design University",
+            "Dr. Pamela Jahn",
+            "Dr. Karin Wukovits",
+            "Gesundheitszentrum Neustift",
+
         ],
     },
     {
@@ -426,8 +394,58 @@ export const clientCategories: ClientCategory[] = [
             "Bellaria",
             "Cafe Burggasse 24",
             "Cafe Kriemhild",
+            "Cafelino",
+            "Das Liebig",
+            "Freigut Thallern",
             "Mochi GmbH",
-            "Restaurant Zsom",
+            "Zsom",
+        ],
+    },
+    {
+        category: "Handel & E-Commerce",
+        names: [
+            "Aumaerk",
+            "B-Dressed",
+            "BIPA",
+            "Bikestore",
+            "Burggasse 24",
+            "Depot",
+            "Die Naturgreißlerinnen",
+            "Die Stadlauer Kaufleute",
+            "Dorotheum",
+            "Hartmann Optik",
+            "Gissinger",
+            "Herbanima",
+            "Hugos Box",
+            "Intersport Alpensport",
+            "Lobmeyr",
+            "Lucas Gezzele Optik",
+            "Morawa",
+            "Yogesh Parfums",
+        ],
+    },
+    {
+        category: "Dienstleistung & KMU",
+        names: [
+            "Anthrazit Arch",
+            "ArtforArt",
+            "Check in carwash",
+            "Finetime",
+            "Kager Knapp Immobilien Hausverwaltung",
+            "Kohlroser Kachelöfen ",
+            "Laser Design",
+            "Lindenpark GmbH",
+            "Maschek",
+            "Oceanum Salzgrotte",
+            "Onlim",
+            "ORBIS Reisen",
+            "PCA People Cast Agency",
+            "SOL4 IT-Consulting",
+            "smec smarter-ecommerce",
+            "Stadtlichtspiele Gmünd",
+            "Theater mit Horizont",
+            "Votiv Kino",
+            "Wine & Partners",
         ],
     },
 ];
@@ -437,12 +455,15 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
         category: "Handel & E-Commerce",
         featured: ["BIPA", "Dorotheum", "Lobmeyr"],
         names: [
-            "Depot",
-            "Morawa",
-            "Bikestore",
-            "Burggasse 24",
+            "Aumaerk",
+            "B-Dressed",
+            "Die Stadlauer Kaufleute",
+            "Dorotheum",
+            "Hartmann Optik",
+            "Gissinger",
             "Intersport Alpensport",
-            "Weingut Polz",
+            "Lobmeyr",
+
         ],
     },
     {
@@ -454,7 +475,7 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
         ],
         names: [
             "ArtforArt",
-            "SOL4 IT-Consulting GmbH",
+            "SOL4 IT-Consulting",
             "Oceanum Salzgrotte",
             "Wallner & Partner",
             "Kager Knapp Hausverwaltung",
@@ -471,7 +492,7 @@ export const clientCategoriesSelected: ClientCategoryWithFeatures[] = [
             "New Design University",
             "KMU Digital",
             "Middlesex University",
-            "WKO",
+            "Wirtschaftskammer",
         ],
     },
 ];
