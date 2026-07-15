@@ -33,7 +33,7 @@ const serviceBlocks = [
         problem:
             "Historisch gewachsene Vertriebsstrukturen machen Marktbearbeitung oft aufwendig, unübersichtlich oder schwer steuerbar.",
         approach:
-            "swdcwd Wir analysieren Rollen, Prozesse, Angebotslogik und operative Vertriebsaktivitäten und bringen diese in eine klarere Struktur.",
+            "Wir analysieren Rollen, Prozesse, Angebotslogik und operative Vertriebsaktivitäten und bringen diese in eine klarere Struktur.",
         result:
             "Sie bekommen eine belastbare Grundlage für Vertriebsorganisation, Prioritäten und die Weiterentwicklung laufender Aktivitäten.",
     },
