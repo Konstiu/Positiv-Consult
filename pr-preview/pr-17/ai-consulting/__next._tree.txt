@@ -1,2 +1,0 @@
-:HL["/pr-preview/pr-17/_next/static/css/6104d1f3a0f183d0.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"ai-consulting","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"u4j0nir17bkF6ktmO6bji"}
