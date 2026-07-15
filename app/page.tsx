@@ -32,9 +32,7 @@ export default function Home() {
 
             <section className="relative overflow-hidden">
                 <div
-                    className="absolute inset-0 bg-cover bg-position-[center_30%] opacity-[0.12] mask-[linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)]"
-                    style={{backgroundImage: `url('${withBasePath("/ai-images/output.png")}')`}}
-                    aria-hidden="true"
+                    className="absolute inset-0 bg-cover bg-position-[center_30%] opacity-[0.12] mask-[linear-gradient(to_bottom,black_0%,black_40%,transparent_100%)]" aria-hidden="true"
                 />
                 <div
                     className="site-shell relative grid gap-12 py-24 md:py-32 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center lg:py-36">

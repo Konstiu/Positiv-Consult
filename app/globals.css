@@ -237,6 +237,18 @@ summary:focus-visible {
     animation: fade-up 700ms ease both;
 }
 
+@media (max-width: 767px) {
+    html {
+        background: #f7f8fa;
+    }
+
+    body {
+        background: #f7f8fa;
+        background-image: radial-gradient(circle at 88% 10%, rgba(13, 27, 42, 0.12) 0%, rgba(13, 27, 42, 0.06) 22%, transparent 45%),
+        radial-gradient(circle at 70% 85%, rgba(230, 57, 70, 0.04) 0%, rgba(230, 57, 70, 0.02) 18%, transparent 38%);
+    }
+}
+
 @media (min-width: 768px) {
     .site-shell {
         padding-inline: 2rem;
