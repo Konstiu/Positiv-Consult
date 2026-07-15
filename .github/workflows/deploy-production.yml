@@ -33,7 +33,7 @@ jobs:
       - name: Build production export
         env:
           NEXT_PUBLIC_BASE_PATH: /
-          NEXT_PUBLIC_SITE_URL: https://positiv-consult.unterweger.tech
+          NEXT_PUBLIC_SITE_URL: https://positiv-consult.at
         run: npm run build
 
       - name: Deploy production to gh-pages root
