@@ -1,2 +1,0 @@
-:HL["/pr-preview/pr-1/_next/static/css/5e5024de5ae96f9a.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"kunden-erfahrung","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"67FifCYeNqXs15MXk12ql"}

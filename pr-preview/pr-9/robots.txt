@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://positiv-consult.unterweger.tech/pr-preview/pr-9/sitemap.xml

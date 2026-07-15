@@ -1,2 +1,0 @@
-:HL["/pr-preview/pr-12/_next/static/css/e4c58c1cbf399813.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"digitalisierung","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"6vDhanwhv5PbxCz61y1OX"}
