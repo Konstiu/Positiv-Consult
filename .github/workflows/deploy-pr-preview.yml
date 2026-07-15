@@ -39,8 +39,8 @@ jobs:
       - name: Build preview export
         if: github.event.action != 'closed'
         env:
-          NEXT_PUBLIC_BASE_PATH: /pr-preview/pr-${{ github.event.pull_request.number }}/
-          NEXT_PUBLIC_SITE_URL: https://positiv-consult.unterweger.tech/pr-preview/pr-${{ github.event.pull_request.number }}
+          NEXT_PUBLIC_BASE_PATH: /pr-preview/pr-${{ github.event.pull_request.number }}
+          NEXT_PUBLIC_SITE_URL: https://positiv-consult.at/pr-preview/pr-${{ github.event.pull_request.number }}
         run: npm run build
 
       - name: Deploy preview
@@ -49,5 +49,5 @@ jobs:
           source-dir: ./out
           preview-branch: gh-pages
           umbrella-dir: pr-preview
-          pages-base-url: positiv-consult.unterweger.tech
+          pages-base-url: https://positiv-consult.at
           wait-for-pages-deployment: true
