@@ -1,2 +1,0 @@
-:HL["/pr-preview/pr-4/_next/static/css/c707b7cba17ea4a5.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"ueber-uns","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"epd7cMlbDw2smgFAt7PsD"}
